@@ -1,0 +1,44 @@
+[
+  {
+    "__config__": {
+      "defaultValue": [],
+      "wrapWithInputGroup": false,
+      "optionType": "default",
+      "border": false,
+      "tag": "p-checkbox-group",
+      "layout": "fixedItem",
+      "label": "多选框组"
+    },
+    "__vModel__": "checkboxGroup101",
+    "__native__": {
+      "class": "23daa",
+      "title": "请输入！"
+    },
+    "__refs__": {
+      "options": "checkboxGroup101Options"
+    },
+    "__data__": {
+      "name": "options",
+      "source": "static",
+      "dynamic": {
+        "ref": true,
+        "url": "https://www.fastmock.site/mock/c9e1a1c3cefb84da4306dcf9fadde652/ele-plus-desinger/options",
+        "method": "get",
+        "dataKey": "list"
+      },
+      "static": {
+        "ref": true,
+        "options": [
+          {
+            "label": "选项一",
+            "value": "1"
+          },
+          {
+            "label": "选项二",
+            "value": "2"
+          }
+        ]
+      }
+    }
+  }
+]

@@ -1,0 +1,24 @@
+@import './variable.scss';
+@mixin action-bar {
+  .action-bar {
+    height: $actionBarHeight;
+    text-align: right;
+    padding-top: 5px;
+    box-sizing: border-box;;
+    border: 1px solid #f1e8e8;
+    border-top: none;
+    border-left: none;
+
+    .delete-btn {
+      color: #F56C6C;
+    }
+    .p-button{
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+    .p-button + .p-button {
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+  }
+}

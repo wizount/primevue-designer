@@ -1,0 +1,14 @@
+node_modules/
+dist/
+lib/
+lib-render/
+.idea/
+
+
+*.txt
+
+yarn.lock
+/desc.md
+/config-generator/
+/src/primevue-config/json-alt
+

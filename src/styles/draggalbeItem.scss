@@ -1,0 +1,28 @@
+@import './variable.scss';
+
+
+//fixme 这些类名以后再改吧
+
+.drawing-ele {
+  position: relative;
+  cursor: move;
+  box-sizing: border-box;
+  border: 1px dashed transparent;
+  border-radius: 3px;
+  //padding: 0 2px;
+  //margin-bottom: 15px;
+
+  &.selected-draw-ele {
+    border: 1px dashed $lighterBlue;
+  }
+  &.unselected-draw-ele{
+    border: 1px dashed lightgray;
+  }
+
+}
+.selected-raw-ele .drawing-ele {
+  @extend .drawing-ele, .selected-draw-ele
+}
+.raw-ele .drawing-ele {
+  @extend .drawing-ele, .unselected-draw-ele
+}
