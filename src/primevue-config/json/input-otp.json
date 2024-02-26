@@ -1,0 +1,117 @@
+{
+  "__id__": "input-otp",
+  "name": "InputOtp",
+  "tag": "p-input-otp",
+  "tagIcon": "inputOtp",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/inputotp",
+  "description": "InputOtp  is used to enter one time passwords.",
+  "attributes": {
+    "vModel": "modelValue",
+    "true-value": {
+      "label": "trueValue",
+      "title": "Value in checked state.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "false-value": {
+      "label": "falseValue",
+      "title": "Value in unchecked state.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [],
+  "events": [
+    {
+      "name": "click",
+      "title": "Callback to invoke on click."
+    },
+    {
+      "name": "change",
+      "title": "Callback to invoke on value change."
+    },
+    {
+      "name": "input",
+      "title": "Callback to invoke on value change."
+    }
+  ]
+}
