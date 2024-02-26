@@ -1,0 +1,750 @@
+{
+  "__id__": "calendar",
+  "name": "Calendar",
+  "tag": "p-calendar",
+  "tagIcon": "calendar",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/calendar",
+  "description": "Calendar is an input component to select a date.",
+  "attributes": {
+    "vModel": "modelValue",
+    "selection-mode": {
+      "label": "selectionMode",
+      "title": "Defines the quantity of the selection, valid values are \"single\", \"multiple\" and \"range\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "single",
+              "multiple",
+              "range"
+            ]
+          }
+        }
+      ],
+      "default": "single"
+    },
+    "date-format": {
+      "label": "dateFormat",
+      "title": "Format of the date. Defaults to PrimeVue Locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "inline": {
+      "label": "inline",
+      "title": "When enabled, displays the calendar as inline instead of an overlay.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-other-months": {
+      "label": "showOtherMonths",
+      "title": "Whether to display dates in other months (non-selectable) at the start or end of the current month. To make these days selectable use the selectOtherMonths option.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "select-other-months": {
+      "label": "selectOtherMonths",
+      "title": "Whether days in other months shown before or after the current month are selectable. This only applies if the showOtherMonths option is set to true.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-icon": {
+      "label": "showIcon",
+      "title": "When enabled, displays a button with icon next to input.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": false
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Icon of the calendar button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "previous-icon": {
+      "label": "previousIcon",
+      "title": "Icon to show in the previous button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "next-icon": {
+      "label": "nextIcon",
+      "title": "Icon to show in the next button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "increment-icon": {
+      "label": "incrementIcon",
+      "title": "Icon to show in each of the increment buttons.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "decrement-icon": {
+      "label": "decrementIcon",
+      "title": "Icon to show in each of the decrement buttons.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "number-of-months": {
+      "label": "numberOfMonths",
+      "title": "Number of months to display.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "view": {
+      "label": "view",
+      "title": "Type of view to display, valid valids are \"date\" for datepicker and \"month\" for month picker.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "date"
+    },
+    "touch-u-i": {
+      "label": "touchUI",
+      "title": "When enabled, calendar overlay is displayed as optimized for touch devices.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "month-navigator": {
+      "label": "monthNavigator",
+      "title": "Whether the month should be rendered as a dropdown instead of text.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "year-navigator": {
+      "label": "yearNavigator",
+      "title": "Whether the year should be rendered as a dropdown instead of text.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "year-range": {
+      "label": "yearRange",
+      "title": "The range of years displayed in the year drop-down in (nnnn:nnnn) format such as (2000:2020).",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "panel-class": {
+      "label": "panelClass",
+      "title": "Style class of the overlay panel.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "min-date": {
+      "label": "minDate",
+      "title": "The minimum selectable date.",
+      "types": [
+        {
+          "name": "Date",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "max-date": {
+      "label": "maxDate",
+      "title": "The maximum selectable date.",
+      "types": [
+        {
+          "name": "Date",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "disabled-dates": {
+      "label": "disabledDates",
+      "title": "Array with dates to disable.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "disabled-days": {
+      "label": "disabledDays",
+      "title": "Array with disabled weekday numbers.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "max-date-count": {
+      "label": "maxDateCount",
+      "title": "Maximum number of selectable dates in multiple mode.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "show-on-focus": {
+      "label": "showOnFocus",
+      "title": "When disabled, datepicker will not be visible with input focus.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "show-button-bar": {
+      "label": "showButtonBar",
+      "title": "Whether to display today and clear buttons at the footer",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "short-year-cutoff": {
+      "label": "shortYearCutoff",
+      "title": "The cutoff year for determining the century for a date.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "+10"
+    },
+    "show-time": {
+      "label": "showTime",
+      "title": "Whether to display timepicker.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "time-only": {
+      "label": "timeOnly",
+      "title": "Whether to display timepicker only.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "hour-format": {
+      "label": "hourFormat",
+      "title": "Specifies 12 or 24 hour format.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": 24
+    },
+    "step-hour": {
+      "label": "stepHour",
+      "title": "Hours to change per step.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "step-minute": {
+      "label": "stepMinute",
+      "title": "Minutes to change per step.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "step-seconds": {
+      "label": "stepSeconds",
+      "title": "Seconds to change per step.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "show-seconds": {
+      "label": "showSeconds",
+      "title": "Whether to show the seconds in time picker.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "hide-on-date-time-select": {
+      "label": "hideOnDateTimeSelect",
+      "title": "Whether to hide the overlay on date selection when showTime is enabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "hide-on-range-selection": {
+      "label": "hideOnRangeSelection",
+      "title": "Whether to hide the overlay on date selection is completed when selectionMode is range.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "time-separator": {
+      "label": "timeSeparator",
+      "title": "Separator of time selector.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": ":"
+    },
+    "show-week": {
+      "label": "showWeek",
+      "title": "When enabled, calendar will show week numbers.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "manual-input": {
+      "label": "manualInput",
+      "title": "Whether to allow entering the date manually via typing.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the overlay gets attached. Special keywords are \"body\" for document body and \"self\" for the element itself.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "body"
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "readonly": {
+      "label": "readonly",
+      "title": "When present, it specifies that an input field is read-only.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "placeholder": "Please enter ",
+    "id": {
+      "label": "id",
+      "title": "Identifier of the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "panel-style": {
+      "label": "panelStyle",
+      "title": "Inline style of the overlay panel.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "panel-props": {
+      "label": "panelProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the overlay panel inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component header."
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component footer."
+    },
+    {
+      "name": "date",
+      "title": "Custom content for the calendar cell."
+    },
+    {
+      "name": "decade",
+      "title": "Custom content for the calendar decade."
+    },
+    {
+      "name": "dropdownicon",
+      "title": "Custom dropdown icon template."
+    },
+    {
+      "name": "previousicon",
+      "title": "Custom previous icon template."
+    },
+    {
+      "name": "nexticon",
+      "title": "Custom next icon template."
+    },
+    {
+      "name": "incrementicon",
+      "title": "Custom increment icon template."
+    },
+    {
+      "name": "decrementicon",
+      "title": "Custom decrement icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "input",
+      "title": "Callback to invoke when input field is being typed.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "New date"
+        }
+      ]
+    },
+    {
+      "name": "date-select",
+      "title": "Callback to invoke when a date is selected.",
+      "arguments": [
+        {
+          "name": "value",
+          "type": "Date",
+          "description": "Selected value"
+        }
+      ]
+    },
+    {
+      "name": "show",
+      "title": "Callback to invoke when datepicker panel is shown."
+    },
+    {
+      "name": "hide",
+      "title": "Callback to invoke when datepicker panel is hidden."
+    },
+    {
+      "name": "today-click",
+      "title": "Callback to invoke when today button is clicked.",
+      "arguments": [
+        {
+          "name": "date",
+          "type": "Date",
+          "description": "Today as a date instance"
+        }
+      ]
+    },
+    {
+      "name": "clear-click",
+      "title": "Callback to invoke when clear button is clicked.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Click event"
+        }
+      ]
+    },
+    {
+      "name": "month-change",
+      "title": "Callback to invoke when a month is changed using the navigators.",
+      "arguments": [
+        {
+          "name": "event.month",
+          "type": "number",
+          "description": "New month"
+        },
+        {
+          "name": "event.year",
+          "type": "number",
+          "description": "New year"
+        }
+      ]
+    },
+    {
+      "name": "year-change",
+      "title": "Callback to invoke when a year is changed using the navigators.",
+      "arguments": [
+        {
+          "name": "event.month",
+          "type": "number",
+          "description": "New month"
+        },
+        {
+          "name": "event.year",
+          "type": "number",
+          "description": "New year"
+        }
+      ]
+    },
+    {
+      "name": "focus",
+      "title": "Callback to invoke on focus of input field.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Focus event"
+        }
+      ]
+    },
+    {
+      "name": "blur",
+      "title": "Callback to invoke on blur of input field.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "string",
+          "description": "Input value"
+        }
+      ]
+    },
+    {
+      "name": "keydown",
+      "title": "Callback to invoke when a key is pressed.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Keydown event"
+        }
+      ]
+    }
+  ]
+}

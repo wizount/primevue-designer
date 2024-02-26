@@ -1,0 +1,89 @@
+{
+  "__id__": "block-u-i",
+  "name": "BlockUI",
+  "tag": "p-block-u-i",
+  "tagIcon": "blockUI",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/blockui",
+  "description": "BlockUI can either block other components or the whole page.",
+  "attributes": {
+    "blocked": {
+      "label": "blocked",
+      "title": "Controls the blocked state.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "fullscreen": {
+      "label": "fullscreen",
+      "title": "When enabled, the whole document gets blocked.",
+      "types": [
+        {
+          "name": "menuitem",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [],
+  "events": [
+    {
+      "name": "block",
+      "title": "Fired when the element gets blocked."
+    },
+    {
+      "name": "unblock",
+      "title": "Fired when the element gets unblocked."
+    }
+  ]
+}

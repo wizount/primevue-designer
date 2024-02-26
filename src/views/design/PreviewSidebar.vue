@@ -2,7 +2,7 @@
 <div>
   <p-sidebar
       v-bind="$attrs"
-      @opened="onOpen"
+      @show="onOpen"
       @close="onClose"
       header="预览"
   >
@@ -60,7 +60,10 @@ function iframeLoad() {
 const previewPage = ref();
 
 function runCode() {
+
   const jsCodeStr = jsCode.value
+  console.info(jsCodeStr)
+  console.info(htmlCode.value)
   try {
 
     const postData = {

@@ -417,6 +417,18 @@ function addEvent(event) {
 }
 
 //endregion
+//region
+function addDirective(event) {
+  if (!props.activeData.__directives__[event]) {
+    props.activeData.__directives__[event] = {
+      value:elementPlusConfigMap[event].value.default,
+      arg:undefined,
+      modifiers:[]
+    };
+  }
+}
+
+//endregion
 </script>
 
 <style lang="scss" scoped>

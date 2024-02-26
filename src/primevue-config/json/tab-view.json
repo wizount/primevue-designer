@@ -1,0 +1,144 @@
+{
+  "__id__": "tab-view",
+  "name": "TabView",
+  "tag": "p-tab-view",
+  "tagIcon": "tabView",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/tabview",
+  "description": "TabView is a container component to group content with tabs.",
+  "attributes": {
+    "active-index": {
+      "label": "activeIndex",
+      "title": "Index of the active tab.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "lazy": {
+      "label": "lazy",
+      "title": "When enabled, hidden tabs are not rendered at all. Defaults to false that hides tabs with css.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "scrollable": {
+      "label": "scrollable",
+      "title": "When enabled displays buttons at each side of the tab headers to scroll the tab list.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "select-on-focus": {
+      "label": "selectOnFocus",
+      "title": "When enabled, the focused tab is activated.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "previous-button-props": {
+      "label": "previousButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the previous button.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "next-button-props": {
+      "label": "nextButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the next button.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "prev-icon": {
+      "label": "prevIcon",
+      "title": "Prev icon of the scrollable tabview.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "next-icon": {
+      "label": "nextIcon",
+      "title": "Next icon of the scrollable tabview.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default slot to detect TabPanel components."
+    },
+    {
+      "name": "previcon",
+      "title": "Previous button icon template for the scrollable component."
+    },
+    {
+      "name": "nexticon",
+      "title": "Next button icon template for the scrollable component."
+    }
+  ]
+}

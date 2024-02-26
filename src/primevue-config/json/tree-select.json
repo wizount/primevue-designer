@@ -1,0 +1,319 @@
+{
+  "__id__": "tree-select",
+  "name": "TreeSelect",
+  "tag": "p-tree-select",
+  "tagIcon": "treeSelect",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/treeselect",
+  "description": "TreeSelect is a form component to choose from hierarchical data.",
+  "attributes": {
+    "vModel": "modelValue",
+    "options": {
+      "label": "options",
+      "title": "An array of treenodes.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "scroll-height": {
+      "label": "scrollHeight",
+      "title": "Height of the viewport, a scrollbar is defined if height of list exceeds this value.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "200px"
+    },
+    "placeholder": "Please enter ",
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the component should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "selection-mode": {
+      "label": "selectionMode",
+      "title": "Defines the selection mode, valid values \"single\", \"multiple\", and \"checkbox\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "single",
+              "multiple",
+              "checkbox"
+            ]
+          }
+        }
+      ]
+    },
+    "panel-class": {
+      "label": "panelClass",
+      "title": "Style class of the overlay panel.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the overlay gets attached. Special keywords are \"body\" for document body and \"self\" for the element itself.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "body"
+    },
+    "empty-message": {
+      "label": "emptyMessage",
+      "title": "Text to display when there are no options available. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No results found"
+    },
+    "display": {
+      "label": "display",
+      "title": "Defines how the selected items are displayed, valid values are \"comma\" and \"chip\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "comma",
+              "chip"
+            ]
+          }
+        }
+      ],
+      "default": "comma"
+    },
+    "meta-key-selection": {
+      "label": "metaKeySelection",
+      "title": "Defines how multiple items can be selected, when true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually. On touch enabled devices, metaKeySelection is turned off automatically.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "aria-labelledby": {
+      "label": "aria-labelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "aria-label",
+      "title": "Used to define a string that labels the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "value",
+      "title": "Custom content for the item's value"
+    },
+    {
+      "name": "header",
+      "title": "Custom content for the component's header"
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component's footer"
+    },
+    {
+      "name": "empty",
+      "title": "Custom content when there is no data to display"
+    },
+    {
+      "name": "triggericon",
+      "title": "Custom content for the dropdown indicator"
+    },
+    {
+      "name": "itemtogglericon",
+      "title": "Custom item toggler icon template."
+    },
+    {
+      "name": "itemcheckboxicon",
+      "title": "Custom item checkbox icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "title": "Callback to invoke on value change.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Selected node keys"
+        }
+      ]
+    },
+    {
+      "name": "before-show",
+      "title": "Callback to invoke before the overlay is shown."
+    },
+    {
+      "name": "before-hide",
+      "title": "Callback to invoke before the overlay is hidden."
+    },
+    {
+      "name": "show",
+      "title": "Callback to invoke when the overlay is shown."
+    },
+    {
+      "name": "hide",
+      "title": "Callback to invoke when the overlay is hidden."
+    },
+    {
+      "name": "node-select",
+      "title": "Callback to invoke when a node is selected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-unselect",
+      "title": "Callback to invoke when a node is unselected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-expand",
+      "title": "Callback to invoke when a node is expanded.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-collapse",
+      "title": "Callback to invoke when a node is collapsed.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    }
+  ]
+}

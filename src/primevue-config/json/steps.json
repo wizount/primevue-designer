@@ -1,0 +1,84 @@
+{
+  "__id__": "steps",
+  "name": "Steps",
+  "tag": "p-steps",
+  "tagIcon": "steps",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/steps",
+  "description": "Steps components is an indicator for the steps in a wizard workflow.",
+  "attributes": {
+    "id": {
+      "label": "id",
+      "title": "Unique identifier of the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "model": {
+      "label": "model",
+      "title": "An array of menuitems.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "active-step": {
+      "label": "activeStep",
+      "title": "Active step index of menuitem.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "readonly": {
+      "label": "readonly",
+      "title": "Whether the items are clickable or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "item",
+      "title": "Template of a menuitem."
+    }
+  ]
+}

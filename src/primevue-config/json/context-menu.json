@@ -1,0 +1,104 @@
+{
+  "__id__": "context-menu",
+  "name": "ContextMenu",
+  "tag": "p-context-menu",
+  "tagIcon": "contextMenu",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/contextmenu",
+  "description": "ContextMenu displays an overlay menu on right click of its target.",
+  "attributes": {
+    "model": {
+      "label": "model",
+      "title": "An array of menuitems.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the overlay gets attached.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "body"
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "global": {
+      "label": "global",
+      "title": "Attaches the menu to document instead of a particular item.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "item",
+      "title": "Custom item template."
+    },
+    {
+      "name": "submenuicon",
+      "title": "Custom submenu icon template."
+    },
+    {
+      "name": "itemicon",
+      "title": "Custom item icon template."
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "__id__": "breadcrumb",
+  "name": "Breadcrumb",
+  "tag": "p-breadcrumb",
+  "tagIcon": "breadcrumb",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/breadcrumb",
+  "description": "Breadcrumb provides contextual information about page hierarchy.",
+  "attributes": {
+    "model": {
+      "label": "model",
+      "title": "An array of menuitems.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "home": {
+      "label": "home",
+      "title": "Configuration for the home icon.",
+      "types": [
+        {
+          "name": "menuitem",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "item",
+      "title": "Custom item template."
+    },
+    {
+      "name": "separator",
+      "title": "Custom separator template."
+    },
+    {
+      "name": "itemicon",
+      "title": "Custom item icon template."
+    }
+  ]
+}

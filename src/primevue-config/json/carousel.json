@@ -1,0 +1,215 @@
+{
+  "__id__": "carousel",
+  "name": "Carousel",
+  "tag": "p-carousel",
+  "tagIcon": "carousel",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/carousel",
+  "description": "Carousel is a content slider featuring various customization options.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "An array of objects to display.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "page": {
+      "label": "page",
+      "title": "Index of the first item.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "circular": {
+      "label": "circular",
+      "title": "Defines if scrolling would be infinite.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "autoplay-interval": {
+      "label": "autoplayInterval",
+      "title": "Time in milliseconds to scroll items automatically.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "num-visible": {
+      "label": "numVisible",
+      "title": "Number of items per page.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "num-scroll": {
+      "label": "numScroll",
+      "title": "Number of items to scroll.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "responsive-options": {
+      "label": "responsiveOptions",
+      "title": "An array of options for responsive design.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "orientation": {
+      "label": "orientation",
+      "title": "Specifies the layout of the component, valid values are \"horizontal\" and \"vertical\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "horizontal",
+              "vertical"
+            ]
+          }
+        }
+      ],
+      "default": "horizontal"
+    },
+    "vertical-view-port-height": {
+      "label": "verticalViewPortHeight",
+      "title": "Height of the viewport in vertical layout.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "300px"
+    },
+    "content-class": {
+      "label": "contentClass",
+      "title": "Style class of main content.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "container-class": {
+      "label": "containerClass",
+      "title": "Style class of the viewport container.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "indicators-content-class": {
+      "label": "indicatorsContentClass",
+      "title": "Style class of the indicator items.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "show-navigators": {
+      "label": "showNavigators",
+      "title": "Whether to display navigation buttons in container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-indicators": {
+      "label": "showIndicators",
+      "title": "Whether to display indicator container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component header."
+    },
+    {
+      "name": "header",
+      "title": "Custom content for the component header."
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component footer."
+    },
+    {
+      "name": "item",
+      "title": "Custom content for the component item."
+    },
+    {
+      "name": "previousicon",
+      "title": "Custom previous icon template."
+    },
+    {
+      "name": "nexticon",
+      "title": "Custom next icon template."
+    }
+  ]
+}

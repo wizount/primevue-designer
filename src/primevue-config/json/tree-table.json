@@ -1,0 +1,759 @@
+{
+  "__id__": "tree-table",
+  "name": "TreeTable",
+  "tag": "p-tree-table",
+  "tagIcon": "treeTable",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/treetable",
+  "description": "TreeTable is used to display hierarchical data in tabular format.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "An array of treenodes.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "Name of the field that uniquely identifies the a record in the data.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "expanded-keys": {
+      "label": "expandedKeys",
+      "title": "A map of keys to represent the state of the tree expansion state in controlled mode.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "selection-keys": {
+      "label": "selectionKeys",
+      "title": "A map of keys to control the selection state.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "selection-mode": {
+      "label": "selectionMode",
+      "title": "Defines the selection mode, valid values \"single\", \"multiple\", and \"checkbox\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "single",
+              "multiple",
+              "checkbox"
+            ]
+          }
+        }
+      ]
+    },
+    "meta-key-selection": {
+      "label": "metaKeySelection",
+      "title": "Defines how multiple items can be selected, when true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually. On touch enabled devices, metaKeySelection is turned off automatically.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "rows": {
+      "label": "rows",
+      "title": "Number of rows to display per page.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "first": {
+      "label": "first",
+      "title": "Index of the first row to be displayed.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "total-records": {
+      "label": "totalRecords",
+      "title": "Number of total records, defaults to length of value when not defined.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "paginator": {
+      "label": "paginator",
+      "title": "When specified as true, enables the pagination.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "paginator-position": {
+      "label": "paginatorPosition",
+      "title": "Position of the paginator, options are \"top\", \"bottom\" or \"both\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "top",
+              "bottom",
+              "both"
+            ]
+          }
+        }
+      ],
+      "default": "bottom"
+    },
+    "always-show-paginator": {
+      "label": "alwaysShowPaginator",
+      "title": "Whether to show it even there is only one page.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "paginator-template": {
+      "label": "paginatorTemplate",
+      "title": "Template of the paginator.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+    },
+    "page-link-size": {
+      "label": "pageLinkSize",
+      "title": "Number of page links to display.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 5
+    },
+    "rows-per-page-options": {
+      "label": "rowsPerPageOptions",
+      "title": "Array of integer values to display inside rows per page dropdown.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "current-page-report-template": {
+      "label": "currentPageReportTemplate",
+      "title": "Template of the current page report element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "({currentPage} of {totalPages})"
+    },
+    "lazy": {
+      "label": "lazy",
+      "title": "Defines if data is loaded and interacted with in lazy manner.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loading": {
+      "label": "loading",
+      "title": "Displays a loader to indicate data load is in progress.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loading-icon": {
+      "label": "loadingIcon",
+      "title": "The icon to show while indicating data load is in progress.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": "pi pi-spinner"
+    },
+    "row-hover": {
+      "label": "rowHover",
+      "title": "When enabled, background of the rows change on hover.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "auto-layout": {
+      "label": "autoLayout",
+      "title": "Whether the cell widths scale according to their content or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "sort-field": {
+      "label": "sortField",
+      "title": "Property name or a getter function of a row data used for sorting by default.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "sort-order": {
+      "label": "sortOrder",
+      "title": "Order to sort the data by default.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "default-sort-order": {
+      "label": "defaultSortOrder",
+      "title": "Default sort order of an unsorted column.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "multi-sort-meta": {
+      "label": "multiSortMeta",
+      "title": "An array of SortMeta objects to sort the data by default in multiple sort mode.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "sort-mode": {
+      "label": "sortMode",
+      "title": "Defines whether sorting works on single column or on multiple columns.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "single"
+    },
+    "removable-sort": {
+      "label": "removableSort",
+      "title": "When enabled, columns can have an un-sorted state.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "filters": {
+      "label": "filters",
+      "title": "Filters object with key-value pairs to define the filters.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "filter-mode": {
+      "label": "filterMode",
+      "title": "Mode for filtering valid values are \"lenient\" and \"strict\". Default is lenient.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "lenient",
+              "strict"
+            ]
+          }
+        }
+      ],
+      "default": "lenient"
+    },
+    "filter-locale": {
+      "label": "filterLocale",
+      "title": "Locale to use in filtering. The default locale is the host environment's current locale.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "resizable-columns": {
+      "label": "resizableColumns",
+      "title": "When enabled, columns can be resized using drag and drop.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "column-resize-mode": {
+      "label": "columnResizeMode",
+      "title": "Defines whether the overall table width should change on column resize, valid values are \"fit\" and \"expand\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "fit",
+              "expand"
+            ]
+          }
+        }
+      ],
+      "default": "fit"
+    },
+    "indentation": {
+      "label": "indentation",
+      "title": "Indentation factor as rem value for children nodes. Defaults to 1rem.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 1
+    },
+    "show-gridlines": {
+      "label": "showGridlines",
+      "title": "Whether to show grid lines between cells.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "scrollable": {
+      "label": "scrollable",
+      "title": "When specified, enables horizontal and/or vertical scrolling.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "scroll-direction": {
+      "label": "scrollDirection",
+      "title": "Orientation of the scrolling, options are \"vertical\", \"horizontal\" and \"both\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "vertical",
+              "horizontal",
+              "both"
+            ]
+          }
+        }
+      ],
+      "default": "vertical"
+    },
+    "scroll-height": {
+      "label": "scrollHeight",
+      "title": "Height of the scroll viewport in fixed units or the \"flex\" keyword for a dynamic size.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "responsive-layout": {
+      "label": "responsiveLayout",
+      "title": "Defines the responsive mode, currently only option is scroll.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "size": {
+      "label": "size",
+      "title": "Defines the size of the table.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component's header."
+    },
+    {
+      "name": "paginatorstart",
+      "title": "Custom content for the component paginator's left side."
+    },
+    {
+      "name": "paginatorend",
+      "title": "Custom content for the component paginator's right side."
+    },
+    {
+      "name": "empty",
+      "title": "Custom content when there is no data to display."
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component's footer."
+    },
+    {
+      "name": "loadingicon",
+      "title": "Custom loading icon template."
+    },
+    {
+      "name": "togglericon",
+      "title": "Custom toggler icon template."
+    },
+    {
+      "name": "checkboxicon",
+      "title": "Custom checkbox icon template."
+    },
+    {
+      "name": "sorticon",
+      "title": "Custom sort icon template."
+    },
+    {
+      "name": "paginatorfirstpagelinkicon",
+      "title": "Custom paginator first page link icon template."
+    },
+    {
+      "name": "paginatorprevpagelinkicon",
+      "title": "Custom paginator prev page link icon template."
+    },
+    {
+      "name": "paginatornextpagelinkicon",
+      "title": "Custom paginator next page link icon template."
+    },
+    {
+      "name": "paginatorlastpagelinkicon",
+      "title": "Custom paginator last page link icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "page",
+      "title": "Callback to invoke on pagination. Sort and Filter information is also available for lazy loading implementation.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "event.page",
+          "type": "number",
+          "description": "New page number"
+        },
+        {
+          "name": "event.pageCount",
+          "type": "number",
+          "description": "Total page count"
+        },
+        {
+          "name": "event.first",
+          "type": "number",
+          "description": "Index of first record"
+        },
+        {
+          "name": "event.rows",
+          "type": "number",
+          "description": "Number of rows to display in new page"
+        },
+        {
+          "name": "event.sortField",
+          "type": "object",
+          "description": "Field to sort against"
+        },
+        {
+          "name": "event.sortOrder",
+          "type": "number",
+          "description": "Sort order as integer"
+        },
+        {
+          "name": "event.multiSortMeta",
+          "type": "object",
+          "description": "MultiSort metadata"
+        },
+        {
+          "name": "event.filters",
+          "type": "object",
+          "description": "Collection of active filters"
+        },
+        {
+          "name": "event.filterMatchModes",
+          "type": "object",
+          "description": "Match modes per field"
+        }
+      ]
+    },
+    {
+      "name": "sort",
+      "title": "Callback to invoke on sort. Page and Filter information is also available for lazy loading implementation.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "event.first",
+          "type": "number",
+          "description": "Index of first record"
+        },
+        {
+          "name": "event.rows",
+          "type": "number",
+          "description": "Number of rows to display in new page"
+        },
+        {
+          "name": "event.sortField",
+          "type": "object",
+          "description": "Field to sort against"
+        },
+        {
+          "name": "event.sortOrder",
+          "type": "number",
+          "description": "Sort order as integer"
+        },
+        {
+          "name": "event.multiSortMeta",
+          "type": "object",
+          "description": "MultiSort metadata"
+        },
+        {
+          "name": "event.filters",
+          "type": "object",
+          "description": "Collection of active filters"
+        },
+        {
+          "name": "event.filterMatchModes",
+          "type": "object",
+          "description": "Match modes per field"
+        }
+      ]
+    },
+    {
+      "name": "filter",
+      "title": "Event to emit after filtering, not triggered in lazy mode.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "event.first",
+          "type": "number",
+          "description": "Index of first record"
+        },
+        {
+          "name": "event.rows",
+          "type": "number",
+          "description": "Number of rows to display in new page"
+        },
+        {
+          "name": "event.sortField",
+          "type": "object",
+          "description": "Field to sort against"
+        },
+        {
+          "name": "event.sortOrder",
+          "type": "number",
+          "description": "Sort order as integer"
+        },
+        {
+          "name": "event.multiSortMeta",
+          "type": "object",
+          "description": "MultiSort metadata"
+        },
+        {
+          "name": "event.filters",
+          "type": "object",
+          "description": "Collection of active filters"
+        },
+        {
+          "name": "event.filteredValue",
+          "type": "string",
+          "description": "Filtered collection"
+        },
+        {
+          "name": "event.filterMatchModes",
+          "type": "object",
+          "description": "Match modes per field"
+        }
+      ]
+    },
+    {
+      "name": "node-select",
+      "title": "Callback to invoke when a node is selected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-unselect",
+      "title": "Callback to invoke when a node is unselected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-expand",
+      "title": "Callback to invoke when a node is expanded.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-collapse",
+      "title": "Callback to invoke when a node is collapsed.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "column-resize-end",
+      "title": "Callback to invoke when a column is resized.",
+      "arguments": [
+        {
+          "name": "event.element",
+          "type": "object",
+          "description": "DOM element of the resized column."
+        },
+        {
+          "name": "event.delta",
+          "type": "number",
+          "description": "Change in column width"
+        }
+      ]
+    }
+  ]
+}

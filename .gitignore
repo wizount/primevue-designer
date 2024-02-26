@@ -10,5 +10,4 @@ lib-render/
 yarn.lock
 /desc.md
 /config-generator/
-/src/primevue-config/json-alt
 

@@ -1,0 +1,177 @@
+{
+  "__id__": "accordion",
+  "name": "Accordion",
+  "tag": "p-accordion",
+  "tagIcon": "accordion",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/accordion",
+  "description": "Accordion groups a collection of contents in tabs.",
+  "attributes": {
+    "multiple": {
+      "label": "multiple",
+      "title": "When enabled, multiple tabs can be activated at the same time.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "active-index": {
+      "label": "activeIndex",
+      "title": "Index of the active tab or an array of indexes in multiple mode.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        },
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ]
+    },
+    "lazy": {
+      "label": "lazy",
+      "title": "When enabled, hidden tabs are not rendered at all. Defaults to false that hides tabs with css.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "expand-icon": {
+      "label": "expandIcon",
+      "title": "Icon of a collapsed tab.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "collapse-icon": {
+      "label": "collapseIcon",
+      "title": "Icon of a expanded tab.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "select-on-focus": {
+      "label": "selectOnFocus",
+      "title": "When enabled, the focused tab is activated.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Custom template."
+    },
+    {
+      "name": "collapseicon",
+      "title": "Custom collapse icon template."
+    },
+    {
+      "name": "expandicon",
+      "title": "Custom expand icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "tab-open",
+      "title": "Callback to invoke when a tab gets expanded.",
+      "arguments": [
+        {
+          "name": "originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "index",
+          "type": "number",
+          "description": "Opened tab index"
+        }
+      ]
+    },
+    {
+      "name": "tab-close",
+      "title": "Callback to invoke when an active tab is collapsed by clicking on the header.",
+      "arguments": [
+        {
+          "name": "originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "index",
+          "type": "number",
+          "description": "Closed tab index"
+        }
+      ]
+    },
+    {
+      "name": "tab-click",
+      "title": "Callback to invoke when an active tab is clicked.",
+      "arguments": [
+        {
+          "name": "originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "index",
+          "type": "number",
+          "description": "Index of the clicked tab"
+        }
+      ]
+    }
+  ]
+}

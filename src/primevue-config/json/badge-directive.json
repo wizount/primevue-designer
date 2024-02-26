@@ -1,0 +1,13 @@
+{
+  "__id__": "badge-directive",
+  "name": "BadgeDirective",
+  "tag": "p-badge-directive",
+  "tagIcon": "badgeDirective",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/badgedirective",
+  "description": "When Badge used as a directive, badge needs to be configured at the application with a name of your choice.",
+  "attributes": {},
+  "slots": []
+}

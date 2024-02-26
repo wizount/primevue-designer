@@ -475,8 +475,9 @@ function cloneDrawItem(origin) {
   if (!clone["__config__"]) {
     clone["__config__"] = {}
   }
-
-
+  if (!clone["__directives__"]) {
+    clone["__directives__"] = {}
+  }
   delete clone.__link__;
   createIdAndKey(clone);
   if (!clone["__props__"]) {

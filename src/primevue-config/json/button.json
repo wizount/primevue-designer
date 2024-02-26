@@ -1,0 +1,239 @@
+{
+  "__id__": "button",
+  "name": "Button",
+  "tag": "p-button",
+  "tagIcon": "button",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/button",
+  "description": "Button is an extension to standard button element with icons and theming.",
+  "attributes": {
+    "label": {
+      "label": "label",
+      "title": "Text of the button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Name of the icon.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "icon-pos": {
+      "label": "iconPos",
+      "title": "Position of the icon, valid values are \"left\", \"right\", \"bottom\" and \"top\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "right",
+              "bottom",
+              "top"
+            ]
+          }
+        }
+      ],
+      "default": "left"
+    },
+    "icon-class": {
+      "label": "iconClass",
+      "title": "Style class of the icon.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "badge": {
+      "label": "badge",
+      "title": "Value of the badge.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "badge-class": {
+      "label": "badgeClass",
+      "title": "Style class of the badge.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "loading": {
+      "label": "loading",
+      "title": "Whether the button is in loading state.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loading-icon": {
+      "label": "loadingIcon",
+      "title": "Icon to display in loading state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": "pi pi-spinner pi-spin"
+    },
+    "link": {
+      "label": "link",
+      "title": "Add a link style to the button.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "severity": {
+      "label": "severity",
+      "title": "Defines the style of the button, valid values are \"secondary\", \"success\", \"info\", \"warning\", \"help\", \"danger\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "secondary",
+              "success",
+              "info",
+              "warning",
+              "help",
+              "danger"
+            ]
+          }
+        }
+      ]
+    },
+    "raised": {
+      "label": "raised",
+      "title": "Add a shadow to indicate elevation.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "rounded": {
+      "label": "rounded",
+      "title": "Add a circular border radius to the button.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "text": {
+      "label": "text",
+      "title": "Add a textual class to the button without a background initially.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "outlined": {
+      "label": "outlined",
+      "title": "Add a border class without a background initially.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "size": {
+      "label": "size",
+      "title": "Defines the size of the button, valid values are \"small\" and \"large\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "small",
+              "large"
+            ]
+          }
+        }
+      ]
+    },
+    "plain": {
+      "label": "plain",
+      "title": "Add a plain textual class to the button without a background initially.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    },
+    {
+      "name": "loadingicon",
+      "title": "Custom loading icon template."
+    }
+  ],
+  "events": []
+}

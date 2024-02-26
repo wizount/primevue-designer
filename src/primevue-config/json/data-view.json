@@ -1,0 +1,277 @@
+{
+  "__id__": "data-view",
+  "name": "DataView",
+  "tag": "p-data-view",
+  "tagIcon": "dataView",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/dataview",
+  "description": "DataView displays data in grid or list layout with pagination and sorting features.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "An array of objects to display.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "layout": {
+      "label": "layout",
+      "title": "Layout of the items, valid values are \"list\" and \"grid\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "list",
+              "grid"
+            ]
+          }
+        }
+      ],
+      "default": "list"
+    },
+    "rows": {
+      "label": "rows",
+      "title": "Number of rows to display per page.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "first": {
+      "label": "first",
+      "title": "ndex of the first record to render.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "total-records": {
+      "label": "totalRecords",
+      "title": "Number of total records, defaults to length of value when not defined.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "paginator": {
+      "label": "paginator",
+      "title": "When specified as true, enables the pagination.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "paginator-position": {
+      "label": "paginatorPosition",
+      "title": "Position of the paginator, options are \"top\",\"bottom\" or \"both\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "top\",\"bottom",
+              "both"
+            ]
+          }
+        }
+      ],
+      "default": "bottom"
+    },
+    "always-show-paginator": {
+      "label": "alwaysShowPaginator",
+      "title": "Whether to show it even there is only one page.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "paginator-template": {
+      "label": "paginatorTemplate",
+      "title": "Template of the paginator.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+    },
+    "page-link-size": {
+      "label": "pageLinkSize",
+      "title": "Number of page links to display.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 5
+    },
+    "rows-per-page-options": {
+      "label": "rowsPerPageOptions",
+      "title": "Array of integer values to display inside rows per page dropdown.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "current-page-report-template": {
+      "label": "currentPageReportTemplate",
+      "title": "Template of the current page report element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "({currentPage} of {totalPages})"
+    },
+    "sort-field": {
+      "label": "sortField",
+      "title": "Property name or a getter function of data to use in sorting by default.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "sort-order": {
+      "label": "sortOrder",
+      "title": "Order to sort the data by default.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "lazy": {
+      "label": "lazy",
+      "title": "Defines if data is loaded and interacted with in lazy manner.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "Name of the data that uniquely identifies the a record in the data.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component's header"
+    },
+    {
+      "name": "paginatorstart",
+      "title": "Custom content for the component paginator's left side"
+    },
+    {
+      "name": "paginatorend",
+      "title": "Custom content for the component paginator's right side"
+    },
+    {
+      "name": "list",
+      "title": "Content for the list layout"
+    },
+    {
+      "name": "grid",
+      "title": "Content for the grid layout"
+    },
+    {
+      "name": "empty",
+      "title": "Custom content when there is no data to display"
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component's footer"
+    }
+  ],
+  "events": [
+    {
+      "name": "page",
+      "title": "Callback to invoke when page changes, the event object contains information about the new state.",
+      "arguments": [
+        {
+          "name": "event.page",
+          "type": "number",
+          "description": "New page number"
+        },
+        {
+          "name": "event.first",
+          "type": "number",
+          "description": "Index of first record"
+        },
+        {
+          "name": "event.rows",
+          "type": "number",
+          "description": "Number of rows to display in new page"
+        },
+        {
+          "name": "event.pageCount",
+          "type": "number",
+          "description": "Total number of pages"
+        }
+      ]
+    }
+  ]
+}

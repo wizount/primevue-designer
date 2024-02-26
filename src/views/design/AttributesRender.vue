@@ -208,7 +208,6 @@ function setDefaultSetterData() {
 //更改
 
 function changeType(key, typeName) {
-  console.info(key, typeName)
   const types = props.attributeConfig[key].types;
   let nextTypeName
   let thisDefault;

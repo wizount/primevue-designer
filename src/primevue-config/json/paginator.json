@@ -1,0 +1,177 @@
+{
+  "__id__": "paginator",
+  "name": "Paginator",
+  "tag": "p-paginator",
+  "tagIcon": "paginator",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/paginator",
+  "description": "Paginator is a generic component to display content in paged format.",
+  "attributes": {
+    "total-records": {
+      "label": "totalRecords",
+      "title": "Number of total records.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "rows": {
+      "label": "rows",
+      "title": "Data count to display per page.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "first": {
+      "label": "first",
+      "title": "Zero-relative number of the first row to be displayed.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "page-link-size": {
+      "label": "pageLinkSize",
+      "title": "Number of page links to display.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 5
+    },
+    "rows-per-page-options": {
+      "label": "rowsPerPageOptions",
+      "title": "Array of integer values to display inside rows per page dropdown.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "template": {
+      "label": "template",
+      "title": "Template of the paginator.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink RowsPerPageDropdown"
+    },
+    "current-page-report-template": {
+      "label": "currentPageReportTemplate",
+      "title": "Template of the current page report element. Available placeholders are {currentPage},{totalPages},{rows},{first},{last} and {totalRecords}",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "({currentPage} of {totalPages})"
+    },
+    "always-show": {
+      "label": "alwaysShow",
+      "title": "Whether to show the paginator even there is only one page.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "start",
+      "title": "Custom content for the component's left side."
+    },
+    {
+      "name": "end",
+      "title": "Custom content for the component's right side."
+    },
+    {
+      "name": "firstpagelinkicon",
+      "title": "Custom first page link icon template."
+    },
+    {
+      "name": "prevpagelinkicon",
+      "title": "Custom previous page link icon template."
+    },
+    {
+      "name": "nextpagelinkicon",
+      "title": "Custom next page link icon template."
+    },
+    {
+      "name": "lastpagelinkicon",
+      "title": "Custom last page link icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "page",
+      "title": "Callback to invoke when page changes, the event object contains information about the new state.",
+      "arguments": [
+        {
+          "name": "event.page",
+          "type": "number",
+          "description": "New page number"
+        },
+        {
+          "name": "event.first",
+          "type": "number",
+          "description": "Index of first record"
+        },
+        {
+          "name": "event.rows",
+          "type": "number",
+          "description": "Number of rows to display in new page"
+        },
+        {
+          "name": "event.pageCount",
+          "type": "number",
+          "description": "Total number of pages"
+        }
+      ]
+    }
+  ]
+}

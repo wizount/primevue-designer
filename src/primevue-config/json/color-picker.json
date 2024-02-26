@@ -1,0 +1,180 @@
+{
+  "__id__": "color-picker",
+  "name": "ColorPicker",
+  "tag": "p-color-picker",
+  "tagIcon": "colorPicker",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/colorpicker",
+  "description": "ColorPicker is an input component to select a color.",
+  "attributes": {
+    "vModel": "modelValue",
+    "default-color": {
+      "label": "defaultColor",
+      "title": "Initial color to display when value is not defined.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "ff0000"
+    },
+    "inline": {
+      "label": "inline",
+      "title": "Whether to display as an overlay or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "format": {
+      "label": "format",
+      "title": "Format to use in value binding, supported formats are \"hex\", \"rgb\" and \"hsb\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "hex"
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the component should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "panel-class": {
+      "label": "panelClass",
+      "title": "Style class of the overlay panel.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the overlay gets attached. Special keywords are \"body\" for document body and \"self\" for the element itself.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "body"
+    },
+    "aria-labelledby": {
+      "label": "aria-labelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "aria-label",
+      "title": "Used to define a string that labels the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [],
+  "events": [
+    {
+      "name": "change",
+      "title": "Callback to invoke when a color is selected.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Original event"
+        },
+        {
+          "name": "event.value",
+          "type": "any",
+          "description": "Selected color"
+        }
+      ]
+    },
+    {
+      "name": "show",
+      "title": "Callback to invoke when popup is shown."
+    },
+    {
+      "name": "hide",
+      "title": "Callback to invoke when popup is hidden."
+    }
+  ]
+}

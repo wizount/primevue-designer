@@ -1,0 +1,725 @@
+{
+  "__id__": "multi-select",
+  "name": "MultiSelect",
+  "tag": "p-multi-select",
+  "tagIcon": "multiSelect",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/multiselect",
+  "description": "MultiSelect is used to multiple values from a list of options.",
+  "attributes": {
+    "vModel": "modelValue",
+    "options": {
+      "label": "options",
+      "title": "An array of selectitems to display as the available options.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "option-label": {
+      "label": "optionLabel",
+      "title": "Property name or getter function to use as the label of an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-value": {
+      "label": "optionValue",
+      "title": "Property name or getter function to use as the value of an option, defaults to the option itself when not defined.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-disabled": {
+      "label": "optionDisabled",
+      "title": "Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-group-label": {
+      "label": "optionGroupLabel",
+      "title": "Property name or getter function to use as the label of an option group.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-group-children": {
+      "label": "optionGroupChildren",
+      "title": "Property name or getter function that refers to the children options of option group.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "scroll-height": {
+      "label": "scrollHeight",
+      "title": "Height of the viewport, a scrollbar is defined if height of list exceeds this value.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "200px"
+    },
+    "placeholder": "Please enter ",
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the component should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "panel-style": {
+      "label": "panelStyle",
+      "title": "Inline style of the overlay panel.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "panel-class": {
+      "label": "panelClass",
+      "title": "Style class of the overlay panel.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "panel-props": {
+      "label": "panelProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the overlay panel.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "filter-input-props": {
+      "label": "filterInputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the filter input inside the overlay panel.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "close-button-props": {
+      "label": "closeButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the close button inside the overlay panel.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "A property to uniquely identify an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter": {
+      "label": "filter",
+      "title": "When specified, displays a filter input at header.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "filter-placeholder": {
+      "label": "filterPlaceholder",
+      "title": "Placeholder text to show when filter input is empty.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter-locale": {
+      "label": "filterLocale",
+      "title": "Locale to use in filtering. The default locale is the host environment's current locale.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter-match-mode": {
+      "label": "filterMatchMode",
+      "title": "Defines the filtering algorithm to use when searching the options. Valid values are \"contains\" (default), \"startsWith\" and \"endsWith\"",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "contains",
+              "startsWith",
+              "endsWith"
+            ]
+          }
+        }
+      ],
+      "default": "contains"
+    },
+    "filter-fields": {
+      "label": "filterFields",
+      "title": "Fields used when filtering the options, defaults to optionLabel.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the overlay gets attached. Special keywords are 'body' for document body and 'self' for the element itself.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "body"
+    },
+    "display": {
+      "label": "display",
+      "title": "Defines how the selected items are displayed, valid values are \"comma\" and \"chip\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "comma",
+              "chip"
+            ]
+          }
+        }
+      ],
+      "default": "comma"
+    },
+    "selected-items-label": {
+      "label": "selectedItemsLabel",
+      "title": "Label to display after exceeding max selected labels.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "{0} items selected"
+    },
+    "max-selected-labels": {
+      "label": "maxSelectedLabels",
+      "title": "Decides how many selected item labels to show at most.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "selection-limit": {
+      "label": "selectionLimit",
+      "title": "Maximum number of selectable items.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "show-toggle-all": {
+      "label": "showToggleAll",
+      "title": "Whether to show the header checkbox to toggle the selection of all items at once.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loading": {
+      "label": "loading",
+      "title": "Whether the multiselect is in loading state.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loading-icon": {
+      "label": "loadingIcon",
+      "title": "Icon to display in loading state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "checkbox-icon": {
+      "label": "checkboxIcon",
+      "title": "Icon to display in the checkboxes.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "close-icon": {
+      "label": "closeIcon",
+      "title": "Icon to display in the dropdown close button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "dropdown-icon": {
+      "label": "dropdownIcon",
+      "title": "Icon to display in the dropdown.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "filter-icon": {
+      "label": "filterIcon",
+      "title": "Icon to display in filter input.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "remove-token-icon": {
+      "label": "removeTokenIcon",
+      "title": "Icon to display in chip remove action.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "select-all": {
+      "label": "selectAll",
+      "title": "Whether all data is selected.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "reset-filter-on-hide": {
+      "label": "resetFilterOnHide",
+      "title": "Clears the filter value when hiding the dropdown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "virtual-scroller-options": {
+      "label": "virtualScrollerOptions",
+      "title": "Whether to use the virtualScroller feature. The properties of VirtualScroller component can be used like an object in it.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "auto-option-focus": {
+      "label": "autoOptionFocus",
+      "title": "Whether to focus on the first visible or selected element when the overlay panel is shown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "auto-filter-focus": {
+      "label": "autoFilterFocus",
+      "title": "Whether to focus on the filter element when the overlay panel is shown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "filter-message": {
+      "label": "filterMessage",
+      "title": "Text to be displayed in hidden accessible field when filtering returns any results. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "{0} results are available"
+    },
+    "selection-message": {
+      "label": "selectionMessage",
+      "title": "Text to be displayed in hidden accessible field when options are selected. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "{0} items selected"
+    },
+    "empty-selection-message": {
+      "label": "emptySelectionMessage",
+      "title": "Text to be displayed in hidden accessible field when any option is not selected. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No selected item"
+    },
+    "empty-filter-message": {
+      "label": "emptyFilterMessage",
+      "title": "Text to display when filtering does not return any results. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No results found"
+    },
+    "empty-message": {
+      "label": "emptyMessage",
+      "title": "Text to display when there are no options available. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No results found"
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "aria-label": {
+      "label": "aria-label",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-labelledby": {
+      "label": "aria-labelledby",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "value",
+      "title": "Custom content for the item value."
+    },
+    {
+      "name": "chip",
+      "title": "Custom content for the chip display."
+    },
+    {
+      "name": "indicator",
+      "title": "Custom content for the dropdown indicator."
+    },
+    {
+      "name": "header",
+      "title": "Custom content for the component's header."
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component's footer."
+    },
+    {
+      "name": "option",
+      "title": "Custom content for the item's option."
+    },
+    {
+      "name": "optiongroup",
+      "title": "Custom content for the item's optiongroup."
+    },
+    {
+      "name": "emptyfilter",
+      "title": "Custom content when there is no filtered data to display."
+    },
+    {
+      "name": "empty",
+      "title": "Custom content when there is no data to display."
+    },
+    {
+      "name": "content",
+      "title": "Custom content for the virtual scroller."
+    },
+    {
+      "name": "loader",
+      "title": "Custom content for the virtual scroller loader items."
+    },
+    {
+      "name": "removetokenicon",
+      "title": "Custom remove token icon template."
+    },
+    {
+      "name": "headercheckboxicon",
+      "title": "Custom header checkbox icon template."
+    },
+    {
+      "name": "filtericon",
+      "title": "Custom filter icon template."
+    },
+    {
+      "name": "closeicon",
+      "title": "Custom close icon template."
+    },
+    {
+      "name": "itemcheckboxicon",
+      "title": "Custom item checkbox icon template."
+    },
+    {
+      "name": "loadingicon",
+      "title": "Custom loading icon template."
+    },
+    {
+      "name": "dropdownicon",
+      "title": "Custom dropdown icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "title": "Callback to invoke on value change.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "array",
+          "description": "Selected option value"
+        }
+      ]
+    },
+    {
+      "name": "focus",
+      "title": "Callback to invoke when component receives focus.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "blur",
+      "title": "Callback to invoke when component loses focus.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "before-show",
+      "title": "Callback to invoke before the overlay is shown."
+    },
+    {
+      "name": "before-hide",
+      "title": "Callback to invoke before the overlay is hidden."
+    },
+    {
+      "name": "show",
+      "title": "Callback to invoke when the overlay is shown."
+    },
+    {
+      "name": "hide",
+      "title": "Callback to invoke when the overlay is hidden."
+    },
+    {
+      "name": "filter",
+      "title": "Callback to invoke on filter input.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "string",
+          "description": "Filter value"
+        }
+      ]
+    },
+    {
+      "name": "selectall-change",
+      "title": "Callback to invoke when all data is selected.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.checked",
+          "type": "boolean",
+          "description": "Whether all data is selected."
+        }
+      ]
+    }
+  ]
+}

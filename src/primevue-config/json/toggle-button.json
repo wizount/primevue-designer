@@ -1,0 +1,203 @@
+{
+  "__id__": "toggle-button",
+  "name": "ToggleButton",
+  "tag": "p-toggle-button",
+  "tagIcon": "toggleButton",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/togglebutton",
+  "description": "ToggleButton is used to select a boolean value using a button.",
+  "attributes": {
+    "vModel": "modelValue",
+    "on-icon": {
+      "label": "onIcon",
+      "title": "Icon for the on state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "off-icon": {
+      "label": "offIcon",
+      "title": "Icon for the off state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "on-label": {
+      "label": "onLabel",
+      "title": "Label for the on state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "yes"
+    },
+    "off-label": {
+      "label": "offLabel",
+      "title": "Label for the off state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "no"
+    },
+    "icon-pos": {
+      "label": "iconPos",
+      "title": "Position of the icon, valid values are \"left\" and \"right\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "right"
+            ]
+          }
+        }
+      ],
+      "default": "left"
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the focus input to match a label defined for the chips.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "icon",
+      "title": "custom icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "title": "Callback to invoke on value change.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "focus",
+      "title": "Callback to invoke when the component receives focus.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "blur",
+      "title": "Callback to invoke when the component loses focus.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    }
+  ]
+}
