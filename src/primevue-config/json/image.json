@@ -1,0 +1,127 @@
+{
+  "__id__": "image",
+  "name": "Image",
+  "tag": "p-image",
+  "tagIcon": "image",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/image",
+  "description": "Displays an image with preview and tranformation options.",
+  "attributes": {
+    "preview": {
+      "label": "preview",
+      "title": "Controls the preview functionality.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "indicator-icon": {
+      "label": "indicatorIcon",
+      "title": "Custom indicator icon.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": "pi pi-eye"
+    },
+    "zoom-in-disabled": {
+      "label": "zoomInDisabled",
+      "title": "Disable the zoom-in button",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "zoom-out-disabled": {
+      "label": "zoomOutDisabled",
+      "title": "Disable the zoom-out button",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "indicator",
+      "title": "Custom content for the preview indicator."
+    },
+    {
+      "name": "refresh",
+      "title": "Custom content for the component refresh."
+    },
+    {
+      "name": "undo",
+      "title": "Custom content for the component undo."
+    },
+    {
+      "name": "zoomout",
+      "title": "Custom content for the component zoomout."
+    },
+    {
+      "name": "zoomin",
+      "title": "Custom content for the component zoomin."
+    },
+    {
+      "name": "close",
+      "title": "Custom content for the component close."
+    },
+    {
+      "name": "image",
+      "title": "Custom content for the component image."
+    },
+    {
+      "name": "preview",
+      "title": "Custom content for the component preview."
+    }
+  ],
+  "events": [
+    {
+      "name": "show",
+      "title": "Triggered when the preview overlay is shown."
+    },
+    {
+      "name": "hide",
+      "title": "Triggered when the preview overlay is hidden."
+    },
+    {
+      "name": "error",
+      "title": "Triggered when an error occurs while loading an image file."
+    }
+  ]
+}

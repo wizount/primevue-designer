@@ -1,0 +1,35 @@
+{
+  "__id__": "row",
+  "name": "Row",
+  "tag": "p-row",
+  "tagIcon": "row",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/datatable",
+  "description": "DataTable can be grouped by defining a Row component with nested columns",
+  "attributes": {
+    "type": {
+      "label": "type",
+      "title": "Defines the type of the group.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    }
+  },
+  "slots": []
+}

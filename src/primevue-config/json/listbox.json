@@ -112,6 +112,17 @@
       ],
       "default": false
     },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
     "data-key": {
       "label": "dataKey",
       "title": "A property to uniquely identify an option.",
@@ -235,7 +246,7 @@
           "tag": "p-input-switch"
         }
       ],
-      "default": true
+      "default": false
     },
     "select-on-focus": {
       "label": "selectOnFocus",

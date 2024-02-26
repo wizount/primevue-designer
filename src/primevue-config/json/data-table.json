@@ -732,6 +732,17 @@
       ],
       "default": false
     },
+    "highlight-on-select": {
+      "label": "highlightOnSelect",
+      "title": "Highlights automatically the first item.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
     "size": {
       "label": "size",
       "title": "Defines the size of the table.",

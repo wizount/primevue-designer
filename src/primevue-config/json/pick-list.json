@@ -32,6 +32,17 @@
       ],
       "default": true
     },
+    "auto-option-focus": {
+      "label": "autoOptionFocus",
+      "title": "Whether to focus on the first visible or selected element when the overlay panel is shown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
     "data-key": {
       "label": "dataKey",
       "title": "Name of the field that uniquely identifies the a record in the data.",

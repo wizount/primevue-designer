@@ -1,0 +1,72 @@
+{
+  "__id__": "inline-message",
+  "name": "InlineMessage",
+  "tag": "p-inline-message",
+  "tagIcon": "inlineMessage",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/message",
+  "description": "InlineMessage component is useful in cases where a single message needs to be displayed related to an element such as forms",
+  "attributes": {
+    "severity": {
+      "label": "severity",
+      "title": "Severity level of the message. Valid severities are \"success\", \"info\", \"warn\", \"error\", \"secondary\" and \"contrast\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "success",
+              "info",
+              "warn",
+              "error",
+              "secondary",
+              "contrast"
+            ]
+          }
+        }
+      ],
+      "default": "error"
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Display a custom icon for the message.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    }
+  ]
+}

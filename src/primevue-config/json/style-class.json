@@ -1,0 +1,13 @@
+{
+  "__id__": "style-class",
+  "name": "StyleClass",
+  "tag": "p-style-class",
+  "tagIcon": "styleClass",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/styleclass",
+  "description": "StyleClass manages css classes declaratively to during enter/leave animations or just to toggle classes on an element.",
+  "attributes": {},
+  "slots": []
+}

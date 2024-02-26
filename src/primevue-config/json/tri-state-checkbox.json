@@ -21,6 +21,27 @@
       ],
       "default": false
     },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
     "tabindex": {
       "label": "tabindex",
       "title": "Index of the element in tabbing order.",

@@ -1,0 +1,179 @@
+{
+  "__id__": "radio-button",
+  "name": "RadioButton",
+  "tag": "p-radio-button",
+  "tagIcon": "radioButton",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/radiobutton",
+  "description": "RadioButton is an extension to standard radio button element with theming.",
+  "attributes": {
+    "vModel": "modelValue",
+    "value": {
+      "label": "value",
+      "title": "Value of the checkbox.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "name": {
+      "label": "name",
+      "title": "Name of the input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "aria-labelledby": {
+      "label": "aria-labelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "aria-label",
+      "title": "Used to define a string that labels the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [],
+  "events": [
+    {
+      "name": "click",
+      "title": "Callback to invoke on radio button click.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "change",
+      "title": "Callback to invoke on radio button value change.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    }
+  ]
+}

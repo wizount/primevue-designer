@@ -1,0 +1,74 @@
+{
+  "__id__": "progress-bar",
+  "name": "ProgressBar",
+  "tag": "p-progress-bar",
+  "tagIcon": "progressBar",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/progressbar",
+  "description": "ProgressBar is a process status indicator.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "Current value of the progress.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "mode": {
+      "label": "mode",
+      "title": "Defines the mode of the progress, valid values are \"determinate\" and \"indeterminate\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "determinate",
+              "indeterminate"
+            ]
+          }
+        }
+      ],
+      "default": "determinate"
+    },
+    "show-value": {
+      "label": "showValue",
+      "title": "Whether to display the progress bar value.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": []
+}

@@ -1,0 +1,62 @@
+{
+  "__id__": "menubar",
+  "name": "Menubar",
+  "tag": "p-menubar",
+  "tagIcon": "menubar",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/menubar",
+  "description": "Menubar is a horizontal menu component.",
+  "attributes": {
+    "vModel": "modelValue",
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "start",
+      "title": "Custom content before the content."
+    },
+    {
+      "name": "end",
+      "title": "Custom content after the content."
+    },
+    {
+      "name": "item",
+      "title": "Custom menuitem template."
+    },
+    {
+      "name": "baricon",
+      "title": "Custom bar icon template."
+    },
+    {
+      "name": "submenuicon",
+      "title": "Custom submenu icon template."
+    },
+    {
+      "name": "itemicon",
+      "title": "Custom item icon template."
+    }
+  ]
+}

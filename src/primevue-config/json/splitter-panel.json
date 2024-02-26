@@ -1,0 +1,45 @@
+{
+  "__id__": "splitter-panel",
+  "name": "SplitterPanel",
+  "tag": "p-splitter-panel",
+  "tagIcon": "splitterPanel",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/splitter",
+  "description": "Splitter requires two SplitterPanel components to wrap.",
+  "attributes": {
+    "size": {
+      "label": "size",
+      "title": "Size of the element relative to 100%.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "min-size": {
+      "label": "minSize",
+      "title": "Minimum size of the element relative to 100%.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    }
+  },
+  "slots": []
+}

@@ -1,0 +1,195 @@
+{
+  "__id__": "order-list",
+  "name": "OrderList",
+  "tag": "p-order-list",
+  "tagIcon": "orderList",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/orderlist",
+  "description": "OrderList is used to managed the order of a collection.",
+  "attributes": {
+    "vModel": "modelValue",
+    "selection": {
+      "label": "selection",
+      "title": "Selected items in the list.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "meta-key-selection": {
+      "label": "metaKeySelection",
+      "title": "Defines whether metaKey is requred or not for the selection. When true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually. On touch enabled devices, metaKeySelection is turned off automatically.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "auto-option-focus": {
+      "label": "autoOptionFocus",
+      "title": "Whether to focus on the first visible or selected element when the overlay panel is shown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "Name of the field that uniquely identifies the a record in the data.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "list-style": {
+      "label": "listStyle",
+      "title": "Inline style of the the list element.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "responsive": {
+      "label": "responsive",
+      "title": "Whether the list optimizes layout based on screen size.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "breakpoint": {
+      "label": "breakpoint",
+      "title": "The breakpoint to define the maximum width boundary when responsiveness is enabled.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "960px"
+    },
+    "striped-rows": {
+      "label": "stripedRows",
+      "title": "Whether to displays rows with alternating colors.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component's header."
+    },
+    {
+      "name": "item",
+      "title": "Custom content for the item."
+    },
+    {
+      "name": "controlsstart",
+      "title": "Custom content before the buttons."
+    },
+    {
+      "name": "controlsend",
+      "title": "Custom content after the buttons."
+    },
+    {
+      "name": "movetopicon",
+      "title": "Custom move top icon template."
+    },
+    {
+      "name": "moveupicon",
+      "title": "Custom move up icon template."
+    },
+    {
+      "name": "movedownicon",
+      "title": "Custom move down icon template."
+    },
+    {
+      "name": "movebottomicon",
+      "title": "Custom move bottom icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "reorder",
+      "title": "Callback to invoke when the list is reordered.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "array",
+          "description": "Ordered list"
+        },
+        {
+          "name": "event.direction",
+          "type": "string",
+          "description": "Direction of the change; \"up\", \"down\", \"bottom\", \"top\""
+        }
+      ]
+    },
+    {
+      "name": "selection-change",
+      "title": "Callback to invoke when selection changes.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "array",
+          "description": "Ordered list"
+        }
+      ]
+    }
+  ]
+}

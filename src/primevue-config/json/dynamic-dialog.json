@@ -1,0 +1,14 @@
+{
+  "__id__": "dynamic-dialog",
+  "name": "DynamicDialog",
+  "tag": "p-dynamic-dialog",
+  "tagIcon": "dynamicDialog",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/dynamicdialog",
+  "description": "Dialogs can be created dynamically with any component as the content using a DialogService.",
+  "attributes": {},
+  "slots": [],
+  "events": []
+}

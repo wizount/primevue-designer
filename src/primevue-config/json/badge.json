@@ -25,11 +25,21 @@
     },
     "severity": {
       "label": "severity",
-      "title": "Severity type of the badge.",
+      "title": "Severity type of the badge. Valid severities are \"secondary\", \"success\", \"info\", \"warning\", \"danger\" and \"contrast\".",
       "types": [
         {
           "name": "string",
-          "tag": "p-input-text"
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "secondary",
+              "success",
+              "info",
+              "warning",
+              "danger",
+              "contrast"
+            ]
+          }
         }
       ]
     },

@@ -181,6 +181,27 @@
       ],
       "default": false
     },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
     "data-key": {
       "label": "dataKey",
       "title": "A property to uniquely identify an option.",
@@ -346,6 +367,17 @@
       ],
       "default": false
     },
+    "reset-filter-on-clear": {
+      "label": "resetFilterOnClear",
+      "title": "Clears the filter value when clicking on the clear icon.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
     "virtual-scroller-options": {
       "label": "virtualScrollerOptions",
       "title": "Whether to use the virtualScroller feature. The properties of VirtualScroller component can be used like an object in it.",
@@ -366,7 +398,7 @@
           "tag": "p-input-switch"
         }
       ],
-      "default": true
+      "default": false
     },
     "auto-filter-focus": {
       "label": "autoFilterFocus",

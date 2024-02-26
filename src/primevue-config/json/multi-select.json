@@ -110,6 +110,27 @@
       ],
       "default": false
     },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
     "input-id": {
       "label": "inputId",
       "title": "Identifier of the underlying input element.",
@@ -438,11 +459,22 @@
           "tag": "p-input-switch"
         }
       ],
-      "default": true
+      "default": false
     },
     "auto-filter-focus": {
       "label": "autoFilterFocus",
       "title": "Whether to focus on the filter element when the overlay panel is shown.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "highlight-on-select": {
+      "label": "highlightOnSelect",
+      "title": "Highlights automatically the first item.",
       "types": [
         {
           "name": "boolean",

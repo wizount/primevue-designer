@@ -113,7 +113,7 @@
     },
     "severity": {
       "label": "severity",
-      "title": "Defines the style of the button, valid values are \"secondary\", \"success\", \"info\", \"warning\", \"help\", \"danger\".",
+      "title": "Defines the style of the button, valid values are \"secondary\", \"success\", \"info\", \"warning\", \"help\", \"danger\", \"contrast\".",
       "types": [
         {
           "name": "string",
@@ -125,7 +125,8 @@
               "info",
               "warning",
               "help",
-              "danger"
+              "danger",
+              "contrast"
             ]
           }
         }

@@ -1,0 +1,146 @@
+{
+  "__id__": "organization-chart",
+  "name": "OrganizationChart",
+  "tag": "p-organization-chart",
+  "tagIcon": "organizationChart",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/organizationchart",
+  "description": "OrganizationChart visualizes hierarchical organization data.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "Value of the component.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "selection-keys": {
+      "label": "selectionKeys",
+      "title": "A map instance of key-value pairs to represented the selected nodes.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "selection-mode": {
+      "label": "selectionMode",
+      "title": "Type of the selection, valid values are \"single\" and \"multiple\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "single",
+              "multiple"
+            ]
+          }
+        }
+      ]
+    },
+    "collapsible": {
+      "label": "collapsible",
+      "title": "Whether the nodes can be expanded or toggled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "collapsed-keys": {
+      "label": "collapsedKeys",
+      "title": "A map instance of key-value pairs to represented the collapsed nodes.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "togglericon",
+      "title": "Custom toggler icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "node-select",
+      "title": "Callback to invoke when a node is selected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-unselect",
+      "title": "Callback to invoke when a node is unselected.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-expand",
+      "title": "Callback to invoke when a node is expanded.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    },
+    {
+      "name": "node-collapse",
+      "title": "Callback to invoke when a node is collapsed.",
+      "arguments": [
+        {
+          "name": "node",
+          "type": "object",
+          "description": "Node instance"
+        }
+      ]
+    }
+  ]
+}

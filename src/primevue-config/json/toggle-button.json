@@ -90,6 +90,17 @@
       ],
       "default": false
     },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
     "input-id": {
       "label": "inputId",
       "title": "Identifier of the focus input to match a label defined for the chips.",

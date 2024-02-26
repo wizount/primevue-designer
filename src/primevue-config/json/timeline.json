@@ -1,0 +1,111 @@
+{
+  "__id__": "timeline",
+  "name": "Timeline",
+  "tag": "p-timeline",
+  "tagIcon": "timeline",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/timeline",
+  "description": "Timeline visualizes a series of chained events.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "An array of events to display.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "align": {
+      "label": "align",
+      "title": "Position of the timeline bar relative to the content. Valid values are \"left\", \"right\" and \"alternate\" for vertical layout and \"top\", \"bottom\" for horizontal layout.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "right",
+              "alternate",
+              "top",
+              "bottom"
+            ]
+          }
+        }
+      ],
+      "default": "left"
+    },
+    "layout": {
+      "label": "layout",
+      "title": "Orientation of the timeline, valid values are \"vertical\" and \"horizontal\".",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "vertical",
+              "horizontal"
+            ]
+          }
+        }
+      ],
+      "default": "vertical"
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "Name of the field that uniquely identifies the a record in the data.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "opposite",
+      "title": "Custom content for the content to be placed at the other side of the bar"
+    },
+    {
+      "name": "marker",
+      "title": "Custom content for the marker"
+    },
+    {
+      "name": "content",
+      "title": "Custom content"
+    },
+    {
+      "name": "connector",
+      "title": "Connector element"
+    }
+  ]
+}

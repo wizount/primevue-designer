@@ -1,0 +1,198 @@
+{
+  "__id__": "select-button",
+  "name": "SelectButton",
+  "tag": "p-select-button",
+  "tagIcon": "selectButton",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/selectbutton",
+  "description": "SelectButton is a form component to choose a value from a list of options using button elements.",
+  "attributes": {
+    "vModel": "modelValue",
+    "options": {
+      "label": "options",
+      "title": "An array of selectitems to display as the available options.",
+      "types": [
+        {
+          "name": "array",
+          "tag": "array-editor"
+        }
+      ],
+      "default": []
+    },
+    "option-label": {
+      "label": "optionLabel",
+      "title": "Property name or getter function to use as the label of an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-value": {
+      "label": "optionValue",
+      "title": "Property name or getter function to use as the value of an option, defaults to the option itself when not defined.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-disabled": {
+      "label": "optionDisabled",
+      "title": "Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "multiple": {
+      "label": "multiple",
+      "title": "When specified, allows selecting multiple values.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "A property to uniquely identify an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unselectable": {
+      "label": "unselectable",
+      "title": "Whether selection can not be cleared.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "allow-empty": {
+      "label": "allowEmpty",
+      "title": "Whether selection can be cleared.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "aria-labelledby": {
+      "label": "aria-labelledby",
+      "title": "Identifier of the underlying element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "option",
+      "title": "Custom content for the item's option"
+    }
+  ],
+  "events": [
+    {
+      "name": "change",
+      "title": "Callback to invoke on value change.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "any",
+          "description": "Single value or an array of values that are selected."
+        }
+      ]
+    },
+    {
+      "name": "focus",
+      "title": "Callback to invoke on focus.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "blur",
+      "title": "Callback to invoke on blur.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    }
+  ]
+}

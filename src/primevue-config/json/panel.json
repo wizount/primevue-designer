@@ -1,0 +1,111 @@
+{
+  "__id__": "panel",
+  "name": "Panel",
+  "tag": "p-panel",
+  "tagIcon": "panel",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/panel",
+  "description": "Panel is a container with the optional content toggle feature.",
+  "attributes": {
+    "header": {
+      "label": "header",
+      "title": "Header text of the panel.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "toggleable": {
+      "label": "toggleable",
+      "title": "Defines if content of panel can be expanded and collapsed.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "collapsed": {
+      "label": "collapsed",
+      "title": "Defines the initial state of panel content.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "toggle-button-props": {
+      "label": "toggleButtonProps",
+      "title": "Used to pass the custom value to read for the anchor inside the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom content for the component's header."
+    },
+    {
+      "name": "icons",
+      "title": "Custom content for the header's icon."
+    },
+    {
+      "name": "togglericon",
+      "title": "Custom content for the component's toggler icon."
+    },
+    {
+      "name": "footer",
+      "title": "Custom content for the component's footer."
+    }
+  ],
+  "events": [
+    {
+      "name": "toggle",
+      "title": "Callback to invoke when a tab toggle.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "boolean",
+          "description": "collapsed state as a boolean"
+        }
+      ]
+    }
+  ]
+}

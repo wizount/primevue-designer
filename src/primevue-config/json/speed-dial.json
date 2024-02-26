@@ -1,0 +1,276 @@
+{
+  "__id__": "speed-dial",
+  "name": "SpeedDial",
+  "tag": "p-speed-dial",
+  "tagIcon": "speedDial",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/speeddial",
+  "description": "When pressed, a floating action button can display multiple primary actions that can be performed on a page.",
+  "attributes": {
+    "model": {
+      "label": "model",
+      "title": "MenuModel instance to define the action items.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": "any"
+    },
+    "visible": {
+      "label": "visible",
+      "title": "Specifies the visibility of the overlay.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "direction": {
+      "label": "direction",
+      "title": "Specifies the opening direction of actions. Valid values are 'up', 'down', 'left', 'right', 'up-left', 'up-right', 'down-left' and 'down-right'",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "up",
+              "down",
+              "left",
+              "right",
+              "up-left",
+              "up-right",
+              "down-left",
+              "down-right"
+            ]
+          }
+        }
+      ],
+      "default": "up"
+    },
+    "transition-delay": {
+      "label": "transitionDelay",
+      "title": "Transition delay step for each action item.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 30
+    },
+    "type": {
+      "label": "type",
+      "title": "Specifies the opening type of actions.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "linear"
+    },
+    "radius": {
+      "label": "radius",
+      "title": "Radius for *circle types.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "mask": {
+      "label": "mask",
+      "title": "Whether to show a mask element behind the speeddial",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "Whether the component is disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "hide-on-click-outside": {
+      "label": "hideOnClickOutside",
+      "title": "Whether the actions close when clicked outside.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "button-class": {
+      "label": "buttonClass",
+      "title": "Style class of the button element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "mask-class": {
+      "label": "maskClass",
+      "title": "Style class of the mask element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "mask-style": {
+      "label": "maskStyle",
+      "title": "Inline style of the mask element.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "show-icon": {
+      "label": "showIcon",
+      "title": "Show icon of the button element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": "pi pi-plus"
+    },
+    "hide-icon": {
+      "label": "hideIcon",
+      "title": "\tHide icon of the button element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "rotate-animation": {
+      "label": "rotateAnimation",
+      "title": "Defined to rotate showIcon when hideIcon is not present.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "class": {
+      "label": "class",
+      "title": "Style class of the element.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "style": {
+      "label": "style",
+      "title": "Style class of the element.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "tooltip-options": {
+      "label": "tooltipOptions",
+      "title": "Whether to display the tooltip on items. The modifiers of tooltip can be used like an object in it. Valid keys are 'event' and 'position'.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "item",
+      "title": "Custom content for the item"
+    },
+    {
+      "name": "button",
+      "title": "Custom button template."
+    },
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "click",
+      "title": "Fired when the button element clicked.",
+      "arguments": [
+        {
+          "name": "event",
+          "type": "object",
+          "description": "Browser event"
+        }
+      ]
+    },
+    {
+      "name": "show",
+      "title": "Fired when the actions are visible."
+    },
+    {
+      "name": "hide",
+      "title": "Fired when the actions are hidden."
+    }
+  ]
+}

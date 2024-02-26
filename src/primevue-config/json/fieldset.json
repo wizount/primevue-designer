@@ -1,0 +1,104 @@
+{
+  "__id__": "fieldset",
+  "name": "Fieldset",
+  "tag": "p-fieldset",
+  "tagIcon": "fieldset",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/fieldset",
+  "description": "Fieldset is a grouping component with the optional content toggle feature.",
+  "attributes": {
+    "legend": {
+      "label": "legend",
+      "title": "Header text of the fieldset.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "toggleable": {
+      "label": "toggleable",
+      "title": "When specified, content can toggled by clicking the legend.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "collapsed": {
+      "label": "collapsed",
+      "title": "Defines the default visibility state of the content.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "toggle-button-props": {
+      "label": "toggleButtonProps",
+      "title": "Used to pass the custom value to read for the AnchorHTMLAttributes inside the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "legend",
+      "title": "Custom legend template."
+    },
+    {
+      "name": "togglericon",
+      "title": "Custom toggler icon template."
+    }
+  ],
+  "events": [
+    {
+      "name": "toggle",
+      "title": "Callback to invoke when a tab gets expanded or collapsed.",
+      "arguments": [
+        {
+          "name": "event.originalEvent",
+          "type": "object",
+          "description": "Browser event"
+        },
+        {
+          "name": "event.value",
+          "type": "boolean",
+          "description": "collapsed state as a boolean"
+        }
+      ]
+    }
+  ]
+}
