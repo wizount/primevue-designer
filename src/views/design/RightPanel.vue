@@ -181,17 +181,44 @@
           </div>
         </p-scroll-panel>
       </p-tab-panel>
+      <p-tab-panel header="指令"  key="directive">
+        <p-button type="button" icon="pi pi-ellipsis-v" @click="toggleDirectiveMenu" aria-haspopup="true" aria-controls="directive_menu" />
+        <p-menu ref="directiveMenu" id="directive_menu" :model="directiveItems" :popup="true" />
+
+        <div v-for="(d,key) in activeData.__directives__">
+
+          <p-divider>{{key}}指令</p-divider>
+          <p-input-group>
+            <p-input-group-addon>值</p-input-group-addon>
+            <config-value-input v-model="d.value" :attr-config="primeVueConfigMap[key].value"></config-value-input>
+          </p-input-group>
+
+
+          <p-input-group>
+            <p-input-group-addon>参数</p-input-group-addon>
+            <p-select-button v-model="d.arg" :options="primeVueConfigMap[key].args"></p-select-button>
+          </p-input-group>
+          <p-input-group label="修饰符">
+            <p-input-group-addon>修饰符</p-input-group-addon>
+            <p-select-button v-model="d.modifiers" :options="primeVueConfigMap[key].modifiers" multiple></p-select-button>
+          </p-input-group>
+        </div>
+
+      </p-tab-panel>
     </p-tab-view>
+
     <div style="position: absolute; bottom: 2px;right: 10px;color: grey">PrimeVue version {{ version }}</div>
   </div>
 </template>
 
 <script setup lang="jsx">
-const version = "3.45.0";
+import ConfigValueInput from "@/views/design/ConfigValueInput";
+console.info(resolveComponent("p-button"))
+const version = "3.49.1";
 import Draggable from '@/vuedraggable/vuedraggable';
 import {saveDesignConf} from '@/utils/db'
 import AttributesRender from "@/views/design/AttributesRender.vue";
-import primeVueConfigMap from "@/primevue-config";
+import primeVueConfigMap from "@/config";
 import StyleEditor from "@/components/editors/StyleEditor.vue";
 
 
@@ -418,14 +445,37 @@ function addEvent(event) {
 
 //endregion
 //region
+
+const directiveMenu = ref();
+const directiveItems = ref([
+  {
+    label: '指令',
+    items: [
+      {
+        label: 'tooltip',
+        command: () =>addDirective("tooltip")
+      },
+      {
+        label: 'Export',
+      }
+    ]
+  }
+]);
+
+const toggleDirectiveMenu = (event) => {
+  directiveMenu.value.toggle(event);
+};
+
 function addDirective(event) {
+  console.info(primeVueConfigMap)
   if (!props.activeData.__directives__[event]) {
     props.activeData.__directives__[event] = {
-      value:elementPlusConfigMap[event].value.default,
+      value:primeVueConfigMap[event].value.default,
       arg:undefined,
       modifiers:[]
     };
   }
+  console.info(props.activeData.__directives__)
 }
 
 //endregion

@@ -1,0 +1,185 @@
+{
+  "__id__": "menubar",
+  "name": "Menubar",
+  "tag": "p-menubar",
+  "tagIcon": "menubar",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/menubar/",
+  "description": "Menubar is a horizontal menu component.",
+  "attributes": {
+    "action": {
+      "label": "action",
+      "title": "Action element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Icon element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": {}
+    },
+    "label": {
+      "label": "label",
+      "title": "Label element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "submenuicon": {
+      "label": "submenuicon",
+      "title": "Submenuicon elemnt binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": {}
+    },
+    "model": {
+      "label": "model",
+      "title": "An array of menuitems.",
+      "types": [
+        {
+          "name": "MenuItem[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "breakpoint": {
+      "label": "breakpoint",
+      "title": "The breakpoint to define the maximum width boundary.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "960px"
+    },
+    "exact": {
+      "label": "exact",
+      "title": "Whether to apply 'router-link-active-exact' class if route exactly matches the item path.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "button-props": {
+      "label": "buttonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the menu button.",
+      "types": [
+        {
+          "name": "ButtonHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "start",
+      "title": "Custom start template."
+    },
+    {
+      "name": "end",
+      "title": "Custom end template."
+    },
+    {
+      "name": "item",
+      "title": "Custom item template."
+    },
+    {
+      "name": "menubutton",
+      "title": "Custom menu button template on responsive mode."
+    },
+    {
+      "name": "popupicon",
+      "title": "Custom popup icon template on responsive mode."
+    },
+    {
+      "name": "menubuttonicon",
+      "title": "Custom menu button icon template on responsive mode."
+    },
+    {
+      "name": "submenuicon",
+      "title": "Custom submenu icon template."
+    },
+    {
+      "name": "itemicon",
+      "title": "Custom item icon template."
+    }
+  ]
+}

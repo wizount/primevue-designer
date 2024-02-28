@@ -112,7 +112,8 @@ import Terminal from 'primevue/terminal'
 
 import PrimeVue from 'primevue/config'
 
-// import 'primevue/resources/themes/lara-light-green/theme.css'
+ import 'primevue/resources/themes/lara-light-green/theme.css'
+
 // directives
 //import BadgeDirective from 'primevue/badgedirective'
 // import Ripple from 'primevue/ripple'

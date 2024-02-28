@@ -1,0 +1,180 @@
+{
+  "__id__": "sidebar",
+  "name": "Sidebar",
+  "tag": "p-sidebar",
+  "tagIcon": "sidebar",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/sidebar",
+  "description": "Sidebar is a panel component displayed as an overlay.",
+  "attributes": {
+    "visible": {
+      "label": "visible",
+      "title": "Specifies the visibility of the dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "position": {
+      "label": "position",
+      "title": "Specifies the position of the sidebar.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "top",
+              "bottom",
+              "right",
+              "full"
+            ]
+          }
+        }
+      ],
+      "default": "left"
+    },
+    "header": {
+      "label": "header",
+      "title": "Title content of the dialog.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "dismissable": {
+      "label": "dismissable",
+      "title": "Whether clicking outside closes the panel.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-close-icon": {
+      "label": "showCloseIcon",
+      "title": "Whether to display a close icon inside the panel.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": true
+    },
+    "close-icon": {
+      "label": "closeIcon",
+      "title": "Icon to display in the sidebar close button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "modal": {
+      "label": "modal",
+      "title": "Whether to a modal layer behind the sidebar.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "block-scroll": {
+      "label": "blockScroll",
+      "title": "Whether background scroll should be blocked when sidebar is visible.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Custom content template."
+    },
+    {
+      "name": "header",
+      "title": "Custom header template."
+    },
+    {
+      "name": "closeicon",
+      "title": "Custom close icon template."
+    },
+    {
+      "name": "container",
+      "title": "Custom container slot."
+    }
+  ]
+}

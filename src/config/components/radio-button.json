@@ -1,0 +1,191 @@
+{
+  "__id__": "radio-button",
+  "name": "RadioButton",
+  "tag": "p-radio-button",
+  "tagIcon": "radioButton",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/radiobutton/",
+  "description": "RadioButton is an extension to standard radio button element with theming.",
+  "attributes": {
+    "vModel": "modelValue",
+    "value": {
+      "label": "value",
+      "title": "Value of the checkbox.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "name": {
+      "label": "name",
+      "title": "Name of the input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "binary": {
+      "label": "binary",
+      "title": "Allows to select a boolean value.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the component should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "filled",
+              "outlined"
+            ]
+          }
+        }
+      ],
+      "default": "outlined"
+    },
+    "readonly": {
+      "label": "readonly",
+      "title": "When present, it specifies that an input field is read-only.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ]
+    },
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Establishes a string value that labels the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": []
+}

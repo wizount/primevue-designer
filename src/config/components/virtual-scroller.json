@@ -1,0 +1,317 @@
+{
+  "__id__": "virtual-scroller",
+  "name": "VirtualScroller",
+  "tag": "p-virtual-scroller",
+  "tagIcon": "virtualScroller",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/virtualscroller/",
+  "description": "VirtualScroller is a performant approach to handle huge data efficiently.",
+  "attributes": {
+    "id": {
+      "label": "id",
+      "title": "Unique identifier of the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "style": {
+      "label": "style",
+      "title": "Inline style of the component.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "class": {
+      "label": "class",
+      "title": "Style class of the component.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "items": {
+      "label": "items",
+      "title": "An array of objects to display.",
+      "types": [
+        {
+          "name": "any[]",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "any[][]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "item-size": {
+      "label": "itemSize",
+      "title": "The height/width of item according to orientation.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        },
+        {
+          "name": "number[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "scroll-height": {
+      "label": "scrollHeight",
+      "title": "Height of the scroll viewport.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "scroll-width": {
+      "label": "scrollWidth",
+      "title": "Width of the scroll viewport.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "orientation": {
+      "label": "orientation",
+      "title": "The orientation of scrollbar.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "both",
+              "horizontal",
+              "vertical"
+            ]
+          }
+        }
+      ],
+      "default": "vertical"
+    },
+    "num-tolerated-items": {
+      "label": "numToleratedItems",
+      "title": "Determines how many additional elements to add to the DOM outside of the view.\r\nAccording to the scrolls made up and down, extra items are added in a certain algorithm in the form of multiples of this number.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": "half the number of items shown in the view."
+    },
+    "delay": {
+      "label": "delay",
+      "title": "Delay in scroll before new data is loaded.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "resize-delay": {
+      "label": "resizeDelay",
+      "title": "Delay after window's resize finishes.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 10
+    },
+    "lazy": {
+      "label": "lazy",
+      "title": "Defines if data is loaded and interacted with in lazy manner.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "If disabled, the VirtualScroller feature is eliminated and the content is displayed directly.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "loader-disabled": {
+      "label": "loaderDisabled",
+      "title": "Used to implement a custom loader instead of using the loader feature in the VirtualScroller.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-loader": {
+      "label": "showLoader",
+      "title": "Whether to show loader.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-spacer": {
+      "label": "showSpacer",
+      "title": "Used to implement a custom spacer instead of using the spacer feature in the VirtualScroller.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "loading": {
+      "label": "loading",
+      "title": "Whether to load items.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "inline": {
+      "label": "inline",
+      "title": "When enabled, positions the content as inline.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "step": {
+      "label": "step",
+      "title": "Used to specify how many items to load in each load method in lazy mode.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "append-only": {
+      "label": "appendOnly",
+      "title": "Used to append each loaded item to top without removing any items from the DOM. Using very large data may cause the browser to crash.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "auto-size": {
+      "label": "autoSize",
+      "title": "Whether to dynamically change the height or width of scrollable container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "content",
+      "title": "Custom content template."
+    },
+    {
+      "name": "item",
+      "title": "Custom item template."
+    },
+    {
+      "name": "loader",
+      "title": "Custom loader template."
+    },
+    {
+      "name": "loadingicon",
+      "title": "Custom loading icon template."
+    }
+  ]
+}

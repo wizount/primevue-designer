@@ -1,0 +1,101 @@
+{
+  "__id__": "badge",
+  "name": "Badge",
+  "tag": "p-badge",
+  "tagIcon": "badge",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/badge",
+  "description": "Badge represents people using icons, labels and images.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "Value to display inside the badge.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "severity": {
+      "label": "severity",
+      "title": "Severity type of the badge.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "success",
+              "secondary",
+              "info",
+              "warning",
+              "danger",
+              "contrast"
+            ]
+          }
+        }
+      ]
+    },
+    "size": {
+      "label": "size",
+      "title": "Size of the badge, valid options are 'large' and 'xlarge'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "large",
+              "xlarge"
+            ]
+          }
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Content can easily be customized with the default slot instead of using the built-in display."
+    }
+  ]
+}

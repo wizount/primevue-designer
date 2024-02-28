@@ -1,0 +1,86 @@
+{
+  "__id__": "inline-message",
+  "name": "InlineMessage",
+  "tag": "p-inline-message",
+  "tagIcon": "inlineMessage",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/inlinemessage/",
+  "description": "InlineMessage component is useful in cases where a single message needs to be displayed related to an element such as forms. It has one property, severity of the message.",
+  "attributes": {
+    "severity": {
+      "label": "severity",
+      "title": "Severity level of the message.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "error",
+              "success",
+              "secondary",
+              "info",
+              "contrast",
+              "warn"
+            ]
+          }
+        }
+      ],
+      "default": "info"
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Display a custom icon for the message.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default custom slot."
+    },
+    {
+      "name": "icon",
+      "title": "Custom message icon template."
+    }
+  ]
+}

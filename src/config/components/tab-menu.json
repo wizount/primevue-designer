@@ -1,0 +1,140 @@
+{
+  "__id__": "tab-menu",
+  "name": "TabMenu",
+  "tag": "p-tab-menu",
+  "tagIcon": "tabMenu",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/tabmenu/",
+  "description": "TabMenu is a navigation component that displays items as tab headers. Example below uses nested routes with TabMenu.",
+  "attributes": {
+    "action": {
+      "label": "action",
+      "title": "Action element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "icon": {
+      "label": "icon",
+      "title": "Icon element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "icon-chooser"
+        }
+      ],
+      "default": {}
+    },
+    "label": {
+      "label": "label",
+      "title": "Label element binding",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "model": {
+      "label": "model",
+      "title": "An array of menuitems.",
+      "types": [
+        {
+          "name": "MenuItem[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "exact": {
+      "label": "exact",
+      "title": "Defines if active route highlight should match the exact route path.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "active-index": {
+      "label": "activeIndex",
+      "title": "Active index of menuitem.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "item",
+      "title": "Custom content for each item."
+    },
+    {
+      "name": "itemicon",
+      "title": "Custom item icon template."
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "__id__": "row",
+  "name": "Row",
+  "tag": "p-row",
+  "tagIcon": "row",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/datatable/",
+  "description": "Row component is a helper component used to create grouping structures in DataTable.",
+  "attributes": {
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": []
+}

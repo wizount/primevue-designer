@@ -33,10 +33,8 @@
                   </p-button>
                   <p-split-button v-else class="components-item" @click="addDrawItem(element)" severity="info"
                                   :model="element.__link__.map(l=>{return {label:l.__config__.name || l.__config__.tag,command:()=>addDrawItem(l)}})">
-                    <template #buttoncontent>
                       <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
                       {{ element.__config__.name }}
-                    </template>
                   </p-split-button>
                 </template>
               </draggable>
@@ -167,7 +165,7 @@ import JsonSidebar from './JsonSidebar.vue'
 import RightPanel from './RightPanel'
 import {
   designConf as designConfPreset, jsCodeStyleList
-} from '@/components/config/config'
+} from '@/config/config'
 import {addClass, camelCase, deepClone, deleteObjectProps} from '@/utils'
 
 
@@ -183,10 +181,10 @@ import {useToast} from 'primevue/usetoast';
 const toast = useToast();
 
 import DraggableItem from "./DraggableItem"
-import {primeVueComponents} from "@/components/config/elementPlusConfig";
+import {primeVueComponents} from "@/config/elementPlusConfig";
 
 
-import primeVueConfigMap from "@/primevue-config";
+import primeVueConfigMap from "@/config";
 
 const componentMap = {};
 primeVueComponents.forEach((first) => {

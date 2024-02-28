@@ -145,7 +145,7 @@ import ConfigValueInput from "@/views/design/ConfigValueInput";
 import {computed} from "vue";
 import {camelCase, deepClone, getType} from "@/utils";
 import IconChooser from "@/components/editors/IconChooser.vue";
-import primeVueConfigMap from "@/primevue-config";
+import primeVueConfigMap from "@/config";
 import ObjectEditor from "@/components/editors/ObjectEditor.vue";
 import FormItem from "@/components/formItem"
 

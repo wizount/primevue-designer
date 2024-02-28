@@ -1,0 +1,88 @@
+{
+  "__id__": "fieldset",
+  "name": "Fieldset",
+  "tag": "p-fieldset",
+  "tagIcon": "fieldset",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/fieldset/",
+  "description": "Fieldset is a grouping component with the optional content toggle feature.",
+  "attributes": {
+    "legend": {
+      "label": "legend",
+      "title": "Header text of the fieldset.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "toggleable": {
+      "label": "toggleable",
+      "title": "When specified, content can toggled by clicking the legend.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "collapsed": {
+      "label": "collapsed",
+      "title": "Defines the default visibility state of the content.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "toggle-button-props": {
+      "label": "toggleButtonProps",
+      "title": "Used to pass the custom value to read for the AnchorHTMLAttributes inside the component.",
+      "types": [
+        {
+          "name": "AnchorHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": []
+}

@@ -1,4 +1,4 @@
-import primeVueConfigMap from "@/primevue-config"
+import primeVueConfigMap from "@/config"
 import slotHtmlFunctions from "@/components/generator/slots";
 import {deepClone} from "@/utils";
 import {isArrayEqual, isObjectEqual} from "@/components/generator/utils";

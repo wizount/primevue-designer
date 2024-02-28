@@ -1,0 +1,69 @@
+{
+  "__id__": "toolbar",
+  "name": "Toolbar",
+  "tag": "p-toolbar",
+  "tagIcon": "toolbar",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/toolbar/",
+  "description": "Toolbar is a grouping component for buttons and other content.",
+  "attributes": {
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "start",
+      "title": "Custom start template."
+    },
+    {
+      "name": "center",
+      "title": "Custom center template."
+    },
+    {
+      "name": "end",
+      "title": "Custom end template."
+    }
+  ]
+}

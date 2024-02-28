@@ -1,0 +1,377 @@
+{
+  "__id__": "dialog",
+  "name": "Dialog",
+  "tag": "p-dialog",
+  "tagIcon": "dialog",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/dialog",
+  "description": "Dialog is a container to display content in an overlay window.",
+  "attributes": {
+    "header": {
+      "label": "header",
+      "title": "Title content of the dialog.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "footer": {
+      "label": "footer",
+      "title": "Footer content of the dialog.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "visible": {
+      "label": "visible",
+      "title": "Specifies the visibility of the dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "modal": {
+      "label": "modal",
+      "title": "Defines if background should be blocked when dialog is displayed.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "content-style": {
+      "label": "contentStyle",
+      "title": "Style of the content section.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "content-class": {
+      "label": "contentClass",
+      "title": "Style class of the content section.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "content-props": {
+      "label": "contentProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the overlay panel inside the component.",
+      "types": [
+        {
+          "name": "HTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "rtl": {
+      "label": "rtl",
+      "title": "When enabled dialog is displayed in RTL direction.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "closable": {
+      "label": "closable",
+      "title": "Adds a close icon to the header to hide the dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "dismissable-mask": {
+      "label": "dismissableMask",
+      "title": "Specifies if clicking the modal background should hide the dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "close-on-escape": {
+      "label": "closeOnEscape",
+      "title": "Specifies if pressing escape key should hide the dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-header": {
+      "label": "showHeader",
+      "title": "Whether to show the header or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "block-scroll": {
+      "label": "blockScroll",
+      "title": "Whether background scroll should be blocked when dialog is visible.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-z-index": {
+      "label": "autoZIndex",
+      "title": "Whether to automatically manage layering.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "position": {
+      "label": "position",
+      "title": "Position of the dialog.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "center",
+              "left",
+              "top",
+              "bottom",
+              "right",
+              "topleft",
+              "topright",
+              "bottomleft",
+              "bottomright"
+            ]
+          }
+        }
+      ],
+      "default": "center"
+    },
+    "maximizable": {
+      "label": "maximizable",
+      "title": "Whether the dialog can be displayed full screen.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "breakpoints": {
+      "label": "breakpoints",
+      "title": "Object literal to define widths per screen size.",
+      "types": [
+        {
+          "name": "DialogBreakpoints",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "draggable": {
+      "label": "draggable",
+      "title": "Enables dragging to change the position using header.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "keep-in-view-port": {
+      "label": "keepInViewPort",
+      "title": "Keeps dialog in the viewport when dragging.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "min-x": {
+      "label": "minX",
+      "title": "Minimum value for the left coordinate of dialog in dragging.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": "0."
+    },
+    "min-y": {
+      "label": "minY",
+      "title": "Minimum value for the top coordinate of dialog in dragging.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "append-to": {
+      "label": "appendTo",
+      "title": "A valid query selector or an HTMLElement to specify where the dialog gets attached.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "body",
+              "self"
+            ]
+          }
+        }
+      ],
+      "default": "body"
+    },
+    "style": {
+      "label": "style",
+      "title": "Style of the dynamic dialog.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "close-icon": {
+      "label": "closeIcon",
+      "title": "Icon to display in the dialog close button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "maximize-icon": {
+      "label": "maximizeIcon",
+      "title": "Icon to display in the dialog maximize button when dialog is not maximized.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "minimize-icon": {
+      "label": "minimizeIcon",
+      "title": "Icon to display in the dialog maximize button when dialog is minimized.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default content slot."
+    },
+    {
+      "name": "header",
+      "title": "Custom header template."
+    },
+    {
+      "name": "footer",
+      "title": "Custom footer template."
+    },
+    {
+      "name": "closeicon",
+      "title": "Custom close icon template."
+    },
+    {
+      "name": "maximizeicon",
+      "title": "Custom maximize icon template of dialog."
+    },
+    {
+      "name": "container",
+      "title": "Custom container slot."
+    }
+  ]
+}

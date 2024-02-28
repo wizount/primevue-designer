@@ -1,0 +1,343 @@
+{
+  "__id__": "file-upload",
+  "name": "FileUpload",
+  "tag": "p-file-upload",
+  "tagIcon": "fileUpload",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/fileupload/",
+  "description": "FileUpload is an advanced uploader with dragdrop support, multi file uploads, auto uploading, progress tracking and validations.",
+  "attributes": {
+    "name": {
+      "label": "name",
+      "title": "Name of the request parameter to identify the files at backend.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "url": {
+      "label": "url",
+      "title": "Remote url to upload the files.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "mode": {
+      "label": "mode",
+      "title": "Defines the UI of the component, possible values are 'advanced' and 'basic'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "basic",
+              "advanced"
+            ]
+          }
+        }
+      ],
+      "default": "advanced"
+    },
+    "multiple": {
+      "label": "multiple",
+      "title": "Used to select multiple files at once from file dialog.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "accept": {
+      "label": "accept",
+      "title": "Pattern to restrict the allowed file types such as 'image/*'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "Disables the upload functionality.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "auto": {
+      "label": "auto",
+      "title": "When enabled, upload begins automatically after selection is completed.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "max-file-size": {
+      "label": "maxFileSize",
+      "title": "Maximum file size allowed in bytes.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "invalid-file-size-message": {
+      "label": "invalidFileSizeMessage",
+      "title": "Message of the invalid fize size.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": ": Invalid file size, file size should be smaller than {1.}"
+    },
+    "invalid-file-limit-message": {
+      "label": "invalidFileLimitMessage",
+      "title": "Message to display when number of files to be uploaded exceeeds the limit.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "Maximum number of files to be uploaded is {0.}"
+    },
+    "invalid-file-type-message": {
+      "label": "invalidFileTypeMessage",
+      "title": "Message of the invalid fize type.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "'{0}: Invalid file type.'"
+    },
+    "file-limit": {
+      "label": "fileLimit",
+      "title": "Maximum number of files that can be uploaded.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "with-credentials": {
+      "label": "withCredentials",
+      "title": "Cross-site Access-Control requests should be made using credentials such as cookies, authorization headers or TLS client certificates.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "preview-width": {
+      "label": "previewWidth",
+      "title": "Width of the image thumbnail in pixels.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 50
+    },
+    "choose-label": {
+      "label": "chooseLabel",
+      "title": "Label of the choose button. Defaults to PrimeVue Locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "upload-label": {
+      "label": "uploadLabel",
+      "title": "Label of the upload button. Defaults to PrimeVue Locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "cancel-label": {
+      "label": "cancelLabel",
+      "title": "Label of the cancel button. Defaults to PrimeVue Locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "Cancel"
+    },
+    "custom-upload": {
+      "label": "customUpload",
+      "title": "Whether to use the default upload or a manual implementation defined in uploadHandler callback. Defaults to PrimeVue Locale configuration.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "show-upload-button": {
+      "label": "showUploadButton",
+      "title": "Whether to show the upload button.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-cancel-button": {
+      "label": "showCancelButton",
+      "title": "Whether to show the cancel button.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "choose-icon": {
+      "label": "chooseIcon",
+      "title": "Icon of the choose button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "upload-icon": {
+      "label": "uploadIcon",
+      "title": "Icon of the upload button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "cancel-icon": {
+      "label": "cancelIcon",
+      "title": "Icon of the cancel button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "style": {
+      "label": "style",
+      "title": "Inline style of the component.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "class": {
+      "label": "class",
+      "title": "Style class of the component.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom header content template."
+    },
+    {
+      "name": "content",
+      "title": "Custom uploaded content template."
+    },
+    {
+      "name": "empty",
+      "title": "Custom content when there is no selected file."
+    },
+    {
+      "name": "chooseicon",
+      "title": "Custom choose icon template."
+    },
+    {
+      "name": "uploadicon",
+      "title": "Custom upload icon template."
+    },
+    {
+      "name": "cancelicon",
+      "title": "Custom cancel icon template."
+    },
+    {
+      "name": "fileremoveicon",
+      "title": "Custom remove icon template for each file."
+    }
+  ]
+}

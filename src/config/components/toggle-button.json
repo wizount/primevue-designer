@@ -1,0 +1,208 @@
+{
+  "__id__": "toggle-button",
+  "name": "ToggleButton",
+  "tag": "p-toggle-button",
+  "tagIcon": "toggleButton",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/togglebutton/",
+  "description": "ToggleButton is used to select a boolean value using a button.",
+  "attributes": {
+    "vModel": "modelValue",
+    "on-icon": {
+      "label": "onIcon",
+      "title": "Icon for the on state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "off-icon": {
+      "label": "offIcon",
+      "title": "Icon for the off state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "on-label": {
+      "label": "onLabel",
+      "title": "Label for the on state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "yes"
+    },
+    "off-label": {
+      "label": "offLabel",
+      "title": "Label for the off state.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "no"
+    },
+    "icon-pos": {
+      "label": "iconPos",
+      "title": "Position of the icon.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "right"
+            ]
+          }
+        }
+      ],
+      "default": "left"
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "readonly": {
+      "label": "readonly",
+      "title": "When present, it specifies that an input field is read-only.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ]
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the focus input to match a label defined for the chips.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Establishes a string value that labels the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    }
+  ]
+}

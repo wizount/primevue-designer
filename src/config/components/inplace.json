@@ -1,0 +1,122 @@
+{
+  "__id__": "inplace",
+  "name": "Inplace",
+  "tag": "p-inplace",
+  "tagIcon": "inplace",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/inplace",
+  "description": "Inplace provides an easy to do editing and display at the same time where clicking the output displays the actual content.",
+  "attributes": {
+    "closable": {
+      "label": "closable",
+      "title": "Displays a button to switch back to display mode.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "active": {
+      "label": "active",
+      "title": "Whether the content is displayed or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "close-icon": {
+      "label": "closeIcon",
+      "title": "Icon to display in the close button.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "display-props": {
+      "label": "displayProps",
+      "title": "Used to pass all properties of the HTMLDivElement to display container.",
+      "types": [
+        {
+          "name": "HTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "close-button-props": {
+      "label": "closeButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the close button.",
+      "types": [
+        {
+          "name": "ButtonHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "display",
+      "title": "Custom display template."
+    },
+    {
+      "name": "content",
+      "title": "Custom content template."
+    },
+    {
+      "name": "closeicon",
+      "title": "Custom close icon template."
+    }
+  ]
+}

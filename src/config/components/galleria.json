@@ -1,0 +1,415 @@
+{
+  "__id__": "galleria",
+  "name": "Galleria",
+  "tag": "p-galleria",
+  "tagIcon": "galleria",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/galleria/",
+  "description": "Galleria is an advanced content gallery component.",
+  "attributes": {
+    "id": {
+      "label": "id",
+      "title": "Unique identifier of the element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "value": {
+      "label": "value",
+      "title": "An array of objects to display.",
+      "types": [
+        {
+          "name": "any[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "active-index": {
+      "label": "activeIndex",
+      "title": "Index of the first item.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "full-screen": {
+      "label": "fullScreen",
+      "title": "Whether to display the component on fullscreen.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "visible": {
+      "label": "visible",
+      "title": "Specifies the visibility of the mask on fullscreen mode.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "num-visible": {
+      "label": "numVisible",
+      "title": "Number of items per page.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 3
+    },
+    "responsive-options": {
+      "label": "responsiveOptions",
+      "title": "An array of options for responsive design.",
+      "types": [
+        {
+          "name": "GalleriaResponsiveOptions[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "show-item-navigators": {
+      "label": "showItemNavigators",
+      "title": "Whether to display navigation buttons in item section.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-thumbnail-navigators": {
+      "label": "showThumbnailNavigators",
+      "title": "Whether to display navigation buttons in thumbnail container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-item-navigators-on-hover": {
+      "label": "showItemNavigatorsOnHover",
+      "title": "Whether to display navigation buttons on item hover.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "change-item-on-indicator-hover": {
+      "label": "changeItemOnIndicatorHover",
+      "title": "When enabled, item is changed on indicator hover.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "circular": {
+      "label": "circular",
+      "title": "Defines if scrolling would be infinite.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "auto-play": {
+      "label": "autoPlay",
+      "title": "Items are displayed with a slideshow in autoPlay mode.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "transition-interval": {
+      "label": "transitionInterval",
+      "title": "Time in milliseconds to scroll items.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 4000
+    },
+    "show-thumbnails": {
+      "label": "showThumbnails",
+      "title": "Whether to display thumbnail container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "thumbnails-position": {
+      "label": "thumbnailsPosition",
+      "title": "Position of thumbnails.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "top",
+              "bottom",
+              "right"
+            ]
+          }
+        }
+      ],
+      "default": "bottom"
+    },
+    "vertical-thumbnail-view-port-height": {
+      "label": "verticalThumbnailViewPortHeight",
+      "title": "Height of the viewport in vertical thumbnail.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "300px"
+    },
+    "show-indicators": {
+      "label": "showIndicators",
+      "title": "Whether to display indicator container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "show-indicators-on-item": {
+      "label": "showIndicatorsOnItem",
+      "title": "When enabled, indicator container is displayed on item container.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "indicators-position": {
+      "label": "indicatorsPosition",
+      "title": "Position of indicators.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "top",
+              "bottom",
+              "right"
+            ]
+          }
+        }
+      ],
+      "default": "bottom"
+    },
+    "base-z-index": {
+      "label": "baseZIndex",
+      "title": "Base zIndex value to use in layering.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "mask-class": {
+      "label": "maskClass",
+      "title": "Style class of the mask on fullscreen mode.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "container-style": {
+      "label": "containerStyle",
+      "title": "Inline style of the component on fullscreen mode. Otherwise, the 'style' property can be used.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "container-class": {
+      "label": "containerClass",
+      "title": "Style class of the component on fullscreen mode. Otherwise, the 'class' property can be used.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "container-props": {
+      "label": "containerProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the container element on fullscreen mode.",
+      "types": [
+        {
+          "name": "HTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "prev-button-props": {
+      "label": "prevButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the previous navigation button.",
+      "types": [
+        {
+          "name": "ButtonHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "next-button-props": {
+      "label": "nextButtonProps",
+      "title": "Used to pass all properties of the HTMLButtonElement to the next navigation button.",
+      "types": [
+        {
+          "name": "ButtonHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-roledescription": {
+      "label": "ariaRoledescription",
+      "title": "Defines a string value that description for the role of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom header template."
+    },
+    {
+      "name": "footer",
+      "title": "Custom footer template."
+    },
+    {
+      "name": "item",
+      "title": "Custom item template."
+    },
+    {
+      "name": "caption",
+      "title": "Custom caption template."
+    },
+    {
+      "name": "indicator",
+      "title": "Custom indicator template."
+    },
+    {
+      "name": "thumbnail",
+      "title": "Custom thumbnail template."
+    },
+    {
+      "name": "closeicon",
+      "title": "Custom close icon template."
+    },
+    {
+      "name": "previousitemicon",
+      "title": "Custom navigator previous item icon template."
+    },
+    {
+      "name": "nextitemicon",
+      "title": "Custom navigator next item icon template."
+    },
+    {
+      "name": "previousthumbnailicon",
+      "title": "Custom thumbnail previous icon template."
+    },
+    {
+      "name": "nextthumbnailicon",
+      "title": "Custom thumbnail next item template."
+    }
+  ]
+}

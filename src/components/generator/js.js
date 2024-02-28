@@ -1,4 +1,4 @@
-import primeVueConfigMap from "@/primevue-config"
+import primeVueConfigMap from "@/config"
 import ruleTrigger from './ruleTrigger'
 import {deepClone, titleCase} from "@/utils";
 

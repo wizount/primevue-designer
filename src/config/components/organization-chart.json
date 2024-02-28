@@ -1,0 +1,112 @@
+{
+  "__id__": "organization-chart",
+  "name": "OrganizationChart",
+  "tag": "p-organization-chart",
+  "tagIcon": "organizationChart",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/organizationchart",
+  "description": "OrganizationChart visualizes hierarchical organization data.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "Value of the component.",
+      "types": [
+        {
+          "name": "OrganizationChartNode",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "selection-keys": {
+      "label": "selectionKeys",
+      "title": "A map instance of key-value pairs to represented the selected nodes.",
+      "types": [
+        {
+          "name": "OrganizationChartSelectionKeys",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "selection-mode": {
+      "label": "selectionMode",
+      "title": "Type of the selection.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "multiple",
+              "single"
+            ]
+          }
+        }
+      ]
+    },
+    "collapsed-keys": {
+      "label": "collapsedKeys",
+      "title": "A map instance of key-value pairs to represented the collapsed nodes.",
+      "types": [
+        {
+          "name": "OrganizationChartCollapsedKeys",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "collapsible": {
+      "label": "collapsible",
+      "title": "Whether the nodes can be expanded or toggled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Custom content template."
+    },
+    {
+      "name": "togglericon",
+      "title": "Custom toggler icon template."
+    }
+  ]
+}

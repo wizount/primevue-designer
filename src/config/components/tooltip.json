@@ -1,0 +1,12 @@
+{
+  "__id__": "tooltip",
+  "name": "Tooltip",
+  "tag": "p-tooltip",
+  "tagIcon": "tooltip",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/tooltip",
+  "attributes": {},
+  "slots": []
+}

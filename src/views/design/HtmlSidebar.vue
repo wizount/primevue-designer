@@ -7,7 +7,7 @@
           <p-button security="primary" class="pi pi-copy mr-2" @click="triggerCopy" label="复制HTML"/>
           <p-button security="primary" @click="exportHtmlFile" class="pi pi-download" label="导出HTML文件"/>
         </div>
-        <p-dropdownn v-model="designConf.jsCodeStyle" :options="jsCodeStyleList" option-label="text"
+        <p-dropdown v-model="designConf.jsCodeStyle" :options="jsCodeStyleList" option-label="text"
                      option-value="value"/>
       </div>
     </template>
@@ -33,7 +33,7 @@ import {saveAs} from 'file-saver'
 import {VAceEditor} from 'vue3-ace-editor';
 import 'ace-builds/src-noconflict/mode-html';
 import 'ace-builds/src-noconflict/theme-one_dark';
-import {jsCodeStyleList} from "@/components/config/config";
+import {jsCodeStyleList} from "@/config/config";
 
 const props = defineProps({
   htmlStr: {type: String, required: true},

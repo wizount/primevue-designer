@@ -1,0 +1,77 @@
+{
+  "__id__": "confirm-popup",
+  "name": "ConfirmPopup",
+  "tag": "p-confirm-popup",
+  "tagIcon": "confirmPopup",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/confirmpopup",
+  "description": "ConfirmPopup displays a confirmation overlay displayed relatively to its target.",
+  "attributes": {
+    "group": {
+      "label": "group",
+      "title": "Optional key to match the key of the confirmation, useful to target a specific confirm dialog instance.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "message",
+      "title": "Custom message template."
+    },
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    },
+    {
+      "name": "accepticon",
+      "title": "Custom icon template."
+    },
+    {
+      "name": "rejecticon",
+      "title": "Custom icon template."
+    },
+    {
+      "name": "container",
+      "title": "Custom container slot."
+    }
+  ]
+}

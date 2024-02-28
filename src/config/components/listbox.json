@@ -1,0 +1,439 @@
+{
+  "__id__": "listbox",
+  "name": "Listbox",
+  "tag": "p-listbox",
+  "tagIcon": "listbox",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/listbox/",
+  "description": "ListBox is used to select one or more values from a list of items.",
+  "attributes": {
+    "vModel": "modelValue",
+    "options": {
+      "label": "options",
+      "title": "An array of selectitems to display as the available options.",
+      "types": [
+        {
+          "name": "any[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-label": {
+      "label": "optionLabel",
+      "title": "Property name or getter function to use as the label of an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "Function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-value": {
+      "label": "optionValue",
+      "title": "Property name or getter function to use as the value of an option, defaults to the option itself when not defined.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "Function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-disabled": {
+      "label": "optionDisabled",
+      "title": "Property name or getter function to use as the disabled flag of an option, defaults to false when not defined.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "Function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-group-label": {
+      "label": "optionGroupLabel",
+      "title": "Property name or getter function to use as the label of an option group.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "Function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "option-group-children": {
+      "label": "optionGroupChildren",
+      "title": "Property name or getter function that refers to the children options of option group.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "Function",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "list-style": {
+      "label": "listStyle",
+      "title": "Inline style of inner list element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When specified, disables the component.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "data-key": {
+      "label": "dataKey",
+      "title": "A property to uniquely identify an option.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "multiple": {
+      "label": "multiple",
+      "title": "When specified, allows selecting multiple values.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "meta-key-selection": {
+      "label": "metaKeySelection",
+      "title": "Defines how multiple items can be selected, when true metaKey needs to be pressed to select or unselect an item and when set to false selection of each item can be toggled individually.\r\nOn touch enabled devices, metaKeySelection is turned off automatically.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "filter": {
+      "label": "filter",
+      "title": "When specified, displays a filter input at header.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "filter-placeholder": {
+      "label": "filterPlaceholder",
+      "title": "Placeholder text to show when filter input is empty.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter-locale": {
+      "label": "filterLocale",
+      "title": "Locale to use in filtering. The default locale is the host environment's current locale.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter-match-mode": {
+      "label": "filterMatchMode",
+      "title": "Defines the filtering algorithm to use when searching the options.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "endsWith",
+              "startsWith",
+              "contains"
+            ]
+          }
+        }
+      ],
+      "default": "contains"
+    },
+    "filter-fields": {
+      "label": "filterFields",
+      "title": "Fields used when filtering the options, defaults to optionLabel.",
+      "types": [
+        {
+          "name": "string[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "filter-input-props": {
+      "label": "filterInputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the filter input inside the component.",
+      "types": [
+        {
+          "name": "InputHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "virtual-scroller-options": {
+      "label": "virtualScrollerOptions",
+      "title": "Whether to use the virtualScroller feature. The properties of VirtualScroller component can be used like an object in it.",
+      "types": [
+        {
+          "name": "VirtualScrollerProps",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "auto-option-focus": {
+      "label": "autoOptionFocus",
+      "title": "Whether to focus on the first visible or selected element.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "select-on-focus": {
+      "label": "selectOnFocus",
+      "title": "When enabled, the focused option is selected.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "focus-on-hover": {
+      "label": "focusOnHover",
+      "title": "When enabled, the focus is placed on the hovered option.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "filter-message": {
+      "label": "filterMessage",
+      "title": "Text to be displayed in hidden accessible field when filtering returns any results. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "'{0} results are available'"
+    },
+    "selection-message": {
+      "label": "selectionMessage",
+      "title": "Text to be displayed in hidden accessible field when options are selected. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "'{0} items selected'"
+    },
+    "empty-selection-message": {
+      "label": "emptySelectionMessage",
+      "title": "Text to be displayed in hidden accessible field when any option is not selected. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No selected item"
+    },
+    "empty-filter-message": {
+      "label": "emptyFilterMessage",
+      "title": "Text to display when filtering does not return any results. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No results found"
+    },
+    "empty-message": {
+      "label": "emptyMessage",
+      "title": "Text to display when there are no options available. Defaults to value from PrimeVue locale configuration.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ],
+      "default": "No results found"
+    },
+    "tabindex": {
+      "label": "tabindex",
+      "title": "Index of the element in tabbing order.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "filter-icon": {
+      "label": "filterIcon",
+      "title": "Icon to display in filter input.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Defines a string value that labels an interactive element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Identifier of the underlying input element.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "header",
+      "title": "Custom header template."
+    },
+    {
+      "name": "footer",
+      "title": "Custom footer template."
+    },
+    {
+      "name": "option",
+      "title": "Custom option template."
+    },
+    {
+      "name": "optiongroup",
+      "title": "Custom optiongroup template."
+    },
+    {
+      "name": "emptyfilter",
+      "title": "Custom emptyfilter template."
+    },
+    {
+      "name": "empty",
+      "title": "Custom empty template."
+    },
+    {
+      "name": "content",
+      "title": "Custom content template."
+    },
+    {
+      "name": "loader",
+      "title": "Custom loader template."
+    },
+    {
+      "name": "filtericon",
+      "title": "Custom filter icon template."
+    }
+  ]
+}

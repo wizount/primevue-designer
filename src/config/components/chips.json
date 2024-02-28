@@ -1,0 +1,213 @@
+{
+  "__id__": "chips",
+  "name": "Chips",
+  "tag": "p-chips",
+  "tagIcon": "chips",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/chips/",
+  "description": "Chips is used to enter multiple values on an input field.",
+  "attributes": {
+    "vModel": "modelValue",
+    "max": {
+      "label": "max",
+      "title": "Maximum number of entries allowed.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ]
+    },
+    "add-on-blur": {
+      "label": "addOnBlur",
+      "title": "Whether to add an item when the input loses focus.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "allow-duplicate": {
+      "label": "allowDuplicate",
+      "title": "Whether to allow duplicate values or not.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "separator": {
+      "label": "separator",
+      "title": "Separator char to add an item when pressed in addition to the enter key.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-id": {
+      "label": "inputId",
+      "title": "Identifier of the focus input to match a label defined for the chips.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "input-class": {
+      "label": "inputClass",
+      "title": "Style class of the input field.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        },
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ]
+    },
+    "input-style": {
+      "label": "inputStyle",
+      "title": "Inline style of the input field.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "style-editor"
+        }
+      ],
+      "default": {}
+    },
+    "input-props": {
+      "label": "inputProps",
+      "title": "Used to pass all properties of the HTMLInputElement to the focusable input element inside the component.",
+      "types": [
+        {
+          "name": "InputHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "remove-token-icon": {
+      "label": "removeTokenIcon",
+      "title": "Icon to display in chip remove action.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "icon-chooser"
+        }
+      ]
+    },
+    "invalid": {
+      "label": "invalid",
+      "title": "When present, it specifies that the component should have invalid state style.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the element should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "variant": {
+      "label": "variant",
+      "title": "Specifies the input variant of the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "filled",
+              "outlined"
+            ]
+          }
+        }
+      ],
+      "default": "outlined"
+    },
+    "placeholder": "Please enter ",
+    "aria-labelledby": {
+      "label": "ariaLabelledby",
+      "title": "Establishes relationships between the component and label(s) where its value should be one or more element IDs.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "aria-label": {
+      "label": "ariaLabel",
+      "title": "Establishes a string value that labels the component.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "chip",
+      "title": "Custom chip template."
+    },
+    {
+      "name": "removetokenicon",
+      "title": "Custom remove token icon template."
+    }
+  ]
+}

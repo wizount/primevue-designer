@@ -7,7 +7,7 @@
           <p-button security="primary" class="pi pi-copy mr-2" @click="triggerCopy" label="复制JSON"/>
           <p-button security="primary" @click="exportJsonFile" class="pi pi-download" label="导出JSON文件"/>
         </div>
-        <p-dropdownn v-model="designConf.jsCodeStyle" :options="jsCodeStyleList" option-label="text"
+        <p-dropdown v-model="designConf.jsCodeStyle" :options="jsCodeStyleList" option-label="text"
                      option-value="value"/>
       </div>
     </template>
@@ -33,7 +33,7 @@ import {saveAs} from 'file-saver'
 import {VAceEditor} from 'vue3-ace-editor';
 import 'ace-builds/src-noconflict/mode-json';
 import 'ace-builds/src-noconflict/theme-one_dark';
-import {jsCodeStyleList} from "@/components/config/config";
+import {jsCodeStyleList} from "@/config/config";
 
 const props = defineProps({
   jsonStr: {type: String, required: true},

@@ -1,0 +1,62 @@
+{
+  "__id__": "column-group",
+  "name": "ColumnGroup",
+  "tag": "p-column-group",
+  "tagIcon": "columnGroup",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/datatable/",
+  "description": "It is a helper component for DataTable.",
+  "attributes": {
+    "type": {
+      "label": "type",
+      "title": "Type of column group",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "footer",
+              "header"
+            ]
+          }
+        }
+      ]
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": []
+}

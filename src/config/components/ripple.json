@@ -1,0 +1,12 @@
+{
+  "__id__": "ripple",
+  "name": "Ripple",
+  "tag": "p-ripple",
+  "tagIcon": "ripple",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/ripple",
+  "attributes": {},
+  "slots": []
+}

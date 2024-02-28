@@ -186,8 +186,8 @@
 
 <script setup>
 import {onMounted} from "vue";
-import primeVueConfigMap from "@/primevue-config"
-import * as all from "@/components/config/config"
+import primeVueConfigMap from "@/config"
+import * as all from "@/config/config"
 
 const keys = Object.keys(all) || []
 const components = {};

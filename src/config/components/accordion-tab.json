@@ -1,0 +1,139 @@
+{
+  "__id__": "accordion-tab",
+  "name": "AccordionTab",
+  "tag": "p-accordion-tab",
+  "tagIcon": "accordionTab",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/accordion/",
+  "description": "AccordionTab is a helper component for Accordion..",
+  "attributes": {
+    "header": {
+      "label": "header",
+      "title": "Orientation of tab headers.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "header-style": {
+      "label": "headerStyle",
+      "title": "Inline style of the tab header.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "header-class": {
+      "label": "headerClass",
+      "title": "Style class of the tab header.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "header-props": {
+      "label": "headerProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the tab header.",
+      "types": [
+        {
+          "name": "HTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "header-action-props": {
+      "label": "headerActionProps",
+      "title": "Used to pass all properties of the HTMLAnchorElement to the focusable anchor element inside the tab header.",
+      "types": [
+        {
+          "name": "AnchorHTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "content-style": {
+      "label": "contentStyle",
+      "title": "Inline style of the tab content.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "style-editor"
+        }
+      ]
+    },
+    "content-class": {
+      "label": "contentClass",
+      "title": "Style class of the tab content.",
+      "types": [
+        {
+          "name": "any",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "content-props": {
+      "label": "contentProps",
+      "title": "Used to pass all properties of the HTMLDivElement to the tab content.",
+      "types": [
+        {
+          "name": "HTMLAttributes",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "Whether the tab is disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default slot for content."
+    },
+    {
+      "name": "header",
+      "title": "Custom content for the title section of a AccordionTab is defined using the header template."
+    },
+    {
+      "name": "headericon",
+      "title": "Custom icon for the header section of a AccordionTab is defined using the headericon template."
+    }
+  ]
+}
