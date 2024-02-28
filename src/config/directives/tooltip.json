@@ -1,0 +1,15 @@
+{
+  "__id__": "tooltip",
+  "directive": true,
+  "value": {
+    "name": "string",
+    "tag": "p-input-text",
+    "default": ""
+  },
+  "args": [],
+  "modifiers": [
+    "body",
+    "fullscreen",
+    "lock"
+  ]
+}

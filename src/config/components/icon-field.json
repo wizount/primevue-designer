@@ -1,0 +1,68 @@
+{
+  "__id__": "icon-field",
+  "name": "IconField",
+  "tag": "p-icon-field",
+  "tagIcon": "iconField",
+  "layouts": [
+    "containerItem"
+  ],
+  "document": "https://primevue.org/inputtext/",
+  "description": "IconField is used to select a boolean value.",
+  "attributes": {
+    "icon-position": {
+      "label": "iconPosition",
+      "title": "Position of the icon",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "left",
+              "right"
+            ]
+          }
+        }
+      ],
+      "default": "right"
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default slot for content."
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "__id__": "meter-group",
+  "name": "MeterGroup",
+  "tag": "p-meter-group",
+  "tagIcon": "meterGroup",
+  "layouts": [
+    "rawItem"
+  ],
+  "document": "https://primevue.org/metergroup",
+  "description": "MeterGroup is a group of process status indicators.",
+  "attributes": {
+    "value": {
+      "label": "value",
+      "title": "Current value of the metergroup.",
+      "types": [
+        {
+          "name": "MeterItem[]",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "min": {
+      "label": "min",
+      "title": "Mininum boundary value.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "max": {
+      "label": "max",
+      "title": "Maximum boundary value.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 100
+    },
+    "orientation": {
+      "label": "orientation",
+      "title": "Specifies the layout of the component, valid values are 'horizontal' and 'vertical'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "horizontal",
+              "vertical"
+            ]
+          }
+        }
+      ],
+      "default": "horizontal"
+    },
+    "label-position": {
+      "label": "labelPosition",
+      "title": "Specifies the label position of the component, valid values are 'start' and 'end'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "end",
+              "start"
+            ]
+          }
+        }
+      ],
+      "default": "end"
+    },
+    "label-orientation": {
+      "label": "labelOrientation",
+      "title": "Specifies the label orientation of the component, valid values are 'horizontal' and 'vertical'.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-dropdown",
+          "props": {
+            "options": [
+              "horizontal",
+              "vertical"
+            ]
+          }
+        }
+      ],
+      "default": "horizontal"
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Used to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  },
+  "slots": [
+    {
+      "name": "label",
+      "title": "Custom label template."
+    },
+    {
+      "name": "meter",
+      "title": "Custom meter template."
+    },
+    {
+      "name": "icon",
+      "title": "Custom icon template."
+    },
+    {
+      "name": "start",
+      "title": "Custom start template."
+    },
+    {
+      "name": "end",
+      "title": "Custom end template."
+    }
+  ]
+}
