@@ -6,19 +6,16 @@
   "layouts": [
     "rawItem"
   ],
-  "document": "https://primevue.org/portal",
-  "description": "Portal moves its container to a specific location based on target elements. Basically it uses <Teleport> in the background.",
   "attributes": {
     "append-to": {
       "label": "appendTo",
-      "title": "A valid query selector or an HTMLElement to specify where the dialog gets attached. Special keywords are \"body\" for document body and \"self\" for the element itself.",
+      "title": "A valid query selector or an HTMLElement to specify where the dialog gets attached. Special keywords are 'body' for document body and 'self' for the element itself.",
       "types": [
         {
-          "name": "string",
+          "name": "PortalAppendToType",
           "tag": "p-input-text"
         }
-      ],
-      "default": "body"
+      ]
     },
     "disabled": {
       "label": "disabled",
@@ -32,6 +29,5 @@
       "default": false
     }
   },
-  "slots": [],
-  "events": []
+  "slots": []
 }

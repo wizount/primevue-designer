@@ -3,7 +3,7 @@ import PInputGroup from "primevue/inputgroup";
 import PInputGroupAddon from "primevue/inputgroupaddon";
 import Draggable from '@/vuedraggable/vuedraggable';
 import {deepClone, titleCase} from "@/utils";
-import {h, resolveComponent} from "vue";
+import {h, resolveComponent, resolveDirective, withDirectives} from "vue";
 import '@/styles/draggalbeItem.scss'
 import {AutoCompleteCallback} from "@/utils/primevue-utils";
 
@@ -42,15 +42,15 @@ export default {
             const newProps = {};
             Object.assign(newProps, curItem.__native__);
             Object.assign(newProps, curItem.__props__);
-            if(curItem.__id__==="auto-complete"){
-                const ac =new AutoCompleteCallback(["a","abc","abc32ea"]);
-                newProps["suggestions"]=ac.items;
+            if (curItem.__id__ === "auto-complete") {
+                const ac = new AutoCompleteCallback(["a", "abc", "abc32ea"]);
+                newProps["suggestions"] = ac.items;
 
-                newProps["onComplete"]=ac.querySearch;
+                newProps["onComplete"] = ac.querySearch;
             }
             //对style进行复制
-            if(newProps.style){
-                newProps.style=deepClone(newProps.style);
+            if (newProps.style) {
+                newProps.style = deepClone(newProps.style);
             }
             if (isBuildClass) {
                 Object.assign(newProps, buildClass(curItem, newProps.class))
@@ -110,11 +110,11 @@ export default {
                 Input = "error layout!";
             }
 
-            let {label,showLabel} = curItem.__config__
+            let {label, showLabel} = curItem.__config__
             const InputGroup =
                 <PInputGroup {...buildClass(curItem)}>
                     {
-                        showLabel? <PInputGroupAddon>{label}</PInputGroupAddon>:null
+                        showLabel ? <PInputGroupAddon>{label}</PInputGroupAddon> : null
                     }
 
                     <Input/>
@@ -176,7 +176,7 @@ export default {
                     continue;
                 }
                 if (curItem.__config__.layout === 'rawItem') {
-                    thisSlots[key] = () => curItem.__slots__[key].map(element => doLayout(element));
+                    thisSlots[key] = () => curItem.__slots__[key].map(element => doLayout(element,true));
                 } else {
                     thisSlots[key] = () =>
                         <Draggable tag="span"
@@ -235,7 +235,7 @@ export default {
                     return doWrapWithSpan(curItem, source);
                 } else {
                     return <FixItem
-                        conf={config} {...buildClass(curItem,curItem.__native__.class)} {...buildVModel(curItem)} {...buildEvent(curItem)}></FixItem>
+                        conf={config} {...buildClass(curItem, curItem.__native__.class)} {...buildVModel(curItem)} {...buildEvent(curItem)}></FixItem>
                 }
 
 
@@ -243,6 +243,7 @@ export default {
 
 
         }
+
         /**
          *
          * @param curItem
@@ -253,15 +254,23 @@ export default {
             const {tag, wrapWithSpan} = curItem.__config__;
             const data = buildData(curItem);
             if (simple) {
-                return h(resolveComponent(tag), {...buildProps(curItem, { isBuildModel: true, isBuildEvent: true}), ...data},
+                return h(resolveComponent(tag), {
+                        ...buildProps(curItem, {
+                            isBuildModel: true,
+                            isBuildEvent: true
+                        }), ...data
+                    },
                     buildSlots(curItem));
             } else {
                 if (wrapWithSpan) {
-                    const source = h(resolveComponent(tag), {...buildProps(curItem, { isBuildModel: true, isBuildEvent: true}) ,...data}, buildSlots(curItem));
+                    const source = h(resolveComponent(tag), {
+                        ...buildProps(curItem, {
+                            isBuildModel: true,
+                            isBuildEvent: true
+                        }), ...data
+                    }, buildSlots(curItem));
                     return doWrapWithSpan(curItem, source);
                 } else {
-
-                  console.log(data,curItem.__config__.tag,{...buildProps(curItem, {isBuildClass: true, isBuildModel: true, isBuildEvent: true}), ...data})
                     return h(resolveComponent(tag),
                         {...buildProps(curItem, {isBuildClass: true, isBuildModel: true, isBuildEvent: true}), ...data},
                         buildSlots(curItem));
@@ -277,20 +286,58 @@ export default {
             return h("span", {class: clazz, ...buildEvent(curItem)}, source);
         }
 
-        function doLayout(curItem) {
+        function doLayout(curItem,isRawItemSlots) {
             if (typeof curItem === "string") {
-                return h("span", curItem);
+                if(isRawItemSlots){
+                    return   curItem;
+                }else {
+                    return  ()=>curItem;
+                }
+
             }
+            console.log(
+                curItem
+            )
+            let ele;
             const {layout, wrapWithInputGroup} = curItem.__config__;
             if (wrapWithInputGroup) {
-                return inputGroup(curItem, layout);
+                ele = inputGroup(curItem, layout);
             } else if (layout === 'containerItem') {
-                return containerItem(curItem);
+                ele = containerItem(curItem);
             } else if (layout === 'rawItem') {
-                return rawItem(curItem);
+                ele = rawItem(curItem);
             } else if (layout === 'fixedItem') {
-                return fixedItem(curItem);
+                ele = fixedItem(curItem);
             }
+            const directives = buildDirectives(curItem);
+            if (directives.length > 0) {
+                return withDirectives(ele, directives);
+            } else {
+                return ele;
+            }
+
+        }
+
+        function buildDirectives(curItem) {
+            const {__directives__} = curItem;
+            const directives = [];
+            if (__directives__) {
+                for (const k in __directives__) {
+                    const v = __directives__[k];
+
+                    const modifiers = {};
+                    for (const k1 in v.modifiers) {
+                        modifiers[v.modifiers[k1]]=true;
+                    }
+                    const options = {};
+                    for (const k1 in v.options) {
+                        options[k1]=v.options[k1];
+                    }
+                    directives.push([resolveDirective(k),options,undefined, modifiers]);
+                    console.info(directives)
+                }
+            }
+            return directives;
         }
 
         return () => doLayout(props.currentItem);

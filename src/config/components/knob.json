@@ -6,7 +6,8 @@
   "layouts": [
     "rawItem"
   ],
-  "document": "https://www.primevue.org/knob/",
+  "document": "https://primevue.org/knob/",
+  "description": "Knob is a form component to define number inputs with a dial.",
   "attributes": {
     "vModel": "modelValue",
     "size": {
@@ -139,7 +140,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{value}'"
+      "default": "{value}"
     },
     "tabindex": {
       "label": "tabindex",

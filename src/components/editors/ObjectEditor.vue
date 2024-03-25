@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="editor">
     <draggable :list="list" :animation="340" group="style" itemKey="index"
                handle=".drag-icon" @change="change">
       <template #item="{element,index}">

@@ -7,7 +7,7 @@
     "rawItem"
   ],
   "document": "https://primevue.org/orderlist",
-  "description": "OrderList is used to sort a collection.",
+  "description": "OrderList is used to managed the order of a collection.",
   "attributes": {
     "vModel": "modelValue",
     "data-key": {

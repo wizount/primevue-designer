@@ -6,10 +6,15 @@ const routes = [
         name: 'index',
         component: Index,
     },
+    // {
+    //     path: '/render',
+    //     name: 'render',
+    //     component:() =>import('@/views/render')
+    // },
     {
-        path: '/render',
-        name: 'render',
-        component:() =>import('@/views/render')
+        path: '/test',
+        name: 'test',
+        component:() =>import('@/views/Tool/Test.vue')
     },
     {
         path: '/com',

@@ -6,7 +6,7 @@
   "layouts": [
     "rawItem"
   ],
-  "document": "https://primevue.org/inputtext/",
+  "document": "https://primevue.org/floatlabel/",
   "description": "FloatLabel appears on top of the input field when focused.",
   "attributes": {
     "pt": {

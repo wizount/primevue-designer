@@ -1,15 +1,161 @@
 {
   "__id__": "tooltip",
   "directive": true,
-  "value": {
-    "name": "string",
-    "tag": "p-input-text",
-    "default": ""
-  },
   "args": [],
-  "modifiers": [
-    "body",
-    "fullscreen",
-    "lock"
-  ]
+  "modifiers": {
+    "position": {
+      "name": "string",
+      "tag": "p-dropdown",
+      "props": {
+        "options": [
+          "right",
+          "left",
+          "top",
+          "bottom"
+        ]
+      },
+      "default": "right"
+    },
+    "event": {
+      "name": "string",
+      "tag": "p-dropdown",
+      "props": {
+        "options": [
+          "hover",
+          "focus"
+        ]
+      },
+      "default": "hover"
+    }
+  },
+  "options": {
+    "value": {
+      "label": "value",
+      "title": "Text of the tooltip.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "disabled": {
+      "label": "disabled",
+      "title": "When present, it specifies that the component should be disabled.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    },
+    "id": {
+      "label": "id",
+      "title": "When present, it adds a custom id to the tooltip.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "class": {
+      "label": "class",
+      "title": "When present, it adds a custom class to the tooltip.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "escape": {
+      "label": "escape",
+      "title": "By default the tooltip contents are not rendered as text. Set to false to support html tags in the content.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "fit-content": {
+      "label": "fitContent",
+      "title": "Automatically adjusts the element position when there is not enough space on the selected position.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "show-delay": {
+      "label": "showDelay",
+      "title": "When present, it adds a custom delay to the tooltip's display.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "hide-delay": {
+      "label": "hideDelay",
+      "title": "When present, it adds a custom delay to the tooltip's hiding.",
+      "types": [
+        {
+          "name": "number",
+          "tag": "p-input-number"
+        }
+      ],
+      "default": 0
+    },
+    "auto-hide": {
+      "label": "autoHide",
+      "title": "Whether to hide tooltip when hovering over tooltip content.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": true
+    },
+    "pt": {
+      "label": "pt",
+      "title": "Uses to pass attributes to DOM elements inside the component.",
+      "types": [
+        {
+          "name": "object",
+          "tag": "object-editor"
+        }
+      ],
+      "default": {}
+    },
+    "pt-options": {
+      "label": "ptOptions",
+      "title": "Used to configure passthrough(pt) options of the component.",
+      "types": [
+        {
+          "name": "PassThroughOptions",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "unstyled": {
+      "label": "unstyled",
+      "title": "When enabled, it removes component related styles in the core.",
+      "types": [
+        {
+          "name": "boolean",
+          "tag": "p-input-switch"
+        }
+      ],
+      "default": false
+    }
+  }
 }

@@ -149,7 +149,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'({currentPage} of {totalPages})'"
+      "default": "({currentPage} of {totalPages})"
     },
     "sort-field": {
       "label": "sortField",

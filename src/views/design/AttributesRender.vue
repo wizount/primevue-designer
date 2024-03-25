@@ -56,10 +56,10 @@
   <template v-if="activeData.__id__!=='plainText'">
     <p-divider>属性</p-divider>
 
-    <form-item label="原生属性">
-<!--      <p-input-group-addon>原生属性</p-input-group-addon>-->
+    <p-input-group >
+      <p-input-group-addon>原生属性</p-input-group-addon>
       <object-editor v-model="activeData.__native__"/>
-    </form-item>
+    </p-input-group>
     <p-input-group v-if="curItemConfig.iconName !== undefined">
       <p-input-group-addon>图标</p-input-group-addon>
       <icon-chooser v-model="curItemConfig.iconName"></icon-chooser>
@@ -81,34 +81,34 @@
       <!--v-if="activeData.__data__.dynamic-->
 
       <div>
-      <p-select-button v-model="activeData.__data__.source" class="w-100"
-                       :options="[{text:'静态数据',value:'static'},{text:'动态数据',value:'dynamic'}]"
-                       option-label="text" option-value="value"/>
+        <p-select-button v-model="activeData.__data__.source" class="w-100"
+                         :options="[{text:'静态数据',value:'static'},{text:'动态数据',value:'dynamic'}]"
+                         option-label="text" option-value="value"/>
 
-      <p-input-text v-model="activeData.__refs__[curComConfig.data.name]" class="w-100"
-                    v-if="activeData.__data__[activeData.__data__.source].ref"/>
-      <div v-if="activeData.__data__.source==='static'">
-        <config-value-input :attr-config="curComConfig.data.static.type"
-                            v-model="activeData.__data__.static[curComConfig.data.name]"></config-value-input>
-      </div>
-      <div v-show="activeData.__data__.source==='dynamic'" v-if="activeData.__data__.dynamic">
-        <p-input-group>
-          <p-input-group-addon>网址</p-input-group-addon>
-          <p-input-text v-model="activeData.__data__.dynamic.url" placeholder="网址">
-          </p-input-text>
-        </p-input-group>
-        <p-input-group>
-          <p-input-group-addon>方法</p-input-group-addon>
-          <p-select-button v-model="activeData.__data__.dynamic.method"
-                           :options="['get','post']"/>
-        </p-input-group>
-        <p-input-group>
-          <p-input-group-addon>数据位置</p-input-group-addon>
-          <p-input-text v-model="activeData.__data__.dynamic.dataKey" placeholder="数据位置"
-                        @change="changeRenderKey()">
-          </p-input-text>
-        </p-input-group>
-      </div>
+        <p-input-text v-model="activeData.__refs__[curComConfig.data.name]" class="w-100"
+                      v-if="activeData.__data__[activeData.__data__.source].ref"/>
+        <div v-if="activeData.__data__.source==='static'">
+          <config-value-input :attr-config="curComConfig.data.static.type"
+                              v-model="activeData.__data__.static[curComConfig.data.name]"></config-value-input>
+        </div>
+        <div v-show="activeData.__data__.source==='dynamic'" v-if="activeData.__data__.dynamic">
+          <p-input-group>
+            <p-input-group-addon>网址</p-input-group-addon>
+            <p-input-text v-model="activeData.__data__.dynamic.url" placeholder="网址">
+            </p-input-text>
+          </p-input-group>
+          <p-input-group>
+            <p-input-group-addon>方法</p-input-group-addon>
+            <p-select-button v-model="activeData.__data__.dynamic.method"
+                             :options="['get','post']"/>
+          </p-input-group>
+          <p-input-group>
+            <p-input-group-addon>数据位置</p-input-group-addon>
+            <p-input-text v-model="activeData.__data__.dynamic.dataKey" placeholder="数据位置"
+                          @change="changeRenderKey()">
+            </p-input-text>
+          </p-input-group>
+        </div>
       </div>
     </p-input-group>
     <template v-for="(v,k) in defaultSetterData" :key="v">
@@ -125,14 +125,12 @@
           <i v-if="v.required" style="color:var(--red-500)">*</i>
         </p-input-group-addon>
 
-        <div class="flex-grow-1 d-flex flex-wrap">
-          <p-input-text v-model="__refs__[k]" v-if="__refs__&&__refs__[k]" placeholder="请输入ref对象变量名" class="w-100"
-                        title="请输入ref对象变量名"
-          />
-          <!--      :treeProps="curItemProps.props"使用不明智，但确实解决了问题-->
-          <config-value-input v-model="curItemProps[k]" v-if="v.type.tag" :treeProps="curItemProps.props"
-                              :attr-config="v.type"></config-value-input>
-        </div>
+        <p-input-text v-model="__refs__[k]" v-if="__refs__&&__refs__[k]" placeholder="请输入ref对象变量名" class="w-100"
+                      title="请输入ref对象变量名"
+        />
+        <!--  fixme    :treeProps="curItemProps.props"使用不明智，但确实解决了问题-->
+        <config-value-input v-model="curItemProps[k]" v-if="v.type.tag" :treeProps="curItemProps.props"
+                            :attr-config="v.type"></config-value-input>
       </p-input-group>
     </template>
   </template>

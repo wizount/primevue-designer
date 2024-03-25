@@ -97,7 +97,7 @@
           }
         }
       ],
-      "default": "'button'"
+      "default": "button"
     },
     "icon": {
       "label": "icon",

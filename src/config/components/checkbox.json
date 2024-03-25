@@ -7,7 +7,7 @@
     "rawItem"
   ],
   "document": "https://primevue.org/checkbox/",
-  "description": "Accordion groups a collection of contents in tabs.",
+  "description": "Checkbox is an extension to standard checkbox element with theming.",
   "attributes": {
     "vModel": "modelValue",
     "value": {

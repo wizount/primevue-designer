@@ -1,0 +1,13 @@
+{
+  "__id__": "label",
+  "name": "label",
+  "tag": "label",
+  "tagIcon": "label",
+  "layouts": ["rawItem"],
+  "slots": [
+    {
+      "name": "default",
+      "title": "文本内容"
+    }
+  ]
+}

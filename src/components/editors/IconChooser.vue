@@ -1,5 +1,5 @@
 <template>
-  <div class="my-input-group-addon align-self-center">
+  <div class="editor">
     <p-button class="click-remove-btn" text v-if="icon"
                 :title="`${icon}，点击删除`"
                @click="setIcon('')">

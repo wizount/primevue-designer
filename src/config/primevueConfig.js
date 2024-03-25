@@ -21,6 +21,9 @@ export const primeVueComponents =
                         __id__: "div",
                     },
                     {
+                        __id__: "label",
+                    },
+                    {
                         __id__: "flex-div",
                         __props__: {
                             style: {
@@ -121,7 +124,10 @@ export const primeVueComponents =
                     key: "AutoComplete",
                     children: [
                         {
-                            __id__: "auto-complete"
+                            __id__: "auto-complete",
+                            __config__: {
+                                ...defaultInputGroupConfig
+                            }
                         }
                     ]
                 },
@@ -214,10 +220,51 @@ export const primeVueComponents =
                     children: [
                         {
                             __id__: "editor",
-                            __config__: {
-                                ...defaultInputGroupConfig
-                            }
+                        }
+                    ]
+                },
+                {
+                    name: "FloatLabel",
+                    key: "FloatLabel",
+                    children: [
+                        {
+                            __id__: "float-label",
+                            __slots__: {
+                                default: [{
+                                    __id__: "input-text",
+                                    __native__:{
+                                        id: 'tempId'
+                                    }
+                                }, {
+                                    __id__: "label",
+                                    __native__:{
+                                        for: 'tempId'
+                                    },
+                                    __slots__: {
+                                        default: ["FloatLabel"]
+                                    }
+                                }]
+                            },
+                        }
+                    ]
+                },
+                {
+                    name: "IconField",
+                    key: "IconField",
+                    children: [
+                        {
+                            __id__: "icon-field",
+                            __slots__: {
+                                default: [{
+                                    __id__: "input-icon",
+                                    __native__:{
+                                        class:"pi pi-search"
+                                    }
+                                }, {
+                                    __id__: "input-text"
 
+                                }]
+                            },
                         }
                     ]
                 },
@@ -249,6 +296,16 @@ export const primeVueComponents =
                             __props__: {
                                 showButtons: true
                             }
+
+                        }
+                    ]
+                },
+                {
+                    name: "InputOtp",
+                    key: "InputOtp",
+                    children: [
+                        {
+                            __id__: "input-otp"
 
                         }
                     ]
@@ -1045,24 +1102,6 @@ export const primeVueComponents =
                     children: [
                         {
                             __id__: "progress-spinner"
-                        }
-                    ]
-                },
-                {
-                    name: "Ripple",
-                    key: "Ripple",
-                    children: [
-                        {
-                            __id__: "ripple"
-                        }
-                    ]
-                },
-                {
-                    name: "StyleClass",
-                    key: "StyleClass",
-                    children: [
-                        {
-                            __id__: "style-class"
                         }
                     ]
                 },

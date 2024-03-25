@@ -7,7 +7,7 @@
     "rawItem"
   ],
   "document": "https://primevue.org/paginator",
-  "description": "Paginator is a generic widget to display content in paged format.",
+  "description": "Paginator is a generic component to display content in paged format.",
   "attributes": {
     "total-records": {
       "label": "totalRecords",
@@ -82,7 +82,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'({currentPage} of {totalPages})'"
+      "default": "({currentPage} of {totalPages})"
     },
     "always-show": {
       "label": "alwaysShow",

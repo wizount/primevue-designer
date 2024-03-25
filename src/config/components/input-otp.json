@@ -7,7 +7,7 @@
     "containerItem"
   ],
   "document": "https://primevue.org/inputotp/",
-  "description": "InputOtp  is used to enter one time passwords.",
+  "description": "InputOtp is used to enter one time passwords.",
   "attributes": {
     "vModel": "modelValue",
     "invalid": {

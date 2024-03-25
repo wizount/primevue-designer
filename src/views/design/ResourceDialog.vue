@@ -8,7 +8,7 @@
         @show="onOpen"
         @close="onClose"
     >
-      <p-input
+      <p-input-text
           v-for="(item, index) in resources"
           :key="index"
           v-model="resources[index]"

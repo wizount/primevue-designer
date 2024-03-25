@@ -23,9 +23,9 @@
                   </div>
                   <div v-else>
                     <p-split-button severity="primary" label="添加组件"
-                                    :model="slot.subtags.map(subtag=>{return {label:`添加${{subtag}}组件`,command:()=>addSlotDrawItem({slotName:slot.name,subtag})}})">
-                    </p-split-button>
-                  </div>
+                               :model="slot.subtags.map(subtag=>{return {label:`添加${{subtag}}组件`,command:()=>addSlotDrawItem({slotName:slot.name,subtag})}})">
+                  </p-split-button>
+              </div>
 
                 </template>
 
@@ -53,7 +53,8 @@
                     </div>
                     <template v-if="slot.subtags&&slot.subtags.length>0">
                       <div v-if="slot.subtags.length===1">
-                        <p-button link severity="primary" icon="pi pi-plus" size="small" v-p-tooltip.top="`添加${slot.subtags[0]}组件`"
+                        <p-button link severity="primary" icon="pi pi-plus" size="small"
+                                  v-p-tooltip.top="`添加${slot.subtags[0]}组件`"
                                   @click="addSlotDrawItem({slotName:slot.name,subtag:slot.subtags[0]})"/>
                       </div>
                       <div v-else>
@@ -109,39 +110,39 @@
           </div>
         </p-scroll-panel>
       </p-tab-panel>
-<!--      <p-tab-panel header="事件" key="events">-->
-<!--        <p-scroll-panel class="right-scrollbar">-->
-<!--          <div>-->
-<!--            <p-dropdown @command="addEvent">-->
-<!--              <p-button link severity="primary" :content="`添加事件`" icon="Plus">添加事件</p-button>-->
-<!--              <template #dropdown>-->
-<!--                <p-dropdown-menu>-->
-<!--                  <p-dropdown-item v-for="e in curComConfig.events" :command="e">-->
-<!--                    添加{{ e.name }}事件-->
-<!--                  </p-dropdown-item>-->
-<!--                </p-dropdown-menu>-->
-<!--              </template>-->
-<!--            </p-dropdown>-->
-<!--            <div v-for="e in activeData.__events__">-->
-<!--              <p-input-group label="事件名">-->
-<!--                <p-tag>{{ e.name }}</p-tag>-->
-<!--              </p-input-group>-->
-<!--              <p-input-group label="函数">-->
-<!--                <p-input-text v-model="e.fnName"></p-input-text>-->
-<!--              </p-input-group>-->
-<!--              <p-input-group label="参数">-->
-<!--                <p-input-text v-model="e.params"></p-input-text>-->
-<!--              </p-input-group>-->
-<!--              <p-input-group label="函数体">-->
-<!--                <p-input-text type="textarea" v-model="e.fnBody"></p-input-text>-->
-<!--              </p-input-group>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </p-scroll-panel>-->
-<!--      </p-tab-panel>-->
+      <!--      <p-tab-panel header="事件" key="events">-->
+      <!--        <p-scroll-panel class="right-scrollbar">-->
+      <!--          <div>-->
+      <!--            <p-dropdown @command="addEvent">-->
+      <!--              <p-button link severity="primary" :content="`添加事件`" icon="Plus">添加事件</p-button>-->
+      <!--              <template #dropdown>-->
+      <!--                <p-dropdown-menu>-->
+      <!--                  <p-dropdown-item v-for="e in curComConfig.events" :command="e">-->
+      <!--                    添加{{ e.name }}事件-->
+      <!--                  </p-dropdown-item>-->
+      <!--                </p-dropdown-menu>-->
+      <!--              </template>-->
+      <!--            </p-dropdown>-->
+      <!--            <div v-for="e in activeData.__events__">-->
+      <!--              <p-input-group label="事件名">-->
+      <!--                <p-tag>{{ e.name }}</p-tag>-->
+      <!--              </p-input-group>-->
+      <!--              <p-input-group label="函数">-->
+      <!--                <p-input-text v-model="e.fnName"></p-input-text>-->
+      <!--              </p-input-group>-->
+      <!--              <p-input-group label="参数">-->
+      <!--                <p-input-text v-model="e.params"></p-input-text>-->
+      <!--              </p-input-group>-->
+      <!--              <p-input-group label="函数体">-->
+      <!--                <p-input-text type="textarea" v-model="e.fnBody"></p-input-text>-->
+      <!--              </p-input-group>-->
+      <!--            </div>-->
+      <!--          </div>-->
+      <!--        </p-scroll-panel>-->
+      <!--      </p-tab-panel>-->
       <p-tab-panel header="样式" key="style">
         <p-scroll-panel class="right-scrollbar">
-            <style-editor v-model="curItemProps.style"></style-editor>
+          <style-editor v-model="curItemProps.style"></style-editor>
         </p-scroll-panel>
       </p-tab-panel>
       <p-tab-panel header="正则表达式" v-if="Array.isArray(curItemConfig.regList)" key="reg">
@@ -181,27 +182,37 @@
           </div>
         </p-scroll-panel>
       </p-tab-panel>
-      <p-tab-panel header="指令"  key="directive">
-        <p-button type="button" icon="pi pi-ellipsis-v" @click="toggleDirectiveMenu" aria-haspopup="true" aria-controls="directive_menu" />
-        <p-menu ref="directiveMenu" id="directive_menu" :model="directiveItems" :popup="true" />
+      <p-tab-panel header="指令" key="directive">
+        <p-button type="button" icon="pi pi-ellipsis-v" @click="toggleDirectiveMenu" aria-haspopup="true"
+                  aria-controls="directive_menu"/>
+        <p-menu ref="directiveMenu" id="directive_menu" :model="directiveItems" :popup="true"/>
 
         <div v-for="(d,key) in activeData.__directives__">
 
-          <p-divider>{{key}}指令</p-divider>
-          <p-input-group>
-            <p-input-group-addon>值</p-input-group-addon>
-            <config-value-input v-model="d.value" :attr-config="primeVueConfigMap[key].value"></config-value-input>
-          </p-input-group>
-
-
+          <p-divider>{{ key }}指令</p-divider>
           <p-input-group>
             <p-input-group-addon>参数</p-input-group-addon>
             <p-select-button v-model="d.arg" :options="primeVueConfigMap[key].args"></p-select-button>
           </p-input-group>
-          <p-input-group label="修饰符">
+          <p-input-group>
             <p-input-group-addon>修饰符</p-input-group-addon>
-            <p-select-button v-model="d.modifiers" :options="primeVueConfigMap[key].modifiers" multiple></p-select-button>
+            <div class="w-100">
+              <p-input-group v-for="(m,k) in primeVueConfigMap[key].modifiers" class="w-100">
+                <p-input-group-addon>{{ k }}</p-input-group-addon>
+                <config-value-input v-model="d.modifiers[k]" :attr-config="m"></config-value-input>
+              </p-input-group>
+
+            </div>
+
           </p-input-group>
+          <template v-for="(v,k) in primeVueConfigMap[key].options" :key="v">
+            <p-input-group>
+              <p-input-group-addon> {{v.label}}
+              </p-input-group-addon>
+              <config-value-input v-model="d.options[v.label]" v-if="v.types[0].tag"
+                                   :attr-config="v.types[0]"></config-value-input>
+            </p-input-group>
+          </template>
         </div>
 
       </p-tab-panel>
@@ -213,6 +224,7 @@
 
 <script setup lang="jsx">
 import ConfigValueInput from "@/views/design/ConfigValueInput";
+
 console.info(resolveComponent("p-button"))
 const version = "3.49.1";
 import Draggable from '@/vuedraggable/vuedraggable';
@@ -453,11 +465,12 @@ const directiveItems = ref([
     items: [
       {
         label: 'tooltip',
-        command: () =>addDirective("tooltip")
+        command: () => addDirective("tooltip")
       },
       {
-        label: 'Export',
-      }
+        label: 'ripple',
+        command: () => addDirective("ripple")
+      },
     ]
   }
 ]);
@@ -467,12 +480,21 @@ const toggleDirectiveMenu = (event) => {
 };
 
 function addDirective(event) {
-  console.info(primeVueConfigMap)
   if (!props.activeData.__directives__[event]) {
+    const modifiers = {};
+    const options = {};
+    const modifiersConfig = primeVueConfigMap[event].modifiers;
+    for (const k in modifiersConfig) {
+      modifiers[k] = modifiersConfig[k].default;
+    }
+
+    for (const k in primeVueConfigMap[event].options) {
+      options[primeVueConfigMap[event].options[k].label] = primeVueConfigMap[event].options[k].default;
+    }
     props.activeData.__directives__[event] = {
-      value:primeVueConfigMap[event].value.default,
-      arg:undefined,
-      modifiers:[]
+      arg: undefined,
+      modifiers,
+      options
     };
   }
   console.info(props.activeData.__directives__)

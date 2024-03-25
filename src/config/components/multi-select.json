@@ -323,7 +323,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{0} items selected'"
+      "default": "{0} items selected"
     },
     "max-selected-labels": {
       "label": "maxSelectedLabels",
@@ -512,7 +512,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{0} results are available'"
+      "default": "{0} results are available"
     },
     "selection-message": {
       "label": "selectionMessage",
@@ -523,7 +523,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{0} items selected'"
+      "default": "{0} items selected"
     },
     "empty-selection-message": {
       "label": "emptySelectionMessage",
@@ -556,7 +556,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "No results found'"
+      "default": "No results found"
     },
     "tabindex": {
       "label": "tabindex",

@@ -1,25 +1,9 @@
 {
-  "__id__": "scroll-panel",
-  "name": "ScrollPanel",
-  "tag": "p-scroll-panel",
-  "tagIcon": "scrollPanel",
-  "layouts": [
-    "rawItem"
-  ],
-  "document": "https://primevue.org/scrollpanel/",
-  "description": "ScrollPanel is a cross browser, lightweight and themable alternative to native browser scrollbar.",
-  "attributes": {
-    "step": {
-      "label": "step",
-      "title": "Step factor to scroll the content while pressing the arrow keys.",
-      "types": [
-        {
-          "name": "number",
-          "tag": "p-input-number"
-        }
-      ],
-      "default": 5
-    },
+  "__id__": "badge-directive",
+  "directive": true,
+  "document": "https://primevue.org/badge",
+  "description": "Badge directive is a small status indicator for another element.",
+  "options": {
     "pt": {
       "label": "pt",
       "title": "Used to pass attributes to DOM elements inside the component.",
@@ -51,7 +35,26 @@
         }
       ],
       "default": false
+    },
+    "root": {
+      "label": "root",
+      "title": "Used to pass attributes to the root's DOM element.",
+      "types": [
+        {
+          "name": "BadgeDirectivePassThroughOptionType",
+          "tag": "p-input-text"
+        }
+      ]
+    },
+    "hooks": {
+      "label": "hooks",
+      "title": "Used to manage all lifecycle hooks.",
+      "types": [
+        {
+          "name": "DirectiveHooks<any, any>",
+          "tag": "p-input-text"
+        }
+      ]
     }
-  },
-  "slots": []
+  }
 }

@@ -7,7 +7,7 @@
     "containerItem"
   ],
   "document": "https://primevue.org/message/",
-  "description": "Messages is used to display inline messages with various severities.",
+  "description": "Message groups a collection of contents in tabs.",
   "attributes": {
     "severity": {
       "label": "severity",

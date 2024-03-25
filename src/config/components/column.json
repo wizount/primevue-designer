@@ -7,7 +7,7 @@
     "rawItem"
   ],
   "document": "https://primevue.org/datatable/",
-  "description": "Column is a helper component for Column and TreeTable.",
+  "description": "Column component defines various options to specify corresponding features.\r\nIt is a helper component for DataTable and TreeTable.",
   "attributes": {
     "column-key": {
       "label": "columnKey",

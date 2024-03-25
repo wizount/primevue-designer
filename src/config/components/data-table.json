@@ -147,7 +147,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'({currentPage} of {totalPages})'"
+      "default": "({currentPage} of {totalPages})"
     },
     "lazy": {
       "label": "lazy",

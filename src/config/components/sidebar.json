@@ -7,7 +7,7 @@
     "containerItem"
   ],
   "document": "https://primevue.org/sidebar",
-  "description": "Sidebar is a panel component displayed as an overlay.",
+  "description": "Sidebar is a panel component displayed as an overlay at the edges of the screen.",
   "attributes": {
     "visible": {
       "label": "visible",

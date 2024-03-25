@@ -181,7 +181,7 @@ import {useToast} from 'primevue/usetoast';
 const toast = useToast();
 
 import DraggableItem from "./DraggableItem"
-import {primeVueComponents} from "@/config/elementPlusConfig";
+import {primeVueComponents} from "@/config/primevueConfig";
 
 
 import primeVueConfigMap from "@/config";
@@ -201,7 +201,11 @@ primeVueComponents.forEach((first) => {
 })
 
 function createComponentMap(com) {
+
   if (primeVueConfigMap[com.__id__]) {
+    if(primeVueConfigMap[com.__id__].directive){
+      return
+    }
     if (!com.__config__) {
       com.__config__ = {};
     }
@@ -568,14 +572,12 @@ function cloneDrawItem(origin) {
 
   if (clone.__slots__) {
     Object.keys(clone.__slots__).forEach(k => {
-      console.info(k)
       if (Array.isArray(clone.__slots__[k])) {
         for (let i = 0; i < clone.__slots__[k].length; i++) {
           if (typeof clone.__slots__[k][i] !== 'string') {
             clone.__slots__[k][i] = cloneDrawItem(clone.__slots__[k][i]);
           }
         }
-        console.info(k, clone.__slots__[k])
       }
     })
   }
@@ -756,7 +758,6 @@ function emptyDrawItemList() {
     header: '提示',
     icon: 'pi pi-exclamation-triangle',
     accept: () => {
-      console.trace(1)
       drawItemList.value = []
       activeData.value = {}
       idGlobal.value = 100;

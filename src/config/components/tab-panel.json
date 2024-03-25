@@ -7,7 +7,7 @@
     "containerItem"
   ],
   "document": "https://primevue.org/tabview/",
-  "description": "TabPanel is a helper component for TabView component.",
+  "description": "TabPanel is a helper component for TabPanel component.",
   "attributes": {
     "header": {
       "label": "header",

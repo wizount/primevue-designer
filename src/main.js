@@ -51,6 +51,9 @@ import Divider from 'primevue/divider'
 import Dropdown from 'primevue/dropdown'
 import Dock from 'primevue/dock'
 import Editor from 'primevue/editor'
+import FloatLabel from 'primevue/floatlabel'
+import IconField from 'primevue/iconfield'
+import InputIcon from 'primevue/inputicon'
 import Fieldset from 'primevue/fieldset'
 import FileUpload from 'primevue/fileupload'
 import Image from 'primevue/image'
@@ -58,6 +61,7 @@ import InlineMessage from 'primevue/inlinemessage'
 import Inplace from 'primevue/inplace'
 import InputMask from 'primevue/inputmask'
 import InputNumber from 'primevue/inputnumber'
+import InputOtp from 'primevue/inputotp'
 import InputSwitch from 'primevue/inputswitch'
 import InputText from 'primevue/inputtext'
 import InputGroup from 'primevue/inputgroup'
@@ -116,7 +120,7 @@ import PrimeVue from 'primevue/config'
 
 // directives
 //import BadgeDirective from 'primevue/badgedirective'
-// import Ripple from 'primevue/ripple'
+import Ripple from 'primevue/ripple'
 // import StyleClass from 'primevue/styleclass'
 import Tooltip from 'primevue/tooltip'
 // import FocusTrap from 'primevue/focustrap'
@@ -128,8 +132,9 @@ import DialogService from 'primevue/dialogservice'
 
 
 //   app.directive('badge', BadgeDirective)
-// app.directive('ripple', Ripple)
-app.directive('p-tooltip', Tooltip)
+ app.directive('ripple', Ripple)
+app.directive('tooltip', Tooltip)
+app.directive('PTooltip', Tooltip)
 //  app.directive('styleclass', StyleClass)
 //  app.directive('focustrap', FocusTrap)
 
@@ -169,6 +174,9 @@ app.component('PDivider', Divider)
 app.component('PDropdown', Dropdown)
 app.component('PDock', Dock)
 app.component('PEditor', Editor)
+app.component('PFloatLabel', FloatLabel)
+app.component('PIconField', IconField)
+app.component('PInputIcon', InputIcon)
 app.component('PFieldset', Fieldset)
 app.component('PFileUpload', FileUpload)
 app.component('PImage', Image)
@@ -176,6 +184,7 @@ app.component('PInlineMessage', InlineMessage)
 app.component('PInplace', Inplace)
 app.component('PInputMask', InputMask)
 app.component('PInputNumber', InputNumber)
+app.component('PInputOtp', InputOtp)
 app.component('PInputSwitch', InputSwitch)
 app.component('PInputText', InputText)
 app.component('PInputGroup', InputGroup)
@@ -225,7 +234,7 @@ app.component('PTreeTable', TreeTable)
 app.component('PTriStateCheckbox', TriStateCheckbox)
 app.component('PVirtualScroller', VirtualScroller)
 app.component('PTerminal', Terminal)
-app.use(PrimeVue)
+app.use(PrimeVue,{ ripple: true })
 // services
 app.use(ConfirmationService)
 app.use(ToastService)

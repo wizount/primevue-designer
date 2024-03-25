@@ -6,8 +6,8 @@
   "layouts": [
     "containerItem"
   ],
-  "document": "https://primevue.org/inputtext/",
-  "description": "IconField is used to select a boolean value.",
+  "document": "https://primevue.org/iconfield/",
+  "description": "IconField wraps an input and an icon.",
   "attributes": {
     "icon-position": {
       "label": "iconPosition",

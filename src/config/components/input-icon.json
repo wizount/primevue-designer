@@ -4,10 +4,10 @@
   "tag": "p-input-icon",
   "tagIcon": "inputIcon",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
-  "document": "https://primevue.org/inputgroup/",
-  "description": "InputIcon displays text, icon, buttons and other content can be grouped next to an input.",
+  "document": "https://primevue.org/iconfield/",
+  "description": "InputIcon displays an icon.",
   "attributes": {
     "pt": {
       "label": "pt",

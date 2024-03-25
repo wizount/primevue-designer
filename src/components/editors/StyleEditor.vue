@@ -1,4 +1,5 @@
 <template>
+  <div class="editor">
     <draggable :list="list" :animation="340" group="style" itemKey="index"
                handle=".drag-icon" @change="change" class="w-100">
       <template #item="{element,index}">
@@ -9,11 +10,11 @@
         </draggable-editor>
       </template>
     </draggable>
-    <div style="margin-left: 20px">
+    <div>
       <p-button style="padding-bottom: 0" text severity="primary" @click="list.push({key:'',value:''});change()"> 添加
       </p-button>
     </div>
-
+  </div>
 </template>
 
 <script setup>

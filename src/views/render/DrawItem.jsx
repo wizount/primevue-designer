@@ -68,6 +68,7 @@ export default {
                 rules = props.formRules;
             }
             const {tag} = curItem.__config__;
+            console.info(buildSlots(curItem))
             return h(resolveComponent(tag),
                 {...curItem.__props__, ...curItem.__native__,...buildVModel(curItem), model, rules},
                 buildSlots(curItem));
@@ -89,6 +90,7 @@ export default {
                 }
                 thisSlots[key] = () => curItem.__slots__[key].map(element => doLayout(element));
             }
+            console.log(thisSlots)
             return thisSlots;
         }
 
@@ -148,7 +150,7 @@ export default {
 
         function doLayout(curItem) {
             if (typeof curItem === "string") {
-                return h("span", curItem);
+                return h("span", ()=>curItem);
             }
             const {layout, wrapWithInputGroup} = curItem.__config__;
             if (wrapWithInputGroup) {

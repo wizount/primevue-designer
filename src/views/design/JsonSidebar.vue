@@ -7,7 +7,7 @@
           <p-button security="primary" class="pi pi-copy mr-2" @click="triggerCopy" label="复制JSON"/>
           <p-button security="primary" @click="exportJsonFile" class="pi pi-download" label="导出JSON文件"/>
         </div>
-        <p-dropdown v-model="designConf.jsCodeStyle" :options="jsCodeStyleList" option-label="text"
+        <p-select-button v-model="designConf.jsonSimplified" :options="[{value:true,text:'简化'},{value:false,text:'完整'}]" option-label="text"
                      option-value="value"/>
       </div>
     </template>

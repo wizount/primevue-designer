@@ -7,7 +7,7 @@
     "containerItem"
   ],
   "document": "https://primevue.org/progressbar",
-  "description": "\r\n\r\n[Live Demo](https://www.primevue.org/progressbar/)\r\n--- ---\r\n![PrimeVue](https://primefaces.org/cdn/primevue/images/logo-100.png)",
+  "description": "ProgressBar is a process status indicator.",
   "attributes": {
     "value": {
       "label": "value",

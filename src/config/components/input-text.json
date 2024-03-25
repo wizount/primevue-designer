@@ -10,6 +10,7 @@
   "description": "InputText renders a text field to enter data.",
   "attributes": {
     "vModel": "modelValue",
+    "placeholder": "Please enter ",
     "size": {
       "label": "size",
       "title": "Defines the size of the component.",

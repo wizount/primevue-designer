@@ -10,6 +10,7 @@
   "description": "AutoComplete is an input component that provides real-time suggestions while being typed.",
   "attributes": {
     "vModel": "modelValue",
+    "placeholder": "Please enter ",
     "suggestions": {
       "label": "suggestions",
       "title": "An array of suggestions to display.",
@@ -151,7 +152,6 @@
       ],
       "default": false
     },
-    "placeholder": "Please enter ",
     "loading": {
       "label": "loading",
       "title": "Whether the autocomplete is in loading state.",
@@ -459,7 +459,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{0} results are available'"
+      "default": "{0} results are available"
     },
     "selection-message": {
       "label": "selectionMessage",
@@ -470,7 +470,7 @@
           "tag": "p-input-text"
         }
       ],
-      "default": "'{0} items selected'"
+      "default": "{0} items selected"
     },
     "empty-selection-message": {
       "label": "emptySelectionMessage",
