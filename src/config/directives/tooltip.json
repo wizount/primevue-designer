@@ -1,6 +1,6 @@
 {
   "__id__": "tooltip",
-  "directive": true,
+  "directive": "tooltip",
   "args": [],
   "modifiers": {
     "position": {

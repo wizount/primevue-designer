@@ -461,16 +461,22 @@ const directiveMenu = ref();
 const directiveItems = ref([
   {
     label: '指令',
-    items: [
-      {
-        label: 'tooltip',
-        command: () => addDirective("tooltip")
-      },
-      {
-        label: 'ripple',
-        command: () => addDirective("ripple")
-      },
-    ]
+    items:Object.keys(primeVueConfigMap).filter(key=>primeVueConfigMap[key].directive).map(key=>{
+      return{
+        label: primeVueConfigMap[key].directive,
+        command: () => addDirective(key)
+      }
+    }),
+    // items: [
+    //   {
+    //     label: 'tooltip',
+    //     command: () => addDirective("tooltip")
+    //   },
+    //   {
+    //     label: 'ripple',
+    //     command: () => addDirective("ripple")
+    //   },
+    // ]
   }
 ]);
 
@@ -491,6 +497,7 @@ function addDirective(event) {
       options[primeVueConfigMap[event].options[k].label] = primeVueConfigMap[event].options[k].default;
     }
     props.activeData.__directives__[event] = {
+      name: primeVueConfigMap[event].directive,
       arg: undefined,
       modifiers,
       options

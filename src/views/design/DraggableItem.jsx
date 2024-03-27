@@ -176,7 +176,7 @@ export default {
                     continue;
                 }
                 if (curItem.__config__.layout === 'rawItem') {
-                    thisSlots[key] = () => curItem.__slots__[key].map(element => doLayout(element,true));
+                    thisSlots[key] = () => curItem.__slots__[key].map(element => doLayout(element, true));
                 } else {
                     thisSlots[key] = () =>
                         <Draggable tag="span"
@@ -290,12 +290,12 @@ export default {
             return h("span", {class: clazz, ...buildEvent(curItem)}, source);
         }
 
-        function doLayout(curItem,isRawItemSlots) {
+        function doLayout(curItem, isRawItemSlots) {
             if (typeof curItem === "string") {
-                if(isRawItemSlots){
-                    return   curItem;
-                }else {
-                    return  ()=>curItem;
+                if (isRawItemSlots) {
+                    return curItem;
+                } else {
+                    return () => curItem;
                 }
 
             }
@@ -328,14 +328,14 @@ export default {
 
                     const modifiers = {};
                     for (const k1 in v.modifiers) {
-                        modifiers[v.modifiers[k1]]=true;
+                        modifiers[v.modifiers[k1]] = true;
                     }
                     const options = {};
                     for (const k1 in v.options) {
-                        options[k1]=v.options[k1];
+                        options[k1] = v.options[k1];
                     }
-                    directives.push([resolveDirective(k),options,undefined, modifiers]);
-                    console.info(directives)
+
+                    directives.push([resolveDirective(v.name), options, undefined, modifiers]);
                 }
             }
             return directives;

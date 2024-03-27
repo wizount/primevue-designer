@@ -1,6 +1,6 @@
 {
   "__id__": "ripple",
-  "directive": true,
+  "directive": "ripple",
   "document": "https://primevue.org/ripple",
   "description": "Ripple directive adds ripple effect to the host element.",
   "modifiers": {},

@@ -83,7 +83,7 @@ npm run build
 
 ## 技术栈
 - Vue3 
-- Element Plus
+- Primevue
 - Vite5
 - Vuedraggable（(modified and used directly in the project）
 

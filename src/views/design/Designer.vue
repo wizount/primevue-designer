@@ -29,12 +29,12 @@
                           severity="info"
                           v-p-tooltip.right="primeVueConfigMap[element.__id__].description">
                   <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
-                  {{ element.__config__.name }}
+                  {{ element.__config__.itemName }}
                 </p-button>
                 <p-split-button v-else class="components-item" @click="addDrawItem(element)" severity="info"
                                 :model="element.__link__.map(l=>{return {label:l.__config__.name || l.__config__.tag,command:()=>addDrawItem(l)}})">
                   <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
-                  {{ element.__config__.name }}
+                  {{ element.__config__.itemName }}
                 </p-split-button>
               </template>
             </draggable>
@@ -216,8 +216,8 @@ function createComponentMap(com) {
       com.__config__ = {};
     }
     const {name, tag, tagIcon, layouts} = primeVueConfigMap[com.__id__];
-    if (!com.__config__.name) {
-      com.__config__.name = com.name||name;
+    if (!com.__config__.itemName) {
+      com.__config__.itemName = com.name||name;
     }
     if (!com.__config__.tag) {
       com.__config__.tag = tag;

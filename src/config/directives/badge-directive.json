@@ -1,9 +1,34 @@
 {
   "__id__": "badge-directive",
-  "directive": true,
+  "directive": "badge",
   "document": "https://primevue.org/badge",
   "description": "Badge directive is a small status indicator for another element.",
+  "modifiers": {
+    "severity": {
+      "name": "string",
+      "tag": "p-dropdown",
+      "props": {
+        "options": [
+          "info",
+          "success",
+          "warning",
+          "danger"
+        ]
+      },
+      "default": "info"
+    }
+  },
   "options": {
+    "value": {
+      "label": "value",
+      "title": "Text of the tooltip.",
+      "types": [
+        {
+          "name": "string",
+          "tag": "p-input-text"
+        }
+      ]
+    },
     "pt": {
       "label": "pt",
       "title": "Used to pass attributes to DOM elements inside the component.",

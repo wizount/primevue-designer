@@ -19,4 +19,4 @@ overlay大部分无法实现。
 
 Focus Trap,AnimateOnScroll指令实现
 
-下步计划，针对各种数据输入（比如value, model, data属性）
+下步计划，针对各种数据输入（比如value, model, data属性）提供更加简单的输入

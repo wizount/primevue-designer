@@ -1,6 +1,6 @@
 # Prime Vue设计器 (PrimeVue Designer)
 感谢 JakHuang [form generator](https://github.com/JakHuang/form-generator) 提供的灵感。  
-Element Plus设计器提供大部分PrimeVue组件所见及所得在线设计，当然也包含表单设计。  
+Primevue设计器提供大部分PrimeVue组件所见及所得在线设计，当然也包含表单设计。  
 [GitHub演示地址](https://wizount.github.io/primevue-designer/)
 
 <img src="https://gitee.com/wizount/primevue-designer/raw/master/images/all.png">
@@ -83,7 +83,7 @@ npm run build
 
 ## 技术栈
 - Vue3 
-- Element Plus
+- Primevue
 - Vite5
 - Vuedraggable（有进行修改，并在项目直接使用）
 

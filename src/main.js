@@ -124,10 +124,10 @@ import PrimeVue from 'primevue/config'
  import 'primevue/resources/themes/lara-light-green/theme.css'
 
 // directives
-//import BadgeDirective from 'primevue/badgedirective'
+import BadgeDirective from 'primevue/badgedirective'
 // import StyleClass from 'primevue/styleclass'
 import Tooltip from 'primevue/tooltip'
-// import FocusTrap from 'primevue/focustrap'
+ import FocusTrap from 'primevue/focustrap'
 
 // services
 import ConfirmationService from 'primevue/confirmationservice'
@@ -135,7 +135,7 @@ import ToastService from 'primevue/toastservice'
 import DialogService from 'primevue/dialogservice'
 
 
-//   app.directive('badge', BadgeDirective)
+   app.directive('badge', BadgeDirective)
 
 app.directive('tooltip', Tooltip)
 app.directive('PTooltip', Tooltip)
