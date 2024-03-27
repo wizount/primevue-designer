@@ -30,25 +30,30 @@ const props = defineProps({
 
 });
 onMounted(() => {
+
   setValues();
 })
 
 function setValues() {
+
   if (typeof props.modelValue === 'object' && !Array.isArray(props.modelValue)) {
     values.value = props.modelValue || {}
   } else {
     values.value = props.modelValue
   }
+  console.info()
 }
 
 const values = ref({});
 const emits = defineEmits(['update:modelValue']);
 watch(() => props.modelValue, (v) => {
+  console.log(v)
   setValues();
 })
 
 function change() {
-  emits("update:modelValue", values);
+  console.log(values)
+  emits("update:modelValue", values.value);
 }
 
 </script>

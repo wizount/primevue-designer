@@ -93,8 +93,11 @@ import Slider from 'primevue/slider'
 import Sidebar from 'primevue/sidebar'
 import Skeleton from 'primevue/skeleton'
 import SplitButton from 'primevue/splitbutton'
+import SpeedDial from 'primevue/speeddial'
 import Splitter from 'primevue/splitter'
 import SplitterPanel from 'primevue/splitterpanel'
+import Stepper from 'primevue/stepper'
+import StepperPanel from 'primevue/stepperpanel'
 import Steps from 'primevue/steps'
 import TabMenu from 'primevue/tabmenu'
 import Tag from 'primevue/tag'
@@ -107,6 +110,7 @@ import TabView from 'primevue/tabview'
 import TabPanel from 'primevue/tabpanel'
 import ToggleButton from 'primevue/togglebutton'
 import Tree from 'primevue/tree'
+import TreeSelect from 'primevue/treeselect'
 import TreeTable from 'primevue/treetable'
 import TriStateCheckbox from 'primevue/tristatecheckbox'
 import VirtualScroller from 'primevue/virtualscroller'
@@ -120,7 +124,6 @@ import PrimeVue from 'primevue/config'
 
 // directives
 //import BadgeDirective from 'primevue/badgedirective'
-import Ripple from 'primevue/ripple'
 // import StyleClass from 'primevue/styleclass'
 import Tooltip from 'primevue/tooltip'
 // import FocusTrap from 'primevue/focustrap'
@@ -132,7 +135,7 @@ import DialogService from 'primevue/dialogservice'
 
 
 //   app.directive('badge', BadgeDirective)
- app.directive('ripple', Ripple)
+
 app.directive('tooltip', Tooltip)
 app.directive('PTooltip', Tooltip)
 //  app.directive('styleclass', StyleClass)
@@ -215,9 +218,12 @@ app.component('PScrollTop', ScrollTop)
 app.component('PSlider', Slider)
 app.component('PSidebar', Sidebar)
 app.component('PSkeleton', Skeleton)
+app.component('PSpeedDial', SpeedDial)
 app.component('PSplitButton', SplitButton)
 app.component('PSplitter', Splitter)
 app.component('PSplitterPanel', SplitterPanel)
+app.component('PStepper', Stepper)
+app.component('PStepperPanel', StepperPanel)
 app.component('PSteps', Steps)
 app.component('PTabMenu', TabMenu)
 app.component('PTabView', TabView)
@@ -230,11 +236,12 @@ app.component('PToast', Toast)
 app.component('PToolbar', Toolbar)
 app.component('PToggleButton', ToggleButton)
 app.component('PTree', Tree)
+app.component('PTreeSelect', TreeSelect)
 app.component('PTreeTable', TreeTable)
 app.component('PTriStateCheckbox', TriStateCheckbox)
 app.component('PVirtualScroller', VirtualScroller)
 app.component('PTerminal', Terminal)
-app.use(PrimeVue,{ ripple: true })
+app.use(PrimeVue)
 // services
 app.use(ConfirmationService)
 app.use(ToastService)

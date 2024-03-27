@@ -4,7 +4,7 @@
   "tag": "p-tree",
   "tagIcon": "tree",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/tree/",
   "description": "Tree is used to display hierarchical data.",
@@ -14,10 +14,11 @@
       "title": "An array of treenodes.",
       "types": [
         {
-          "name": "TreeNode[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor"
         }
-      ]
+      ],
+      "hide": true
     },
     "expanded-keys": {
       "label": "expandedKeys",
@@ -264,5 +265,35 @@
       "name": "checkboxicon",
       "title": "Custom checkbox icon"
     }
-  ]
+  ],
+  "data": {
+    "name": "value",
+    "label": "数据",
+    "source": "static",
+    "inProps": true,
+    "static": {
+      "ref": true,
+      "type": {
+        "name": "array",
+        "tag": "tree-editor"
+      },
+      "default": [
+        {
+          "key": "1",
+          "label": "选项1",
+          "children": [
+            {
+              "key": "2",
+              "label": "选项1-1"
+            }
+          ]
+        }
+      ]
+    },
+    "dynamic": {
+      "url": "https://www.fastmock.site/mock/c9e1a1c3cefb84da4306dcf9fadde652/ele-plus-desinger/cascaderData",
+      "method": "get",
+      "dataKey": ""
+    }
+  }
 }

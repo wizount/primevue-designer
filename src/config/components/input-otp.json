@@ -4,7 +4,7 @@
   "tag": "p-input-otp",
   "tagIcon": "inputOtp",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/inputotp/",
   "description": "InputOtp is used to enter one time passwords.",

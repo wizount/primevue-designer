@@ -225,7 +225,6 @@
 <script setup lang="jsx">
 import ConfigValueInput from "@/views/design/ConfigValueInput";
 
-console.info(resolveComponent("p-button"))
 const version = "3.49.1";
 import Draggable from '@/vuedraggable/vuedraggable';
 import {saveDesignConf} from '@/utils/db'

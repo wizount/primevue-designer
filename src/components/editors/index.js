@@ -8,7 +8,6 @@ for (const key of keys) {
     editors[tag] = vueFiles[key].default
 
 }
-
 export default {
     install: (app) => {
         for (const key in editors) {

@@ -62,5 +62,10 @@
       "default": false
     }
   },
-  "slots": []
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default content slot."
+    }
+  ]
 }

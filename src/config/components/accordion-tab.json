@@ -4,7 +4,7 @@
   "tag": "p-accordion-tab",
   "tagIcon": "accordionTab",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/accordion/",
   "description": "AccordionTab is a helper component for Accordion.",

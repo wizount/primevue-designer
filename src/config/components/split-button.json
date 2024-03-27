@@ -4,7 +4,7 @@
   "tag": "p-split-button",
   "tagIcon": "splitButton",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/splitbutton/",
   "description": "SplitButton groups a set of commands in an overlay with a default command.",
@@ -34,10 +34,26 @@
       "title": "MenuModel instance to define the overlay items.",
       "types": [
         {
-          "name": "MenuItem[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor",
+          "props": {
+            "tag": "fixed-keys-object-editor",
+            "tagProps": {
+              "keys": [
+                {
+                  "name": "label",
+                  "tag": "p-input-text"
+                },
+                {
+                  "name": "icon",
+                  "tag": "icon-chooser"
+                }
+              ]
+            }
+          }
         }
-      ]
+      ],
+      "default": []
     },
     "auto-z-index": {
       "label": "autoZIndex",

@@ -4,7 +4,7 @@
   "tag": "p-progress-bar",
   "tagIcon": "progressBar",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/progressbar",
   "description": "ProgressBar is a process status indicator.",

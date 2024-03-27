@@ -14,10 +14,11 @@
       "title": "An array of events to display.",
       "types": [
         {
-          "name": "any[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor"
         }
-      ]
+      ],
+      "defalut": []
     },
     "align": {
       "label": "align",

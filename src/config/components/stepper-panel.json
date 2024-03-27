@@ -4,7 +4,7 @@
   "tag": "p-stepper-panel",
   "tagIcon": "stepperPanel",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/stepper/",
   "description": "StepperPanel is a helper component for Stepper component.",

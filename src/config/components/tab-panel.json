@@ -4,7 +4,7 @@
   "tag": "p-tab-panel",
   "tagIcon": "tabPanel",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/tabview/",
   "description": "TabPanel is a helper component for TabPanel component.",

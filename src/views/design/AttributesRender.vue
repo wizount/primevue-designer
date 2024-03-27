@@ -39,8 +39,10 @@
     <p-input-group-addon v-p-tooltip.top="'请在控件上输入'">
       默认值
     </p-input-group-addon>
-    <div class="flex-grow-1 d-flex">
-      <div class="flex-grow-1 align-self-center"> {{ curItemConfig.defaultValue }}</div>
+    <div class="flex-grow-1 d-flex ml-1">
+      <div class="flex-grow-1 align-self-center">
+        {{ curItemConfig.defaultValue === null ? 'null' : curItemConfig.defaultValue }}
+      </div>
       <p-button text icon="pi pi-trash" severity="danger" title="清空" v-if="curItemConfig.defaultValue!==undefined"
                 @click="curItemConfig.defaultValue=undefined"></p-button>
     </div>
@@ -56,7 +58,7 @@
   <template v-if="activeData.__id__!=='plainText'">
     <p-divider>属性</p-divider>
 
-    <p-input-group >
+    <p-input-group>
       <p-input-group-addon>原生属性</p-input-group-addon>
       <object-editor v-model="activeData.__native__"/>
     </p-input-group>
@@ -125,12 +127,16 @@
           <i v-if="v.required" style="color:var(--red-500)">*</i>
         </p-input-group-addon>
 
-        <p-input-text v-model="__refs__[k]" v-if="__refs__&&__refs__[k]" placeholder="请输入ref对象变量名" class="w-100"
-                      title="请输入ref对象变量名"
-        />
-        <!--  fixme    :treeProps="curItemProps.props"使用不明智，但确实解决了问题-->
-        <config-value-input v-model="curItemProps[k]" v-if="v.type.tag" :treeProps="curItemProps.props"
-                            :attr-config="v.type"></config-value-input>
+        <div class="w-100 d-flex flex-wrap p-inputgroup">
+          <p-input-text v-model="__refs__[k]" placeholder="请输入ref对象变量名" v-if="__refs__&&__refs__[k]"
+                        class="w-100"
+                        title="请输入ref对象变量名"
+          />
+
+          <!--  fixme    :treeProps="curItemProps.props"使用不明智，但确实解决了问题-->
+          <config-value-input v-model="curItemProps[k]" v-if="v.type.tag" :treeProps="curItemProps.props"
+                              :attr-config="v.type"></config-value-input>
+        </div>
       </p-input-group>
     </template>
   </template>

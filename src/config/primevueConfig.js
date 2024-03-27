@@ -2,6 +2,36 @@ const defaultInputGroupConfig = {
     showLabel: true,
     wrapWithInputGroup: true
 }
+const menuModel= [
+    {
+        label: 'Home',
+        icon: 'pi pi-home'
+    },
+    {
+        label: 'Features',
+        icon: 'pi pi-star'
+    },
+    {
+        label: 'Projects',
+        icon: 'pi pi-search',
+        items: [
+            {
+                label: 'Templates',
+                icon: 'pi pi-palette',
+                items: [
+                    {
+                        label: 'Apollo',
+                        icon: 'pi pi-palette'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        label: 'Contact',
+        icon: 'pi pi-envelope'
+    }
+]
 export const primeVueComponents =
 
     [{
@@ -35,7 +65,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "span",//必须是英文
-                            name: "span",
                             tag: "span",
                             tagIcon: "code"
                         },
@@ -47,7 +76,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "p",//必须是英文
-                            name: "p",
                             tag: "p",
                             tagIcon: "p"
                         },
@@ -59,7 +87,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "h1",//必须是英文
-                            name: "h1",
                             tag: "h1",
                             tagIcon: "h1"
                         },
@@ -86,7 +113,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "ul",//必须是英文
-                            name: "无序列表",
                             tag: "ul",
                             tagIcon: "ul"
                         }
@@ -95,7 +121,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "ol",//必须是英文
-                            name: "有序列表",
                             tag: "ol",
                             tagIcon: "ol"
                         }
@@ -104,7 +129,6 @@ export const primeVueComponents =
                         __id__: "html",
                         __config__: {
                             itemName: "li",//必须是英文
-                            name: "列表项",
                             tag: "li",
                             tagIcon: "menu"
                         },
@@ -120,7 +144,6 @@ export const primeVueComponents =
             title: "Form",
             children: [
                 {
-                    name: "AutoComplete",
                     key: "AutoComplete",
                     children: [
                         {
@@ -132,7 +155,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Calendar",
                     key: "Calendar",
                     children: [
                         {
@@ -144,7 +166,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "CascadeSelect",
                     key: "CascadeSelect",
                     children: [
                         {
@@ -155,13 +176,13 @@ export const primeVueComponents =
                             __props__: {
                                 "option-label": "label",
                                 "option-value": "value",
+                                "optionGroupLabel": "label",
                                 "option-group-children": ['children']
                             }
                         }
                     ]
                 },
                 {
-                    name: "Checkbox",
                     key: "Checkbox",
                     children: [
                         {
@@ -176,7 +197,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Chips",
                     key: "Chips",
                     children: [
                         {
@@ -189,7 +209,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ColorPicker",
                     key: "ColorPicker",
                     children: [
                         {
@@ -202,7 +221,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Dropdown",
                     key: "Dropdown",
                     children: [
                         {
@@ -215,7 +233,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Editor",
                     key: "Editor",
                     children: [
                         {
@@ -224,7 +241,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "FloatLabel",
                     key: "FloatLabel",
                     children: [
                         {
@@ -232,12 +248,12 @@ export const primeVueComponents =
                             __slots__: {
                                 default: [{
                                     __id__: "input-text",
-                                    __native__:{
+                                    __native__: {
                                         id: 'tempId'
                                     }
                                 }, {
                                     __id__: "label",
-                                    __native__:{
+                                    __native__: {
                                         for: 'tempId'
                                     },
                                     __slots__: {
@@ -249,7 +265,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "IconField",
                     key: "IconField",
                     children: [
                         {
@@ -257,8 +272,8 @@ export const primeVueComponents =
                             __slots__: {
                                 default: [{
                                     __id__: "input-icon",
-                                    __native__:{
-                                        class:"pi pi-search"
+                                    __native__: {
+                                        class: "pi pi-search"
                                     }
                                 }, {
                                     __id__: "input-text"
@@ -269,7 +284,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InputMask",
                     key: "InputMask",
                     children: [
                         {
@@ -285,7 +299,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InputNumber",
                     key: "InputNumber",
                     children: [
                         {
@@ -301,7 +314,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InputOtp",
                     key: "InputOtp",
                     children: [
                         {
@@ -311,7 +323,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InputSwitch",
                     key: "InputSwitch",
                     children: [
                         {
@@ -324,7 +335,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InputText",
                     key: "InputText",
                     children: [
                         {
@@ -337,7 +347,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Knob",
                     key: "Knob",
                     children: [
                         {
@@ -351,7 +360,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Listbox",
                     key: "Listbox",
                     children: [
                         {
@@ -364,7 +372,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "MultiSelect",
                     key: "MultiSelect",
                     children: [
                         {
@@ -377,7 +384,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Password",
                     key: "Password",
                     children: [
                         {
@@ -390,7 +396,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "RadioButton",
                     key: "RadioButton",
                     children: [
                         {
@@ -403,7 +408,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Rating",
                     key: "Rating",
                     children: [
                         {
@@ -416,7 +420,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "SelectButton",
                     key: "SelectButton",
                     children: [
                         {
@@ -429,7 +432,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Slider",
                     key: "Slider",
                     children: [
                         {
@@ -442,7 +444,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Textarea",
                     key: "Textarea",
                     children: [
                         {
@@ -455,7 +456,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ToggleButton",
                     key: "ToggleButton",
                     children: [
                         {
@@ -468,7 +468,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "TreeSelect",
                     key: "TreeSelect",
                     children: [
                         {
@@ -481,7 +480,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "TriStateCheckbox",
                     key: "TriStateCheckbox",
                     children: [
                         {
@@ -499,7 +497,6 @@ export const primeVueComponents =
             title: "Button",
             children: [
                 {
-                    name: "Button",
                     key: "Button",
                     children: [
                         {
@@ -508,7 +505,14 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "SplitButton",
+                    key: "SpeedDial",
+                    children: [
+                        {
+                            __id__: "speed-dial"
+                        }
+                    ]
+                },
+                {
                     key: "SplitButton",
                     children: [
                         {
@@ -522,7 +526,6 @@ export const primeVueComponents =
             title: "Data",
             children: [
                 {
-                    name: "DataTable",
                     key: "DataTable",
                     children: [
                         {
@@ -552,7 +555,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "DataView",
                     key: "DataView",
                     children: [
                         {
@@ -561,7 +563,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "OrderList",
                     key: "OrderList",
                     children: [
                         {
@@ -570,7 +571,17 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Paginator",
+                    key: "OrganizationChart",
+                    children: [
+                        {
+                            __id__: "organization-chart",
+                            __config__: {
+                                name: "OrgChart"
+                            }
+                        }
+                    ]
+                },
+                {
                     key: "Paginator",
                     children: [
                         {
@@ -583,7 +594,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "PickList",
                     key: "PickList",
                     children: [
                         {
@@ -592,7 +602,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Tree",
                     key: "Tree",
                     children: [
                         {
@@ -601,16 +610,33 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "TreeTable",
                     key: "TreeTable",
                     children: [
                         {
-                            __id__: "tree-table"
+                            __id__: "tree-table",
+                            __props__: {
+                                value: []
+                            },
+                            __slots__: {
+                                default: [{
+                                    __id__: "column",
+                                    __props__: {
+                                        field: 'name',
+                                        header: 'Name',
+                                        expander: true
+                                    }
+                                }, {
+                                    __id__: "column",
+                                    __props__: {
+                                        field: 'label',
+                                        header: 'Label'
+                                    }
+                                }]
+                            },
                         }
                     ]
                 },
                 {
-                    name: "Timeline",
                     key: "Timeline",
                     children: [
                         {
@@ -619,7 +645,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "VirtualScroller",
                     key: "VirtualScroller",
                     children: [
                         {
@@ -633,7 +658,6 @@ export const primeVueComponents =
             title: "Panel",
             children: [
                 {
-                    name: "Accordion",
                     key: "Accordion",
                     children: [
                         {
@@ -645,7 +669,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Card",
                     key: "Card",
                     children: [
                         {
@@ -654,7 +677,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Divider",
                     key: "Divider",
                     children: [
                         {
@@ -663,7 +685,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Fieldset",
                     key: "Fieldset",
                     children: [
                         {
@@ -672,7 +693,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Panel",
                     key: "Panel",
                     children: [
                         {
@@ -681,16 +701,18 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ScrollPanel",
                     key: "ScrollPanel",
                     children: [
                         {
-                            __id__: "scroll-panel"
+                            __id__: "scroll-panel",
+                            style: {
+                                height: "200px",
+                                width: "200px"
+                            }
                         }
                     ]
                 },
                 {
-                    name: "Splitter",
                     key: "Splitter",
                     children: [
                         {
@@ -707,7 +729,7 @@ export const primeVueComponents =
                                 }, {
                                     __id__: "splitter-panel",
                                     __slots__: {
-                                        default: ["Panel1"]
+                                        default: ["Panel2"]
                                     }
                                 }]
                             },
@@ -718,7 +740,33 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "TabView",
+                    key: "Stepper",
+                    children: [
+                        {
+                            __id__: "stepper",
+                            __props__: {
+                                style: {height: '300px'}
+                            },
+                            __slots__: {
+                                default: [{
+                                    __id__: "stepper-panel",
+                                    __slots__: {
+                                        default: ["Panel1"]
+                                    }
+                                }, {
+                                    __id__: "stepper-panel",
+                                    __slots__: {
+                                        default: ["Panel2"]
+                                    }
+                                }]
+                            },
+                            __link__: [
+                                {__id__: "stepper-panel",}
+                            ]
+                        }
+                    ]
+                },
+                {
                     key: "TabView",
                     children: [
                         {
@@ -743,7 +791,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Toolbar",
                     key: "Toolbar",
                     children: [
                         {
@@ -753,87 +800,81 @@ export const primeVueComponents =
                 }
             ]
         },
-        {
-            title: "Overlay",
-            children: [
-                {
-                    name: "ConfirmDialog",
-                    key: "ConfirmDialog",
-                    children: [
-                        {
-                            __id__: "confirm-dialog"
-                        }
-                    ]
-                },
-                {
-                    name: "ConfirmPopup",
-                    key: "ConfirmPopup",
-                    children: [
-                        {
-                            __id__: "confirm-popup"
-                        }
-                    ]
-                },
-                {
-                    name: "Dialog",
-                    key: "Dialog",
-                    children: [
-                        {
-                            __id__: "dialog"
-                        }
-                    ]
-                },
-                {
-                    name: "DynamicDialog",
-                    key: "DynamicDialog",
-                    children: [
-                        {
-                            __id__: "dynamic-dialog"
-                        }
-                    ]
-                },
-                {
-                    name: "OverlayPanel",
-                    key: "OverlayPanel",
-                    children: [
-                        {
-                            __id__: "overlay-panel"
-                        }
-                    ]
-                },
-                {
-                    name: "Sidebar",
-                    key: "Sidebar",
-                    children: [
-                        {
-                            __id__: "sidebar"
-                        }
-                    ]
-                }
-            ]
-        },
+        // {
+        //     title: "Overlay",
+        //     children: [
+        //         {
+        //             key: "ConfirmDialog",
+        //             children: [
+        //                 {
+        //                     __id__: "confirm-dialog"
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             key: "ConfirmPopup",
+        //             children: [
+        //                 {
+        //                     __id__: "confirm-popup"
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             key: "Dialog",
+        //             children: [
+        //                 {
+        //                     __id__: "dialog"
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             key: "DynamicDialog",
+        //             children: [
+        //                 {
+        //                     __id__: "dynamic-dialog"
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             key: "OverlayPanel",
+        //             children: [
+        //                 {
+        //                     __id__: "overlay-panel"
+        //                 }
+        //             ]
+        //         },
+        //         {
+        //             key: "Sidebar",
+        //             children: [
+        //                 {
+        //                     __id__: "sidebar"
+        //                 }
+        //             ]
+        //         }
+        //     ]
+        // },
         {
             title: "File",
-            children: []
+            children: [{
+                key: "FileUpload",
+                children: [
+                    {
+                        __id__: "file-upload",
+                        __props__: {}
+                    }
+                ]
+            }]
         },
         {
             title: "Menu",
             children: [
                 {
-                    name: "Breadcrumb",
                     key: "Breadcrumb",
                     children: [
                         {
                             __id__: "breadcrumb",
                             __props__: {
-                                "model": [
-                                    {
-                                        "label": "item1"
-                                    },
-                                    {
-                                        "label": "item2"
-                                    }
-                                ],
+                                model: menuModel,
                                 "home": {
                                     "icon": "pi pi-home"
                                 }
@@ -842,7 +883,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ContextMenu",
                     key: "ContextMenu",
                     children: [
                         {
@@ -851,7 +891,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Dock",
                     key: "Dock",
                     children: [
                         {
@@ -860,57 +899,127 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Menu",
                     key: "Menu",
                     children: [
                         {
-                            __id__: "menu"
+                            __id__: "menu",
+                            __props__: {
+                                model: menuModel
+                            }
                         }
                     ]
                 },
                 {
-                    name: "Menubar",
                     key: "Menubar",
                     children: [
                         {
-                            __id__: "menubar"
+                            __id__: "menubar",
+                            __props__: {
+                                model: menuModel
+                            }
                         }
                     ]
                 },
                 {
-                    name: "MegaMenu",
                     key: "MegaMenu",
                     children: [
                         {
-                            __id__: "mega-menu"
-                        }
-                    ]
-                },
-                {
-                    name: "PanelMenu",
-                    key: "PanelMenu",
-                    children: [
-                        {
-                            __id__: "panel-menu"
-                        }
-                    ]
-                },
-                {
-                    name: "Steps",
-                    key: "Steps",
-                    children: [
-                        {
-                            __id__: "steps",
+                            __id__: "mega-menu",
                             __props__: {
                                 model: [
                                     {
-                                        label: 'Personal Info'
+                                        label: 'Furniture',
+                                        icon: 'pi pi-box',
+                                        items: [
+                                            [
+                                                {
+                                                    label: 'Living Room',
+                                                    items: [{ label: 'Accessories' }, { label: 'Armchair' }, { label: 'Coffee Table' }, { label: 'Couch' }, { label: 'TV Stand' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Kitchen',
+                                                    items: [{ label: 'Bar stool' }, { label: 'Chair' }, { label: 'Table' }]
+                                                },
+                                                {
+                                                    label: 'Bathroom',
+                                                    items: [{ label: 'Accessories' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Bedroom',
+                                                    items: [{ label: 'Bed' }, { label: 'Chaise lounge' }, { label: 'Cupboard' }, { label: 'Dresser' }, { label: 'Wardrobe' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Office',
+                                                    items: [{ label: 'Bookcase' }, { label: 'Cabinet' }, { label: 'Chair' }, { label: 'Desk' }, { label: 'Executive Chair' }]
+                                                }
+                                            ]
+                                        ]
                                     },
                                     {
-                                        label: 'Reservation'
+                                        label: 'Electronics',
+                                        icon: 'pi pi-mobile',
+                                        items: [
+                                            [
+                                                {
+                                                    label: 'Computer',
+                                                    items: [{ label: 'Monitor' }, { label: 'Mouse' }, { label: 'Notebook' }, { label: 'Keyboard' }, { label: 'Printer' }, { label: 'Storage' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Home Theather',
+                                                    items: [{ label: 'Projector' }, { label: 'Speakers' }, { label: 'TVs' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Gaming',
+                                                    items: [{ label: 'Accessories' }, { label: 'Console' }, { label: 'PC' }, { label: 'Video Games' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Appliances',
+                                                    items: [{ label: 'Coffee Machine' }, { label: 'Fridge' }, { label: 'Oven' }, { label: 'Vaccum Cleaner' }, { label: 'Washing Machine' }]
+                                                }
+                                            ]
+                                        ]
                                     },
                                     {
-                                        label: 'Review'
+                                        label: 'Sports',
+                                        icon: 'pi pi-clock',
+                                        items: [
+                                            [
+                                                {
+                                                    label: 'Football',
+                                                    items: [{ label: 'Kits' }, { label: 'Shoes' }, { label: 'Shorts' }, { label: 'Training' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Running',
+                                                    items: [{ label: 'Accessories' }, { label: 'Shoes' }, { label: 'T-Shirts' }, { label: 'Shorts' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Swimming',
+                                                    items: [{ label: 'Kickboard' }, { label: 'Nose Clip' }, { label: 'Swimsuits' }, { label: 'Paddles' }]
+                                                }
+                                            ],
+                                            [
+                                                {
+                                                    label: 'Tennis',
+                                                    items: [{ label: 'Balls' }, { label: 'Rackets' }, { label: 'Shoes' }, { label: 'Training' }]
+                                                }
+                                            ]
+                                        ]
                                     }
                                 ]
                             }
@@ -918,20 +1027,46 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "TabMenu",
-                    key: "TabMenu",
+                    key: "PanelMenu",
                     children: [
                         {
-                            __id__: "tab-menu"
+                            __id__: "panel-menu",
+                            __props__: {
+                                model: menuModel
+                            }
                         }
                     ]
                 },
                 {
-                    name: "TieredMenu",
+                    key: "Steps",
+                    children: [
+                        {
+                            __id__: "steps",
+                            __props__: {
+                                model: menuModel
+                            }
+                        }
+                    ]
+                },
+                {
+                    key: "TabMenu",
+                    children: [
+                        {
+                            __id__: "tab-menu",
+                            __props__: {
+                                model: menuModel
+                            }
+                        }
+                    ]
+                },
+                {
                     key: "TieredMenu",
                     children: [
                         {
-                            __id__: "tiered-menu"
+                            __id__: "tiered-menu",
+                            __props__: {
+                                model: menuModel
+                            }
                         }
                     ]
                 }
@@ -945,7 +1080,6 @@ export const primeVueComponents =
             title: "Messages",
             children: [
                 {
-                    name: "Message",
                     key: "Message",
                     children: [
                         {
@@ -954,7 +1088,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "InlineMessage",
                     key: "InlineMessage",
                     children: [
                         {
@@ -963,7 +1096,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Toast",
                     key: "Toast",
                     children: [
                         {
@@ -977,7 +1109,6 @@ export const primeVueComponents =
             title: "Media",
             children: [
                 {
-                    name: "Carousel",
                     key: "Carousel",
                     children: [
                         {
@@ -986,7 +1117,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Galleria",
                     key: "Galleria",
                     children: [
                         {
@@ -995,11 +1125,13 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Image",
                     key: "Image",
                     children: [
                         {
-                            __id__: "image"
+                            __id__: "image",
+                            __native__:{
+                                src:"https://primefaces.org/cdn/primevue/images/galleria/galleria10.jpg"
+                            }
                         }
                     ]
                 }
@@ -1009,7 +1141,6 @@ export const primeVueComponents =
             title: "Misc",
             children: [
                 {
-                    name: "Avatar",
                     key: "Avatar",
                     children: [
                         {
@@ -1021,7 +1152,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Badge",
                     key: "Badge",
                     children: [
                         {
@@ -1030,7 +1160,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "BlockUI",
                     key: "BlockUI",
                     children: [
                         {
@@ -1042,11 +1171,13 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Chip",
                     key: "Chip",
                     children: [
                         {
                             __id__: "chip",
+                            __config__: {
+                                wrapWithSpan: true
+                            },
                             __props__: {
                                 label: "Chip"
                             }
@@ -1054,7 +1185,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Inplace",
                     key: "Inplace",
                     children: [
                         {
@@ -1067,7 +1197,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ScrollTop",
                     key: "ScrollTop",
                     children: [
                         {
@@ -1076,7 +1205,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Skeleton",
                     key: "Skeleton",
                     children: [
                         {
@@ -1088,16 +1216,17 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "ProgressBar",
                     key: "ProgressBar",
                     children: [
                         {
-                            __id__: "progress-bar"
+                            __id__: "progress-bar",
+                            __props__: {
+                                value: 50
+                            }
                         }
                     ]
                 },
                 {
-                    name: "ProgressSpinner",
                     key: "ProgressSpinner",
                     children: [
                         {
@@ -1106,7 +1235,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Tag",
                     key: "Tag",
                     children: [
                         {
@@ -1115,7 +1243,6 @@ export const primeVueComponents =
                     ]
                 },
                 {
-                    name: "Terminal",
                     key: "Terminal",
                     children: [
                         {
@@ -1123,13 +1250,6 @@ export const primeVueComponents =
                             __props__: {
                                 welcomeMessage: "Welcome to PrimeVue",
                                 prompt: "primevue $",
-                                "aria-label": "PrimeVue Terminal Service",
-                                pt: {
-                                    root: '',
-                                    prompt: '',
-                                    command: '',
-                                    response: ''
-                                }
                             }
                         }
                     ]

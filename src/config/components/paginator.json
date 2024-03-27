@@ -58,8 +58,11 @@
       "title": "Array of integer values to display inside rows per page dropdown.",
       "types": [
         {
-          "name": "number[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor",
+          "props":{
+            "tag": "p-input-number"
+          }
         }
       ]
     },

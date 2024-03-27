@@ -4,7 +4,7 @@
   "tag": "p-scroll-panel",
   "tagIcon": "scrollPanel",
   "layouts": [
-    "rawItem"
+    "containerItem"
   ],
   "document": "https://primevue.org/scrollpanel/",
   "description": "ScrollPanel is a cross browser, lightweight and themable alternative to native browser scrollbar.",
@@ -53,5 +53,10 @@
       "default": false
     }
   },
-  "slots": []
+  "slots": [
+    {
+      "name": "default",
+      "title": "Default content slot."
+    }
+  ]
 }

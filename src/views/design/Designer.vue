@@ -18,27 +18,27 @@
       </div>
       <p-scroll-panel class="left-scrollbar">
         <p-accordion class="components-list" multiple>
-          <p-accordion-tab :header="c.title" :name="c.titles" v-for="c in primeVueComponents" :key="c.title">
-            <template v-for="l in c.children">
-              <draggable tag="span" class="components-draggable" :list="l.children" item-key="renderKey"
-                         :group="{ name: 'componentsGroup', pull: 'clone', put: false }" :clone="cloneDrawItem"
-                         draggable=".components-item" :sort="false" @end="onEnd">
-                <template #item="{element}">
+          <p-accordion-tab :header="c.title" :name="c.title" v-for="c in leftComponent" :key="c.title">
 
-                  <p-button v-if="!element.__link__" class="components-item" @click="addDrawItem(element)"
-                            severity="info"
-                            v-p-tooltip.right="primeVueConfigMap[element.__id__].description">
-                    <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
-                    {{ element.__config__.name }}
-                  </p-button>
-                  <p-split-button v-else class="components-item" @click="addDrawItem(element)" severity="info"
-                                  :model="element.__link__.map(l=>{return {label:l.__config__.name || l.__config__.tag,command:()=>addDrawItem(l)}})">
-                      <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
-                      {{ element.__config__.name }}
-                  </p-split-button>
-                </template>
-              </draggable>
-            </template>
+            <draggable tag="div" class="components-draggable" :list="c.list" item-key="renderKey"
+                       :group="{ name: 'componentsGroup', pull: 'clone', put: false }" :clone="cloneDrawItem"
+                       draggable=".components-item" :sort="false" @end="onEnd">
+              <template #item="{element}">
+
+                <p-button v-if="!element.__link__" class="components-item" @click="addDrawItem(element)"
+                          severity="info"
+                          v-p-tooltip.right="primeVueConfigMap[element.__id__].description">
+                  <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
+                  {{ element.__config__.name }}
+                </p-button>
+                <p-split-button v-else class="components-item" @click="addDrawItem(element)" severity="info"
+                                :model="element.__link__.map(l=>{return {label:l.__config__.name || l.__config__.tag,command:()=>addDrawItem(l)}})">
+                  <svg-icon :icon-class="element.__config__.tagIcon" class-name="m-2"/>
+                  {{ element.__config__.name }}
+                </p-split-button>
+              </template>
+            </draggable>
+
           </p-accordion-tab>
 
         </p-accordion>
@@ -187,9 +187,12 @@ import {primeVueComponents} from "@/config/primevueConfig";
 import primeVueConfigMap from "@/config";
 
 const componentMap = {};
+const leftComponent=[];
 primeVueComponents.forEach((first) => {
+ let list=[];
   first.children.forEach((second) => {
     second.children.forEach((third) => {
+      list.push(third);
       createComponentMap(third)
       if (third.__link__) {
         third.__link__.forEach(l => {
@@ -198,8 +201,11 @@ primeVueComponents.forEach((first) => {
       }
     });
   });
+  leftComponent.push({
+    title:first.title,
+    list
+  })
 })
-
 function createComponentMap(com) {
 
   if (primeVueConfigMap[com.__id__]) {
@@ -211,7 +217,7 @@ function createComponentMap(com) {
     }
     const {name, tag, tagIcon, layouts} = primeVueConfigMap[com.__id__];
     if (!com.__config__.name) {
-      com.__config__.name = name;
+      com.__config__.name = com.name||name;
     }
     if (!com.__config__.tag) {
       com.__config__.tag = tag;

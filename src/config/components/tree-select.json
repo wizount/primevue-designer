@@ -13,12 +13,15 @@
     "options": {
       "label": "options",
       "title": "An array of treenodes.",
+      "ref": true,
       "types": [
         {
-          "name": "TreeNode[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "tree-editor"
         }
-      ]
+      ],
+      "default": [],
+      "hide": true
     },
     "scroll-height": {
       "label": "scrollHeight",
@@ -295,5 +298,35 @@
       "name": "itemcheckboxicon",
       "title": "Custom item checkbox icon template."
     }
-  ]
+  ],
+  "data": {
+    "name": "options",
+    "label": "选项",
+    "source": "static",
+    "inProps": true,
+    "static": {
+      "ref": true,
+      "type": {
+        "name": "array",
+        "tag": "tree-editor"
+      },
+      "default": [
+        {
+          "key": "1",
+          "label": "选项1",
+          "children": [
+            {
+              "key": "2",
+              "label": "选项1-1"
+            }
+          ]
+        }
+      ]
+    },
+    "dynamic": {
+      "url": "https://www.fastmock.site/mock/c9e1a1c3cefb84da4306dcf9fadde652/ele-plus-desinger/cascaderData",
+      "method": "get",
+      "dataKey": ""
+    }
+  }
 }

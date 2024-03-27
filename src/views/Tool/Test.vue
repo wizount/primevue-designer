@@ -1,20 +1,12 @@
 <template>
   <div style="padding: 5px">
-    <div style="display: flex;padding:2rem">
-      <p-float-label>
-        <p-input-text id="tempId" v-model="inputText106"></p-input-text><label for="tempId">FloatLabel</label>
-      </p-float-label>
-    </div>
+    <p-mega-menu
+        :model="[{label:'Home',icon:'pi pi-home'},{label:'Features',icon:'pi pi-star'},{label:'Projects',icon:'pi pi-search',items:[{label:'Templates',icon:'pi pi-palette',items:[{label:'Apollo',icon:'pi pi-palette'}]}]},{label:'Contact',icon:'pi pi-envelope'}]">
+    </p-mega-menu>
   </div>
 </template>
 
-<script >
-export default {
-  data() {
-    return {
-      inputText106: undefined
-    }
-  }
-}
+<script setup>
+
 
 </script>

@@ -59,19 +59,15 @@
   .components-list {
     //padding: 8px;
     box-sizing: border-box;
-
-    :deep(.p-accordion-content) {
-      padding: 0;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
+    :deep(.p-accordion-content){
+      padding:15px 5px
     }
-
     .components-draggable {
       padding-bottom: 0px;
-
+      display: flex;
+      flex-wrap: wrap;
       .components-item {
-        width: calc(($leftBoardWidth - 40px)/2);
+        width: calc(($leftBoardWidth - 34px) / 2);
         height: 40px;
         margin: 5px;
 

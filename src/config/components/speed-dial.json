@@ -14,10 +14,14 @@
       "title": "MenuModel instance to define the action items.",
       "types": [
         {
-          "name": "MenuItem[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor",
+          "props": {
+            "tag": "menu-item-editor"
+          }
         }
-      ]
+      ],
+      "default": []
     },
     "visible": {
       "label": "visible",

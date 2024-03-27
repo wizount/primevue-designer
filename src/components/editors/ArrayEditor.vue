@@ -35,7 +35,7 @@ const props = defineProps({
   modelValue: {
     type: Array,
     required: true,
-    default: ()=>{
+    default: () => {
       return []
     }
   },
@@ -45,7 +45,7 @@ const props = defineProps({
 });
 const emits = defineEmits(['update:modelValue']);
 const list = ref([]);
-watchEffect(()=>{
+watchEffect(() => {
   if (props.modelValue) {
     list.value = props.modelValue;
   } else {
@@ -55,6 +55,8 @@ watchEffect(()=>{
 const addItem = () => {
   if (props.tag === 'p-date-picker') {
     list.value.push(new Date())
+  } else if (props.tag.indexOf("object") >= 0 || props.tag === 'menu-item-editor') {
+    list.value.push({})
   } else {
     list.value.push('');
   }

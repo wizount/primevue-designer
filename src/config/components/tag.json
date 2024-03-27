@@ -4,7 +4,7 @@
   "tag": "p-tag",
   "tagIcon": "tag",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/tag",
   "description": "Tag component is used to categorize content.",

@@ -4,7 +4,7 @@
   "tag": "p-badge",
   "tagIcon": "badge",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/badge",
   "description": "Badge represents people using icons, labels and images.",

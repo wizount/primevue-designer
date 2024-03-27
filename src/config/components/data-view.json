@@ -14,8 +14,8 @@
       "title": "An array of objects to display.",
       "types": [
         {
-          "name": "any[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor"
         }
       ]
     },

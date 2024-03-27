@@ -4,7 +4,7 @@
   "tag": "p-chip",
   "tagIcon": "chip",
   "layouts": [
-    "containerItem"
+    "rawItem"
   ],
   "document": "https://primevue.org/chip",
   "description": "Chip represents people using icons, labels and images.",

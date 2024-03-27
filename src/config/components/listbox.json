@@ -15,8 +15,8 @@
       "title": "An array of selectitems to display as the available options.",
       "types": [
         {
-          "name": "any[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor"
         }
       ]
     },

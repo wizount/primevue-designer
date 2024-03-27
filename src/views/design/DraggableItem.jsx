@@ -263,6 +263,10 @@ export default {
                     buildSlots(curItem));
             } else {
                 if (wrapWithSpan) {
+                    console.info(buildProps(curItem, {
+                        isBuildModel: true,
+                        isBuildEvent: true
+                    }))
                     const source = h(resolveComponent(tag), {
                         ...buildProps(curItem, {
                             isBuildModel: true,
@@ -295,9 +299,6 @@ export default {
                 }
 
             }
-            console.log(
-                curItem
-            )
             let ele;
             const {layout, wrapWithInputGroup} = curItem.__config__;
             if (wrapWithInputGroup) {
