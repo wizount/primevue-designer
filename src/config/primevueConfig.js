@@ -1197,6 +1197,17 @@ export const primeVueComponents =
                     ]
                 },
                 {
+                    key: "MeterGroup",
+                    children: [
+                        {
+                            __id__: "meter-group",
+                           __props__: {
+                                value:[{ label: 'Space used', value: 15 }]
+                           }
+                        }
+                    ]
+                },
+                {
                     key: "ScrollTop",
                     children: [
                         {

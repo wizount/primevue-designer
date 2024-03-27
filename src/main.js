@@ -59,6 +59,7 @@ import FileUpload from 'primevue/fileupload'
 import Image from 'primevue/image'
 import InlineMessage from 'primevue/inlinemessage'
 import Inplace from 'primevue/inplace'
+import MeterGroup from 'primevue/metergroup'
 import InputMask from 'primevue/inputmask'
 import InputNumber from 'primevue/inputnumber'
 import InputOtp from 'primevue/inputotp'
@@ -185,6 +186,7 @@ app.component('PFileUpload', FileUpload)
 app.component('PImage', Image)
 app.component('PInlineMessage', InlineMessage)
 app.component('PInplace', Inplace)
+app.component('PMeterGroup', MeterGroup)
 app.component('PInputMask', InputMask)
 app.component('PInputNumber', InputNumber)
 app.component('PInputOtp', InputOtp)

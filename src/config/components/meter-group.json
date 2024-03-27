@@ -14,8 +14,11 @@
       "title": "Current value of the metergroup.",
       "types": [
         {
-          "name": "MeterItem[]",
-          "tag": "p-input-text"
+          "name": "array",
+          "tag": "array-editor",
+          "props": {
+            "tag": "object-editor"
+          }
         }
       ]
     },

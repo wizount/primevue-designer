@@ -41,13 +41,11 @@ function setValues() {
   } else {
     values.value = props.modelValue
   }
-  console.info()
 }
 
 const values = ref({});
 const emits = defineEmits(['update:modelValue']);
 watch(() => props.modelValue, (v) => {
-  console.log(v)
   setValues();
 })
 
